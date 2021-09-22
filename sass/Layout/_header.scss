@@ -1,0 +1,15 @@
+.header {
+    width: map-get($grid-col, col-12);
+    height: 4.42em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $header-bg-clr;
+
+    &__logo {
+        width: map-get($grid-col, col-6);
+        height: 2em;
+    }
+}

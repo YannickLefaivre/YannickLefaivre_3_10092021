@@ -1,0 +1,8 @@
+.container {
+    width: map-get($grid-col, col-12);
+
+    @include large-screen-only {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}

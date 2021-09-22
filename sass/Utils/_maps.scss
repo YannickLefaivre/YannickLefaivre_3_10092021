@@ -1,0 +1,17 @@
+/* Column of the grid built with flexbox */
+
+$grid-col: (
+    col-12: 100%,
+    col-6: 50%,
+    col-4: 33.33%,
+    col-3: 25%,
+    col-2: 16.66%,
+    col-1: 8.33%
+);
+
+$breakpoints: (
+    mobile: 0px,
+    tablette: 700px,
+    computer: 992px,
+    large-screen: 1200px
+);
