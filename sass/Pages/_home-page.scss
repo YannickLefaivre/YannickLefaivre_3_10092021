@@ -1,0 +1,61 @@
+.restaurant-locations {
+    width: map-get($grid-col, col-12);
+    height: 3.64rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: $secondary-neutral-bg-clr;
+
+    box-shadow: 0 4px 6px -6px inset;
+
+    &__wrapper {
+        width: map-get($grid-col, col-12);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form {
+    width: map-get($grid-col, col-6);
+    height: 2rem;
+
+    font-size: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $secondary-neutral-bg-clr;
+
+    border-radius: 1rem;
+
+    @include from-tablette-and-more {
+        background-color: $primary-neutral-bg-clr;
+    }
+
+    &__icon {
+        padding: 0 .5rem;
+    }
+
+    &__searchField {
+        width: 75%;
+        height: inherit;
+        
+        padding: 0 0.3em;
+
+        font-weight: bold;
+        text-align: left;
+
+        background-color: inherit;
+
+        border-style: none;
+
+        @include from-tablette-and-more {
+            width: 90%;
+        }
+    }
+}
