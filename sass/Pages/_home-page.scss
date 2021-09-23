@@ -1,5 +1,5 @@
 .restaurant-locations {
-    width: 100%;
+    width: map-get($grid-col, col-12);
     height: 3.64rem;
 
     display: flex;
@@ -9,31 +9,53 @@
     background-color: $secondary-neutral-bg-clr;
 
     box-shadow: 0 4px 6px -6px inset;
+
+    &__wrapper {
+        width: map-get($grid-col, col-12);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .form {
-    width: 50%;
+    width: map-get($grid-col, col-6);
+    height: 2rem;
+
+    font-size: 1rem;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    background-color: $secondary-neutral-bg-clr;
+
+    border-radius: 1rem;
+
+    @include from-tablette-and-more {
+        background-color: $primary-neutral-bg-clr;
+    }
 
     &__icon {
-        font-size: 1.2rem;
-        
-        margin: 0 0.53em 0 0.75em;
+        padding: 0 .5rem;
     }
 
     &__searchField {
-        width: 94%;
+        width: 75%;
+        height: inherit;
         
-        margin: 0 0 0 .53em;
+        padding: 0 0.3em;
 
-        font-size: 1.1rem;
         font-weight: bold;
+        text-align: left;
 
-        background-color: #eaeaea;
+        background-color: inherit;
 
         border-style: none;
+
+        @include from-tablette-and-more {
+            width: 90%;
+        }
     }
 }
