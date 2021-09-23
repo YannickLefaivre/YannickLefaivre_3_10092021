@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: center;
 
-    background-color: $secondary-neutral-bg-clr;
+    background-color: $secondary-neutral-clr;
 
     box-shadow: 0 4px 6px -6px inset;
 
@@ -29,12 +29,12 @@
     justify-content: center;
     align-items: center;
 
-    background-color: $secondary-neutral-bg-clr;
+    background-color: $secondary-neutral-clr;
 
     border-radius: 1rem;
 
     @include from-tablette-and-more {
-        background-color: $primary-neutral-bg-clr;
+        background-color: $primary-neutral-clr;
     }
 
     &__icon {
@@ -61,15 +61,61 @@
 }
 
 .enterprise-presentation {
-    width: 100%;
+    width: map-get($grid-col, col-12);
     display: flex;
     justify-content: center;
 
+    background-color: $tertiary-neutral-clr;
+
     &__wrapper {
-        width: 75%;
+        width: map-get($grid-col, col-12);
+        height: 20.5rem;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    &__heading {
+        width: map-get($grid-col, col-9);
+        margin: 0 0 .3em;
+
+        font-size: 1.8rem;
+        text-align: center;
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-7);
+        }
+
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-5);
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-4);
+        }
+    }
+
+    &__tagline {
+        width: map-get($grid-col, col-12);
+        margin: .3em 0 0;
+
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: center;
+
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-9);
+        }
+
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-7);
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-5);
+        }
     }
 }
