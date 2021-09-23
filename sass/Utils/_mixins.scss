@@ -1,11 +1,5 @@
 /* Breakpoints mixins */
 
-@mixin from-large-screen-and-more {
-    @media screen and (min-width: map-get($breakpoints, large-screen)) {
-        @content;
-    }
-}
-
 @mixin from-tablette-and-more {
     @media screen and (min-width: map-get($breakpoints, tablette)) {
         @content;
