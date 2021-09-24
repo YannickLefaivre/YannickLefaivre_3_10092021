@@ -8,7 +8,7 @@
 
     background-color: $secondary-neutral-clr;
 
-    box-shadow: 0 4px 6px -6px inset;
+    @include box-shadow-template;
 
     &__wrapper {
         width: map-get($grid-col, col-12);
@@ -116,6 +116,89 @@
 
         @include from-large-screen-and-more {
             width: map-get($grid-col, col-5);
+        }
+    }
+}
+
+.user-guide {
+    height: 31.42rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    &__heading {
+        width: map-get($grid-col, col-7);
+        margin-left: 1.35rem;
+        margin-bottom: 2.57rem;
+
+        text-align: left;
+
+        align-self: flex-start;
+    }
+
+    > ol {
+        width: map-get($grid-col, col-12);
+        height: 19.07rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-content: space-around;
+        justify-content: center;
+    }
+
+
+    &__instructions {
+        position: relative;
+
+        width: map-get($grid-col, col-12);
+        height: 5.21rem;
+        margin: 0 2em;
+        
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        background-color: $user-guide__instructions-bg;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        border-radius: 2rem;
+    }
+
+    .omf-ol-custom-marker {
+        position: absolute;
+        left: -.7em;
+
+        @include custom-marker-padding;
+
+        display: flex;
+
+        font-size: 1rem;
+        font-weight: normal;
+
+        background-color: $primary-clr;
+        color: #fff;
+        border-radius: 100%;
+        
+        @include print-ordoned-list-number($ordoned-list-number);
+
+        + .fas {
+            margin: 0 1rem 0 2rem;
+            font-size: 1.2rem;
+            color: $user-guide__instructions-icon-clr;
+
+            &.fa-mobile-alt {
+                margin-left: 2.1rem;
+                font-size: 1.4rem;
+            }
         }
     }
 }

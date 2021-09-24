@@ -23,3 +23,13 @@ $breakpoints: (
     computer: 992px,
     large-screen: 1440px
 );
+
+
+/* Ordoned list number */
+
+$ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');
+
+
+/* Ohmyfood website custom marker padding value */
+
+$omf-ol-custom-marker-padding: (top: .4rem, right-and-left: .5rem, bottom: .1rem);
