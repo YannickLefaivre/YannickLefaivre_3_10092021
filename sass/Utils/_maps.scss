@@ -15,11 +15,18 @@ $grid-col: (
     col-1: 8.33%
 );
 
+
 /* Breakpoints */
 
 $breakpoints: (
-    mobile: 0px,
+    sm-mobile: 0px,
+    lg-mobile: 480px,
     tablette: 700px,
     computer: 992px,
     large-screen: 1440px
 );
+
+
+/* Ordoned list number */
+
+$ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');

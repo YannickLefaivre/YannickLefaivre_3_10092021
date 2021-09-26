@@ -1,17 +1,18 @@
-@import "./Utils/variables";
-@import "./Utils/maps";
-@import "./Utils/functions";
-@import "./Utils/mixins";
+@import "./utils/variables";
+@import "./utils/lists";
+@import "./utils/maps";
+@import "./utils/functions";
+@import "./utils/mixins";
 
-@import "./Vendors/normalize";
+@import "./vendors/normalize";
 
-@import "./Base/base";
-@import "./Base/typography";
+@import "./base/base";
+@import "./base/typography";
 
-@import "./Components/buttons";
+@import "./components/buttons";
 
-@import "./Layout/container";
-@import "./Layout/header";
-@import "./Layout/footer";
+@import "./layout/container";
+@import "./layout/header";
+@import "./layout/footer";
 
-@import "./Pages/home-page";
+@import "./pages/home-page";

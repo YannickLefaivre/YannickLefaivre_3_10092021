@@ -1,5 +1,11 @@
 /* Breakpoints mixins */
 
+@mixin from-large-mobile-and-more {
+    @media screen and (min-width: map-get($breakpoints, lg-mobile)) {
+        @content;
+    }
+}
+
 @mixin from-tablette-and-more {
     @media screen and (min-width: map-get($breakpoints, tablette)) {
         @content;
@@ -16,4 +22,44 @@
     @media screen and (min-width: map-get($breakpoints, large-screen)) {
         @content;
     }
+}
+
+
+/* Make a Box shadow */
+
+@mixin make-box-shadow($offset, $effect-area, $color: hsl(0, 0, 70%))
+{
+    box-shadow: $offset $effect-area $color;
+}
+
+@mixin make-box-shadow--with-inset ($offset, $effect-area, $color: hsl(0deg, 0%, 70%), $type: inset)
+{
+    box-shadow: $offset $effect-area $color $type;
+}
+
+
+/* Sets the selector margin */
+
+@mixin set-selector-margin($sizes)
+{
+    margin: $sizes;
+}
+
+
+
+/* Print the number of a ordoned list with a purple-ish background-color alongside the icon assiociate to <li> markup */
+
+@mixin print-ordoned-list-number($ordoned-list-number) {
+    @each $number, $charValue in $ordoned-list-number {
+        &--#{$number}::before {
+            content: $charValue;
+        }
+    }
+}
+
+
+/* Ohmyfood website custom marker padding */
+
+@mixin custom-marker-padding {
+    padding: $omf-ol-custom-marker-padding;
 }
