@@ -19,7 +19,8 @@ $grid-col: (
 /* Breakpoints */
 
 $breakpoints: (
-    mobile: 0px,
+    sm-mobile: 0px,
+    lg-mobile: 480px,
     tablette: 700px,
     computer: 992px,
     large-screen: 1440px

@@ -129,6 +129,10 @@
     justify-content: center;
     align-items: center;
 
+    @include from-computer-and-more {
+        height: 17rem;
+    }
+
     &__heading {
         width: map-get($grid-col, col-7);
         margin-left: 1.35rem;
@@ -137,6 +141,11 @@
         text-align: left;
 
         align-self: flex-start;
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-3);
+            margin-bottom: 1.3rem;
+        }
     }
 
     > ol {
@@ -149,6 +158,10 @@
 
         align-content: space-around;
         justify-content: center;
+
+        @include from-computer-and-more {
+            height: 8rem;
+        }
     }
 
 
@@ -174,6 +187,20 @@
         border-radius: 2rem;
 
         @include make-box-shadow($user-guide-instructions-shadow-sizes, $user-guide-instructions-shadow-effect-area, $user-guide-instructions-shadow-color);
+
+
+        @include from-large-mobile-and-more {
+            width: map-get($grid-col, col-6);
+        }
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-5);
+        }
+        
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-3);
+            margin: 0 nth($user-guide-instructions-margin-sizes, 2);
+        }
     }
 
     .omf-ol-custom-marker {
