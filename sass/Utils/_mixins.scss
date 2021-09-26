@@ -19,11 +19,26 @@
 }
 
 
-/* Box shadow template */
+/* Make a Box shadow */
 
-@mixin box-shadow-template {
-    box-shadow: 0 4px 6px -6px inset;
+@mixin make-box-shadow($offset, $effect-area, $color: hsl(0, 0, 70%))
+{
+    box-shadow: $offset $effect-area $color;
 }
+
+@mixin make-box-shadow--with-inset ($offset, $effect-area, $color: hsl(0deg, 0%, 70%), $type: inset)
+{
+    box-shadow: $offset $effect-area $color $type;
+}
+
+
+/* Sets the selector margin */
+
+@mixin set-selector-margin($sizes)
+{
+    margin: $sizes;
+}
+
 
 
 /* Print the number of a ordoned list with a purple-ish background-color alongside the icon assiociate to <li> markup */
@@ -36,6 +51,9 @@
     }
 }
 
+
+/* Ohmyfood website custom marker padding */
+
 @mixin custom-marker-padding {
-    padding: map-get($omf-ol-custom-marker-padding, top) map-get($omf-ol-custom-marker-padding, right-and-left) map-get($omf-ol-custom-marker-padding, bottom);
+    padding: $omf-ol-custom-marker-padding;
 }

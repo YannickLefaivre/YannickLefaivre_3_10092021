@@ -15,6 +15,7 @@ $grid-col: (
     col-1: 8.33%
 );
 
+
 /* Breakpoints */
 
 $breakpoints: (
@@ -28,8 +29,3 @@ $breakpoints: (
 /* Ordoned list number */
 
 $ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');
-
-
-/* Ohmyfood website custom marker padding value */
-
-$omf-ol-custom-marker-padding: (top: .4rem, right-and-left: .5rem, bottom: .1rem);

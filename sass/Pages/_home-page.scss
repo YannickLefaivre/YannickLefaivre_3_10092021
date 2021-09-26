@@ -8,7 +8,7 @@
 
     background-color: $secondary-neutral-clr;
 
-    @include box-shadow-template;
+    @include make-box-shadow--with-inset($restaurant-locations-shadow-sizes, $restaurant-locations-shadow-effect-area);
 
     &__wrapper {
         width: map-get($grid-col, col-12);
@@ -38,7 +38,7 @@
     }
 
     &__icon {
-        padding: 0 .5rem;
+        padding: $form-icon-padding;
     }
 
     &__searchField {
@@ -157,7 +157,8 @@
 
         width: map-get($grid-col, col-12);
         height: 5.21rem;
-        margin: 0 2em;
+        
+        @include set-selector-margin($user-guide-instructions-margin-sizes);
         
         font-size: 1.1rem;
         font-weight: 600;
@@ -171,11 +172,13 @@
         align-items: center;
 
         border-radius: 2rem;
+
+        @include make-box-shadow($user-guide-instructions-shadow-sizes, $user-guide-instructions-shadow-effect-area, $user-guide-instructions-shadow-color);
     }
 
     .omf-ol-custom-marker {
         position: absolute;
-        left: -.7em;
+        left: -.6em;
 
         @include custom-marker-padding;
 
