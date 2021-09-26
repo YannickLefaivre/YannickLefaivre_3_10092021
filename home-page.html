@@ -56,6 +56,7 @@
 	<body>
 		<!-- Page container -->
 		<div class="container">
+			
 			<!-- Header -->
 			<header class="header">
 				<img
@@ -70,6 +71,7 @@
 				<!-- Restaurant locations -->
 				<section class="restaurant-locations">
 					<div class="restaurant-locations__wrapper">
+
 						<!-- The search form with its field and icon -->
 						<form class="form" method="POST" action="#">
 							<span class="form__icon fas fa-map-marker-alt fa-lg"></span>
@@ -101,12 +103,10 @@
 				</section>
 
 				<!-- User guide -->
-
 				<section class="user-guide">
 					<h2 class="user-guide__heading">Fonctionnement</h2>
 
 					<!-- User guide instructions list with icon and custom list-style-type -->
-
 					<ol>
 						<li class="user-guide__instructions">
                             <span class="omf-ol-custom-marker omf-ol-custom-marker--number-one"></span>
@@ -127,7 +127,76 @@
 				</section>
 
 				<!-- List of restaurant menus -->
+				<section class="restaurants-menu">
+					<div class="restaurants-menu-cards-grid">
 
+						<h2 class="restaurants-menu__heading">Restaurants</h2>
+
+						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+						<article class="menu-card">
+
+							<!-- link to the menu page of the restaurant -->
+							<a href="menu-la-palette-du-gout.html">
+								<div class="menu-prev">
+									<img src="./pictures/restaurants/la-palette-du-gout.jpg" alt="Aperçue d'un plat du restaurant La palette du goût">
+
+									<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
+								</div>
+
+								<div class="menu-card-infos">
+									<h3 class="menu-card-infos__heading">La palette du goût</h3>
+									<p class="menu-card-infos__restaurant-detailed-location">Ménilmontant</p>
+									<span class="menu-cards-infos__icon fas fa-heart"></span>
+								</div>
+							</a>
+						</article>
+
+						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+						<article class="menu-card">
+
+							<!-- link to the menu page of the restaurant -->
+							<a href="menu-la-note-enchantee.html">
+								<div class="menu-prev">
+									<img src="./pictures/restaurants/la_note_enchantee.jpg" alt="Aperçue d'un plat du restaurant La note enchantée">
+
+									<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
+								</div>
+								<div class="menu-card-infos">
+									<h3 class="menu-card-infos__heading">La note enchantée</h3>
+									<p class="menu-card-infos__restaurant-detailed-location">Charonne</p>
+									<span class="fas fa-heart"></span>
+								</div>
+							</a>
+						</article>
+
+						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+						<article class="menu-card">
+
+							<!-- link to the menu page of the restaurant -->
+							<a href="menu-a-la-francaise.html">
+								<img src="./pictures/restaurants/a_la_francaise.jpg" alt="Aperçue d'un plat du restaurant à la française">
+								<div class="menu-card-infos">
+									<h3 class="menu-card-infos__heading">à la française</h3>
+									<p class="menu-card-infos__restaurant-detailed-location">Cité Rouge</p>
+									<span class="menu-cards-infos__icon fas fa-heart"></span>
+								</div>
+							</a>
+						</article>
+
+						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+						<article class="menu-card">
+
+							<!-- link to the menu page of the restaurant -->
+							<a href="menu-le-delice-des-sens.html">
+								<img src="./pictures/restaurants/le_delice_des_sens.jpg" alt="Aperçue d'un plat du restaurant Le délice des sens">
+								<div class="menu-card-infos">
+									<h3 class="menu-card-infos__heading">Le délice des sens</h3>
+									<p class="menu-card-infos__restaurant-detailed-location">Folie-Méricourt</p>
+									<span class="menu-cards-infos__icon fas fa-heart"></span>
+								</div>
+							</a>
+						</article>
+				</section>
 				<!-- Page main content (end) -->
 			</main>
 
