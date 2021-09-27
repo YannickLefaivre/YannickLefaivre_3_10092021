@@ -4,7 +4,7 @@ $primary-clr: #9356DC;
 $secondary-clr: #FF79DA;
 
 $tertiary-clr: #99E2D0;
-$tertiary-clr--alt-darken: #088869; 
+$tertiary-clr--alt-darken: #099572; 
 
 $primary-neutral-clr: #fff;
 $secondary-neutral-clr: #eaeaea;
@@ -12,6 +12,8 @@ $tertiary-neutral-clr: #f6f6f6;
 
 $user-guide__instructions-icon-clr: #7d7d7d;
 $user-guide-instructions-shadow-color: #bfbfbf;
+
+$menu-card-shadow-clr: #d9d9d9;
 
 
 /* Sizes */
@@ -28,5 +30,11 @@ $form-icon-padding: 0 .5rem;
 
 $page-wrapping-sizes: 1.35rem;
 
-$top-margin: 0;
+$zero-value: 0;
 
+$menu-card-infos-margin-top-size: 1.1rem;
+
+
+/* Shadow offset */
+
+$zero-shadow-offset-x: 0;

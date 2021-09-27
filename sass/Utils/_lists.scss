@@ -1,24 +1,28 @@
-/* Margin value */ 
+/* Margin value */
 
-$user-guide-instructions-margin-sizes: $top-margin 2rem 1.7rem;
-$menu-card-margin-sizes: 1.42rem $page-wrapping-sizes;
-$restaurant-menu-heading-margin-sizes: $top-margin $page-wrapping-sizes 1.92rem;
+$user-guide-instructions-margin-sizes: $zero-value 2rem 1.7rem;
+$restaurant-menu-heading-margin-sizes: $zero-value $page-wrapping-sizes 1.92rem;
+$menu-card-margin-sizes: $zero-value $page-wrapping-sizes 1.21rem;
 
+/* Padding sizes */
+
+$restaurants-menu-cards-grid-padding-sizes: 3rem $zero-value 3.35rem;
 
 /* Box shadow offset and effect area settings */
 
-$restaurant-locations-shadow-sizes: 0 4px;
+$restaurant-locations-shadow-sizes: $zero-shadow-offset-x 4px;
 $restaurant-locations-shadow-effect-area: 6px -6px;
 
-$user-guide-instructions-shadow-sizes: 0 5px;
+$user-guide-instructions-shadow-sizes: $zero-shadow-offset-x 5px;
 $user-guide-instructions-shadow-effect-area: 12px -4px;
 
+$menu-card-shadow-sizes: $zero-shadow-offset-x 0.07rem;
+$menu-card-shadow-effect-area: 0.5rem 0.2rem;
 
 /* Ohmyfood website custom marker padding value */
 
-$omf-ol-custom-marker-padding: .4rem .5rem .1rem;
-
+$omf-ol-custom-marker-padding: 0.4rem 0.5rem 0.1rem;
 
 /* Border radius */
 
-$menu-card-img-border-radius: 1rem 1rem 0 0;
+$menu-card-img-border-radius: 1rem 1rem $zero-value $zero-value;
