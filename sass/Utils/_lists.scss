@@ -1,6 +1,8 @@
 /* Margin value */ 
 
-$user-guide-instructions-margin-sizes: 0 2rem 1.7rem;
+$user-guide-instructions-margin-sizes: $top-margin 2rem 1.7rem;
+$menu-card-margin-sizes: 1.42rem $page-wrapping-sizes;
+$restaurant-menu-heading-margin-sizes: $top-margin $page-wrapping-sizes 1.92rem;
 
 
 /* Box shadow offset and effect area settings */
@@ -15,3 +17,8 @@ $user-guide-instructions-shadow-effect-area: 12px -4px;
 /* Ohmyfood website custom marker padding value */
 
 $omf-ol-custom-marker-padding: .4rem .5rem .1rem;
+
+
+/* Border radius */
+
+$menu-card-img-border-radius: 1rem 1rem 0 0;

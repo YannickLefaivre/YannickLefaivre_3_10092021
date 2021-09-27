@@ -171,7 +171,7 @@
         width: map-get($grid-col, col-12);
         height: 5.21rem;
         
-        @include set-selector-margin($user-guide-instructions-margin-sizes);
+        @include set-margin($user-guide-instructions-margin-sizes);
         
         font-size: 1.1rem;
         font-weight: 600;
@@ -238,51 +238,74 @@
 
     > .restaurants-menu-cards-grid {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
+
+        background-color: $secondary-neutral-clr;
     }
 
     &__heading {
         width: map-get($grid-col, col-5);
-        margin-bottom: 1.92rem;
+        @include set-margin($restaurant-menu-heading-margin-sizes);
     }
 
-    .menu-cards {
+    .menu-card {
+        width: map-get($grid-col, col-12);
         height: 18rem;
+        @include set-margin($menu-card-margin-sizes);
+
+        background-color: $primary-neutral-clr;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        background-color: $primary-neutral-clr;
 
         &__link {
-            height: 16.5rem;
+            width: inherit;
+            height: inherit;
+
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+        }
+
+        img {
+            width: map-get($grid-col, col-12);
+            height: $menu-prev-and-img-height;
+
+            object-fit: cover;
+            
+            z-index: 0;
+
+            border-radius: $menu-card-img-border-radius;
         }
     }
 
     .menu-prev {
         position: relative;
-
-        > img {
-            width: 100%;
-            height: 12.5rem;
-
-            object-fit: cover;
-            
-            z-index: 0;
-        }
+        width: map-get($grid-col, col-12);
+        height: $menu-prev-and-img-height;
 
         &__new-restaurant-indicator {
+            @include set-sizes($new-restaurant-indicator-sizes);
             position: absolute;
-            top: .5rem;
+            top: 1rem;
             right: 1rem;
-
             z-index: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: $tertiary-clr;
+            color: $tertiary-clr--alt-darken;
         }
     }
 
-    .menu-cards-infos {
-        width: 90%;
-        height: 1rem;
+    .menu-card-infos {
+        @include set-sizes($menu-card-infos-sizes);
+        @include set-margin($menu-card-margin-sizes);
 
         display: flex;
         flex-direction: row;
@@ -294,10 +317,12 @@
 
         &__heading {
             width: 100%;
+            margin-bottom: 0.85rem;
         }
 
         &__restaurant-detailed-location {
             width: 70%;
+            margin-bottom: 1.5rem;
         }
     }
 }

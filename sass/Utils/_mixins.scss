@@ -37,10 +37,17 @@
     box-shadow: $offset $effect-area $color $type;
 }
 
+/* Sets the selector sizes */
+
+@mixin set-sizes($sizes) {
+    width: map-get($sizes, width);
+    height: map-get($sizes, height);
+}
+
 
 /* Sets the selector margin */
 
-@mixin set-selector-margin($sizes)
+@mixin set-margin($sizes)
 {
     margin: $sizes;
 }

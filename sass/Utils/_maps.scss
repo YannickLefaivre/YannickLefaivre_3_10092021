@@ -30,3 +30,10 @@ $breakpoints: (
 /* Ordoned list number */
 
 $ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');
+
+
+/* Selector sizes */
+
+$new-restaurant-indicator-sizes: (width: map-get($grid-col, col-3), height: 2rem);
+$menu-card-infos-sizes: (width: map-get($grid-col, col-11), height: 2.57rem);
+

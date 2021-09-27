@@ -17,10 +17,18 @@ h2 {
 }
 
 h3 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
 }
 
 p {
-    font-size: 0.78rem;
+    font-size: 1.1rem;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: black;
+    }
 }
