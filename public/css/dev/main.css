@@ -581,7 +581,7 @@ a:visited {
 }
 @media screen and (min-width: 992px) {
   .user-guide {
-    height: 17rem;
+    height: 20rem;
   }
 }
 .user-guide__heading {
@@ -714,6 +714,11 @@ a:visited {
     height: 18rem;
   }
 }
+@media screen and (min-width: 992px) {
+  .restaurants-menu .menu-card {
+    width: 25%;
+  }
+}
 .restaurants-menu .menu-card__link {
   width: 100%;
   height: inherit;
@@ -779,6 +784,11 @@ a:visited {
     width: 25%;
   }
 }
+@media screen and (min-width: 992px) {
+  .restaurants-menu .menu-prev__new-restaurant-indicator {
+    width: 33.33%;
+  }
+}
 .restaurants-menu .menu-card-infos {
   width: 91.66%;
   height: 2.57rem;
@@ -802,6 +812,12 @@ a:visited {
   .restaurants-menu .menu-card-infos {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants-menu .menu-card-infos {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
   }
 }
 .restaurants-menu .menu-card-infos__heading {

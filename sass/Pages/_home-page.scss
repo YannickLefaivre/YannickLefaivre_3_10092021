@@ -137,7 +137,7 @@
 	align-items: center;
 
 	@include from-computer-and-more {
-		height: 17rem;
+		height: 20rem;
 	}
 
 	&__heading {
@@ -292,6 +292,11 @@
 			@include set-sizes(map-get($menu-card-sizes, height), height);
 		}
 
+		@include from-computer-and-more {
+			@include set-sizes(map-get($grid-col, col-3), width);
+		}
+
+
 		&__link {
 			@include set-sizes($menu-card-link-sizes);
 
@@ -357,6 +362,10 @@
 			@include from-tablette-and-more {
 				@include set-sizes(map-get($grid-col, col-3), width)
 			}
+
+			@include from-computer-and-more {
+				@include set-sizes(map-get($grid-col, col-4), width)
+			}
 		}
 	}
 
@@ -379,6 +388,10 @@
 
 		@include from-tablette-and-more {
 			column-gap: 6rem;
+		}
+
+		@include from-computer-and-more {
+			column-gap: 3rem;
 		}
 
 		&__heading {
