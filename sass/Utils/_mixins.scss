@@ -41,9 +41,20 @@
 
 /* Sets the selector sizes */
 
-@mixin set-sizes($sizes) {
-	width: map-get($sizes, width);
-	height: map-get($sizes, height);
+@mixin set-sizes($sizes, $option: 0) {
+	@if ($option == width) or ($option == height)
+	{
+		@if ($option == width) {
+			width: $sizes;
+		} @else if ($option == height) {
+			height: $sizes;
+		} @else {
+			$sizes: 0;
+		}
+	} @else {
+		width: map-get($sizes, width);
+		height: map-get($sizes, height);
+	}
 }
 
 /* Sets the selector margin */

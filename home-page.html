@@ -35,16 +35,24 @@
 
 		<!-- Link to my custom CSS rules -->
 
-		<link rel="stylesheet" href="./public/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="./public/css/dist/main.min.css" type="text/css" />
 
-		<!-- Integration of Roboto fonts with Google Fonts -->
 
+		<!-- Integration of Roboto and Shrikhand fonts with Google Fonts -->
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Roboto -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
+
+		<!-- Shrikhand -->
+		<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+
 
 		<!-- Add my Font Awesome kit to use it in this page -->
 		<script
@@ -69,7 +77,7 @@
 			<!-- Page main content (start) -->
 			<main>
 				<!-- Restaurant locations -->
-				<section class="restaurant-locations">
+				<div class="restaurant-locations">
 					<div class="restaurant-locations__wrapper">
 
 						<!-- The search form with its field and icon -->
@@ -84,7 +92,7 @@
 							/>
 						</form>
 					</div>
-				</section>
+				</div>
 
 				<!-- Enterprise presentation -->
 				<section class="enterprise-presentation">
@@ -128,74 +136,78 @@
 
 				<!-- List of restaurant menus -->
 				<section class="restaurants-menu">
-					<div class="restaurants-menu-cards-grid">
+					<div class="restaurants-menu-wrapper">
 
 						<h2 class="restaurants-menu__heading">Restaurants</h2>
 
-						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
-						<article class="menu-card">
 
-							<!-- link to the menu page of the restaurant -->
-							<a class="menu-card__link" href="menu-la-palette-du-gout.html">
-								<div class="menu-prev">
-									<img src="./pictures/restaurants/la-palette-du-gout.jpg" alt="Aperçue d'un plat du restaurant La palette du goût">
+						<div class="restaurants-menu-cards-grid">
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
 
-									<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
-								</div>
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-la-palette-du-gout.html">
+									<div class="menu-prev">
+										<img src="./pictures/restaurants/la-palette-du-gout.jpg" alt="Aperçue d'un plat du restaurant La palette du goût">
 
-								<div class="menu-card-infos">
-									<h3 class="menu-card-infos__heading">La palette du goût</h3>
-									<p class="menu-card-infos__restaurant-detailed-location">Ménilmontant</p>
-									<span class="menu-card-infos__icon fas fa-heart"></span>
-								</div>
-							</a>
-						</article>
+										<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
+									</div>
 
-						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
-						<article class="menu-card">
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">La palette du goût</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">Ménilmontant</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
 
-							<!-- link to the menu page of the restaurant -->
-							<a class="menu-card__link" href="menu-la-note-enchantee.html">
-								<div class="menu-prev">
-									<img src="./pictures/restaurants/la_note_enchantee.jpg" alt="Aperçue d'un plat du restaurant La note enchantée">
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
 
-									<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
-								</div>
-								<div class="menu-card-infos">
-									<h3 class="menu-card-infos__heading">La note enchantée</h3>
-									<p class="menu-card-infos__restaurant-detailed-location">Charonne</p>
-									<span class="menu-card-infos__icon fas fa-heart"></span>
-								</div>
-							</a>
-						</article>
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-la-note-enchantee.html">
+									<div class="menu-prev">
+										<img src="./pictures/restaurants/la_note_enchantee.jpg" alt="Aperçue d'un plat du restaurant La note enchantée">
 
-						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
-						<article class="menu-card">
+										<span class="menu-prev__new-restaurant-indicator">Nouveau</span>
+									</div>
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">La note enchantée</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">Charonne</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
 
-							<!-- link to the menu page of the restaurant -->
-							<a class="menu-card__link" href="menu-a-la-francaise.html">
-								<img src="./pictures/restaurants/a_la_francaise.jpg" alt="Aperçue d'un plat du restaurant à la française">
-								<div class="menu-card-infos">
-									<h3 class="menu-card-infos__heading">à la française</h3>
-									<p class="menu-card-infos__restaurant-detailed-location">Cité Rouge</p>
-									<span class="menu-card-infos__icon fas fa-heart"></span>
-								</div>
-							</a>
-						</article>
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
 
-						<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
-						<article class="menu-card">
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-a-la-francaise.html">
+									<img src="./pictures/restaurants/a_la_francaise.jpg" alt="Aperçue d'un plat du restaurant À la française">
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">À la française</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">Cité Rouge</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
 
-							<!-- link to the menu page of the restaurant -->
-							<a class="menu-card__link" href="menu-le-delice-des-sens.html">
-								<img src="./pictures/restaurants/le_delice_des_sens.jpg" alt="Aperçue d'un plat du restaurant Le délice des sens">
-								<div class="menu-card-infos">
-									<h3 class="menu-card-infos__heading">Le délice des sens</h3>
-									<p class="menu-card-infos__restaurant-detailed-location">Folie-Méricourt</p>
-									<span class="menu-card-infos__icon fas fa-heart"></span>
-								</div>
-							</a>
-						</article>
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
+
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-le-delice-des-sens.html">
+									<img src="./pictures/restaurants/le_delice_des_sens.jpg" alt="Aperçue d'un plat du restaurant Le délice des sens">
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">Le délice des sens</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">Folie-Méricourt</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
 				</section>
 				<!-- Page main content (end) -->
 			</main>
