@@ -1,5 +1,6 @@
 /* Colors */
-/* Sizes */
+/* Box sizes */
+/* Font sizes */
 /* Form padding */
 /* Margin */
 /* Shadow offset */
@@ -549,6 +550,11 @@ a:visited {
   font-weight: 300;
   text-align: center;
 }
+@media screen and (min-width: 480px) {
+  .enterprise-presentation__tagline {
+    width: 91.66%;
+  }
+}
 @media screen and (min-width: 700px) {
   .enterprise-presentation__tagline {
     width: 75%;
@@ -699,7 +705,13 @@ a:visited {
 @media screen and (min-width: 480px) {
   .restaurants-menu .menu-card {
     width: 41.66%;
+    height: 16rem;
     margin-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card {
+    height: 18rem;
   }
 }
 .restaurants-menu .menu-card__link {
@@ -717,10 +729,30 @@ a:visited {
   z-index: 0;
   border-radius: 1rem 1rem 0 0;
 }
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-card img {
+    height: 11rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card img {
+    height: 12.5rem;
+  }
+}
 .restaurants-menu .menu-prev {
   position: relative;
   width: 100%;
   height: 12.5rem;
+}
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-prev {
+    height: 11rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-prev {
+    height: 12.5rem;
+  }
 }
 .restaurants-menu .menu-prev__new-restaurant-indicator {
   width: 25%;
@@ -736,6 +768,16 @@ a:visited {
   background-color: #99E2D0;
   color: #099572;
   border-radius: 0.2rem;
+}
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-prev__new-restaurant-indicator {
+    width: 33.33%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-prev__new-restaurant-indicator {
+    width: 25%;
+  }
 }
 .restaurants-menu .menu-card-infos {
   width: 91.66%;
@@ -756,18 +798,54 @@ a:visited {
          column-gap: 2rem;
   }
 }
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card-infos {
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+}
 .restaurants-menu .menu-card-infos__heading {
   grid-column: 1;
   grid-row: 1;
   justify-self: flex-start;
+}
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-card-infos__heading {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card-infos__heading {
+    font-size: 1.3rem;
+  }
 }
 .restaurants-menu .menu-card-infos__restaurant-detailed-location {
   grid-column: 1;
   grid-row: 2;
   justify-self: flex-start;
 }
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-card-infos__restaurant-detailed-location {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card-infos__restaurant-detailed-location {
+    font-size: 1.2rem;
+  }
+}
 .restaurants-menu .menu-card-infos__icon {
   grid-column: 2;
   grid-row: 1/3;
   font-size: 1.6rem;
+}
+@media screen and (min-width: 480px) {
+  .restaurants-menu .menu-card-infos__icon {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .restaurants-menu .menu-card-infos__icon {
+    font-size: 1.6rem;
+  }
 }

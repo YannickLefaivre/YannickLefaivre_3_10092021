@@ -109,6 +109,10 @@
 		font-weight: 300;
 		text-align: center;
 
+		@include from-large-mobile-and-more {
+			width: map-get($grid-col, col-11);
+		}
+
 		@include from-tablette-and-more {
 			width: map-get($grid-col, col-9);
 		}
@@ -265,8 +269,7 @@
 	}
 
 	.menu-card {
-		width: map-get($grid-col, col-12);
-		height: 18rem;
+		@include set-sizes($menu-card-sizes);
 		@include set-margin($menu-card-margin-sizes);
 
 		display: flex;
@@ -281,8 +284,12 @@
 		);
 
 		@include from-large-mobile-and-more {
-			@include set-sizes(map-get($grid-col, col-5), width);
+			@include set-sizes($menu-card-sizes-lg-mobile);
 			@include set-margin($menu-card-margin-bottom-size, bottom);
+		}
+
+		@include from-tablette-and-more {
+			@include set-sizes(map-get($menu-card-sizes, height), height);
 		}
 
 		&__link {
@@ -302,6 +309,14 @@
 			z-index: 0;
 
 			border-radius: $menu-card-img-border-radius;
+
+			@include from-large-mobile-and-more {
+				@include set-sizes($menu-prev-and-img-height-lg-mobile, height);
+			}
+
+			@include from-tablette-and-more {
+				@include set-sizes($menu-prev-and-img-height, height);
+			}
 		}
 	}
 
@@ -309,6 +324,14 @@
 		position: relative;
 		width: map-get($grid-col, col-12);
 		height: $menu-prev-and-img-height;
+
+		@include from-large-mobile-and-more {
+			@include set-sizes($menu-prev-and-img-height-lg-mobile, height);
+		}
+
+		@include from-tablette-and-more {
+			@include set-sizes($menu-prev-and-img-height, height);
+		}
 
 		&__new-restaurant-indicator {
 			@include set-sizes($menu-prev-new-restaurant-indicator-sizes);
@@ -328,7 +351,11 @@
 			border-radius: 0.2rem;
 
 			@include from-large-mobile-and-more {
-				@include set-sizes(map-get($grid-col, col-4) width)
+				@include set-sizes(map-get($grid-col, col-4), width);
+			}
+
+			@include from-tablette-and-more {
+				@include set-sizes(map-get($grid-col, col-3), width)
 			}
 		}
 	}
@@ -350,11 +377,23 @@
 			column-gap: 2rem;
 		}
 
+		@include from-tablette-and-more {
+			column-gap: 6rem;
+		}
+
 		&__heading {
 			grid-column: 1;
 			grid-row: 1;
 
 			justify-self: flex-start;
+
+			@include from-large-mobile-and-more {
+				font-size: $menu-card-infos-heading-font-size-lg-mobile;
+			}
+
+			@include from-tablette-and-more {
+				font-size: $third-heading-font-size;
+			}
 		}
 
 		&__restaurant-detailed-location {
@@ -362,13 +401,29 @@
 			grid-row: 2;
 
 			justify-self: flex-start;
+
+			@include from-large-mobile-and-more {
+				font-size: $menu-card-infos-restaurant-detailed-location-font-size-lg-mobile;
+			}
+
+			@include from-tablette-and-more {
+				font-size: $paragraph-font-size;
+			}
 		}
 
 		&__icon {
 			grid-column: 2;
 			grid-row: 1 / 3;
 
-			font-size: 1.6rem;
+			font-size: $menu-card-infos-icon-font-size;
+
+			@include from-large-mobile-and-more {
+				font-size: $menu-card-infos-icon-font-size-lg-mobile;
+			}
+
+			@include from-tablette-and-more {
+				font-size: $menu-card-infos-icon-font-size;
+			}
 		}
 	}
 }

@@ -42,6 +42,7 @@
 /* Sets the selector sizes */
 
 @mixin set-sizes($sizes, $option: 0) {
+
 	@if ($option == width) or ($option == height)
 	{
 		@if ($option == width) {
