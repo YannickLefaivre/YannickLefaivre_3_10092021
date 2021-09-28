@@ -140,6 +140,10 @@
 		height: 20rem;
 	}
 
+	@include from-large-screen-and-more {
+		height: 25rem;
+	}
+
 	&__heading {
 		width: map-get($grid-col, col-7);
 		margin-left: 1.35rem;
@@ -261,6 +265,10 @@
 		flex-flow: row wrap;
 
 		justify-content: center;
+
+		@include from-large-screen-and-more {
+			justify-content: space-evenly;
+		}
 	}
 
 	&__heading {
@@ -294,6 +302,10 @@
 
 		@include from-computer-and-more {
 			@include set-sizes(map-get($grid-col, col-3), width);
+		}
+
+		@include from-large-screen-and-more {
+			@include set-sizes(map-get($grid-col, col-2), width);
 		}
 
 
@@ -337,6 +349,7 @@
 		@include from-tablette-and-more {
 			@include set-sizes($menu-prev-and-img-height, height);
 		}
+
 
 		&__new-restaurant-indicator {
 			@include set-sizes($menu-prev-new-restaurant-indicator-sizes);
@@ -394,6 +407,11 @@
 			column-gap: 3rem;
 		}
 
+		@include from-large-screen-and-more {
+			column-gap: 2rem;
+		}
+
+
 		&__heading {
 			grid-column: 1;
 			grid-row: 1;
@@ -406,6 +424,10 @@
 
 			@include from-tablette-and-more {
 				font-size: $third-heading-font-size;
+			}
+
+			@include from-large-screen-and-more {
+				font-size: 1.2rem;
 			}
 		}
 
@@ -422,6 +444,10 @@
 			@include from-tablette-and-more {
 				font-size: $paragraph-font-size;
 			}
+
+			@include from-large-screen-and-more {
+				font-size: 1.1rem;
+			}
 		}
 
 		&__icon {
@@ -436,6 +462,10 @@
 
 			@include from-tablette-and-more {
 				font-size: $menu-card-infos-icon-font-size;
+			}
+
+			@include from-large-screen-and-more {
+				font-size: 1.5rem;
 			}
 		}
 	}
