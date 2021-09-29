@@ -49,6 +49,12 @@ $menu-card-infos-sizes: (width: map-get($grid-col, col-11), height: 2.57rem);
 $footer-sizes: (width: map-get($grid-col, col-12), height: 14.14rem);
 $footer-wrapper-sizes: (width: map-get($grid-col, col-12), height: 11rem);
 $footer-heading-sizes: (width: map-get($grid-col, col-4), height: auto);
+
 $footer-link-list-groups-sizes: (width: map-get($grid-col, col-11), height: 8rem);
+$footer-link-list-groups-sizes-lg-screen: (width: map-get($grid-col, col-5), height: 4rem);
+
 $footer-link-list-sizes: (width: map-get($grid-col, col-7), height: 3.1rem);
+$footer-link-list-sizes-lg-screen: (width: 41%,
+height: 4.2rem);
+
 $footer-link-sizes: (width: map-get($grid-col, col-12), height: 1rem);

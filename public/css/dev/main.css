@@ -468,12 +468,24 @@ a:visited {
   display: flex;
   background-color: #353535;
 }
+@media screen and (min-width: 1440px) {
+  .footer {
+    height: 13rem;
+  }
+}
 .footer > .footer-wrapper {
   width: 100%;
   height: 11rem;
   margin: 1.92rem 1.35rem 2.71rem;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+}
+@media screen and (min-width: 1440px) {
+  .footer > .footer-wrapper {
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .footer .footer__heading {
   width: 33.33%;
@@ -483,12 +495,26 @@ a:visited {
   font-size: 1.3rem;
   color: #fff;
 }
+@media screen and (min-width: 1440px) {
+  .footer .footer__heading {
+    width: 16.66%;
+    font-size: 1.5rem;
+  }
+}
 .footer .footer-link-list-groups {
   width: 91.66%;
   height: 8rem;
   display: flex;
   flex-flow: row wrap;
   font-size: 1rem;
+}
+@media screen and (min-width: 1440px) {
+  .footer .footer-link-list-groups {
+    width: 41.66%;
+    height: 4rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 .footer .footer-link-list-groups > ul {
   width: 58.33%;
@@ -498,6 +524,13 @@ a:visited {
 }
 .footer .footer-link-list-groups > ul.fa-ul {
   margin-left: 1.5rem;
+}
+@media screen and (min-width: 1440px) {
+  .footer .footer-link-list-groups > ul {
+    width: 41%;
+    height: 4.2rem;
+    margin-bottom: 0;
+  }
 }
 .footer .footer-link-list-groups__link {
   width: 100%;

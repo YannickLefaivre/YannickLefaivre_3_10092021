@@ -4,13 +4,24 @@
     display: flex; // prevent scroll bar from appearing
 
     background-color: $quaternary-neutral-clr;
+
+    @include from-large-screen-and-more {
+        @include set-sizes($footer-height-lg-screen, height);
+    }
     
     > .footer-wrapper {
         @include set-sizes($footer-wrapper-sizes);
         @include set-margin($footer-wrapper-margin-sizes);
 
         display: flex;
-        flex-direction: column;
+        flex-flow: row wrap;
+
+        @include from-large-screen-and-more {
+            @include set-sizes($footer-wrapper-height-lg-screen, height);
+
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .footer__heading {
@@ -21,6 +32,11 @@
         font-size: 1.3rem;
 
         color: $primary-neutral-clr;
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-2);
+            font-size: 1.5rem;
+        }
     }
 
     .footer-link-list-groups {
@@ -31,6 +47,13 @@
 
         font-size: 1rem;
 
+        @include from-large-screen-and-more {
+            @include set-sizes($footer-link-list-groups-sizes-lg-screen);
+
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
         > ul {
             @include set-sizes($footer-link-list-sizes);
             @include set-margin($footer-link-list-margin-bottom-size, bottom);
@@ -38,6 +61,11 @@
             /* Changed the margin of the special Font Awesome list class to align the list of links with icons with the list without icons on the vertical axis */
             &.fa-ul {
                 margin-left: 1.5rem;
+            }
+
+            @include from-large-screen-and-more {
+                @include set-sizes($footer-link-list-sizes-lg-screen);
+                @include set-margin(0, bottom);
             }
         }
 
