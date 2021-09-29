@@ -5,8 +5,14 @@
 
     background-color: $quaternary-neutral-clr;
 
-    @include from-large-screen-and-more {
-        @include set-sizes($footer-height-lg-screen, height);
+
+    @include from-large-mobile-and-more {
+        width: 100%;
+        height: 13rem;
+    }
+
+    @include from-tablette-and-more {
+        @include set-sizes($footer-height-tablette, height);
     }
     
     > .footer-wrapper {
@@ -16,8 +22,13 @@
         display: flex;
         flex-flow: row wrap;
 
-        @include from-large-screen-and-more {
-            @include set-sizes($footer-wrapper-height-lg-screen, height);
+
+        @include from-large-mobile-and-more {
+            height: 9rem;
+        }
+
+        @include from-tablette-and-more {
+            @include set-sizes($footer-wrapper-height-tablette, height);
 
             justify-content: center;
             align-items: center;
@@ -33,9 +44,24 @@
 
         color: $primary-neutral-clr;
 
-        @include from-large-screen-and-more {
-            width: map-get($grid-col, col-2);
+
+        @include from-large-mobile-and-more {
+            width: map-get($grid-col, col-12);
+        }
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-5);
             font-size: 1.5rem;
+
+            text-align: center;
+        }
+
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-4);
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-3);
         }
     }
 
@@ -47,12 +73,24 @@
 
         font-size: 1rem;
 
-        @include from-large-screen-and-more {
-            @include set-sizes($footer-link-list-groups-sizes-lg-screen);
+        @include from-large-mobile-and-more {
+            width: 90%;
+            height: 6rem;
+
+            flex-flow: row nowrap;
+        }
+
+        @include from-tablette-and-more {
+            @include set-sizes($footer-link-list-groups-sizes-tablette);
 
             justify-content: space-evenly;
             align-items: center;
         }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-5)
+        }
+
 
         > ul {
             @include set-sizes($footer-link-list-sizes);
@@ -63,8 +101,13 @@
                 margin-left: 1.5rem;
             }
 
-            @include from-large-screen-and-more {
-                @include set-sizes($footer-link-list-sizes-lg-screen);
+
+            @include from-large-mobile-and-more {
+                width: 50%;
+            }
+
+            @include from-tablette-and-more {
+                @include set-sizes($footer-link-list-sizes-tablette);
                 @include set-margin(0, bottom);
             }
         }
