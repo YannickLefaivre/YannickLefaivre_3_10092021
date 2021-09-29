@@ -1,33 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Home page | Ohmyfood</title>
-        <meta name="description" content="Page description. No longer than 155 characters." />
+		<!-- Page title and description -->
+		<title>Home page | Ohmyfood</title>
+		<meta
+			name="description"
+			content="Page description. No longer than 155 characters."
+		/>
 
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@publisher_handle">
-        <meta name="twitter:title" content="Page Title">
-        <meta name="twitter:description" content="Page description less than 200 characters">
-        <meta name="twitter:creator" content="@author_handle">
-        <!-- Twitter Summary card images must be at least 200x200px -->
-        <meta name="twitter:image" content="http://www.example.com/image.jpg">
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@publisher_handle" />
+		<meta name="twitter:title" content="Page Title" />
+		<meta
+			name="twitter:description"
+			content="Page description less than 200 characters"
+		/>
+		<meta name="twitter:creator" content="@author_handle" />
+		<!-- Twitter Summary card images must be at least 200x200px -->
+		<meta name="twitter:image" content="http://www.example.com/image.jpg" />
 
-        <!-- Open Graph data -->
-        <meta property="og:title" content="Title Here" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.example.com/" />
-        <meta property="og:image" content="http://example.com/image.jpg" />
-        <meta property="og:description" content="Description Here" /> 
-        <meta property="og:site_name" content="Site Name" />
-        <meta property="fb:admins" content="Facebook numeric ID" />
-    </head>
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Title Here" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:image" content="http://example.com/image.jpg" />
+		<meta property="og:description" content="Description Here" />
+		<meta property="og:site_name" content="Site Name" />
+		<meta property="fb:admins" content="Facebook numeric ID" />
 
-    <body>
-        
-    </body>
+		<!-- Link to my custom CSS rules -->
+
+		<link
+			rel="stylesheet"
+			href="./public/css/dist/main.min.css"
+			type="text/css"
+		/>
+
+		<!-- Integration of Roboto and Shrikhand fonts with Google Fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Roboto -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Shrikhand -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Add my Font Awesome kit to use it in this page -->
+		<script
+			src="https://kit.fontawesome.com/9809ccf456.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<!-- Page container -->
+		<div class="container">
+			<!-- Header -->
+			<header class="header">
+				<img
+					class="header__logo"
+					src="./pictures/logo/ohmyfood@2x.svg"
+					alt="Logo de Ohmyfood"
+				/>
+			</header>
+
+			<!-- Page main content (start) -->
+			<main>
+				<!-- Restaurant locations -->
+				<div class="restaurant-locations">
+					<div class="restaurant-locations__wrapper">
+						<!-- The search form with its field and icon -->
+						<form class="form" method="POST" action="#">
+							<span class="form__icon fas fa-map-marker-alt fa-lg"></span>
+
+							<input
+								type="search"
+								name="form__searchField"
+								class="form__searchField"
+								value="Paris, Belleville"
+							/>
+						</form>
+					</div>
+				</div>
+
+				<!-- Enterprise presentation -->
+				<section class="enterprise-presentation">
+					<div class="enterprise-presentation__wrapper">
+						<h1 class="enterprise-presentation__heading">
+							Réservez le menu qui vous convient
+						</h1>
+
+						<p class="enterprise-presentation__tagline">
+							Découvrez des restaurants d'exception, sélectionnés par nos soins.
+						</p>
+
+						<!-- Call to action -->
+						<button class="btn" type="button">Explorer nos restaurants</button>
+					</div>
+				</section>
+
+				<!-- User guide -->
+				<section class="user-guide">
+					<h2 class="user-guide__heading">Fonctionnement</h2>
+
+					<!-- User guide instructions list with icon and custom list-style-type -->
+					<ol>
+						<li class="user-guide__instructions">
+							<span
+								class="omf-ol-custom-marker omf-ol-custom-marker--number-one"
+							></span>
+							<span class="fas fa-mobile-alt"></span>
+							Choisissez un restaurant
+						</li>
+						<li class="user-guide__instructions">
+							<span
+								class="omf-ol-custom-marker omf-ol-custom-marker--number-two"
+							></span>
+							<span class="fas fa-list-ul"></span>
+							Composez votre menu
+						</li>
+						<li class="user-guide__instructions">
+							<span
+								class="omf-ol-custom-marker omf-ol-custom-marker--number-three"
+							></span>
+							<span class="fas fa-store"></span>
+							Dégustez au restaurant
+						</li>
+					</ol>
+				</section>
+
+				<!-- List of restaurant menus -->
+				<section class="restaurants-menu">
+					<div class="restaurants-menu-wrapper">
+						<h2 class="restaurants-menu__heading">Restaurants</h2>
+
+						<div class="restaurants-menu-cards-grid">
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-la-palette-du-gout.html">
+									<div class="menu-prev">
+										<img
+											src="./pictures/restaurants/la-palette-du-gout.jpg"
+											alt="Aperçue d'un plat du restaurant La palette du goût"
+											ismap
+										/>
+
+										<span class="menu-prev__new-restaurant-indicator"
+											>Nouveau</span
+										>
+									</div>
+
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">La palette du goût</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">
+											Ménilmontant
+										</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
+
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-la-note-enchantee.html">
+									<div class="menu-prev">
+										<img
+											src="./pictures/restaurants/la_note_enchantee.jpg"
+											alt="Aperçue d'un plat du restaurant La note enchantée"
+											ismap
+										/>
+
+										<span class="menu-prev__new-restaurant-indicator"
+											>Nouveau</span
+										>
+									</div>
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">La note enchantée</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">
+											Charonne
+										</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
+
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-a-la-francaise.html">
+									<img
+										src="./pictures/restaurants/a_la_francaise.jpg"
+										alt="Aperçue d'un plat du restaurant À la française"
+										ismap
+									/>
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">À la française</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">
+											Cité Rouge
+										</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
+
+							<!-- Restaurant menu in the form of cards with a preview photo of the meal, some information on the name of the restaurant and its detailed location -->
+							<article class="menu-card">
+								<!-- link to the menu page of the restaurant -->
+								<a class="menu-card__link" href="menu-le-delice-des-sens.html">
+									<img
+										src="./pictures/restaurants/le_delice_des_sens.jpg"
+										alt="Aperçue d'un plat du restaurant Le délice des sens"
+										ismap
+									/>
+									<div class="menu-card-infos">
+										<h3 class="menu-card-infos__heading">Le délice des sens</h3>
+										<p class="menu-card-infos__restaurant-detailed-location">
+											Folie-Méricourt
+										</p>
+										<span class="menu-card-infos__icon far fa-heart"></span>
+									</div>
+								</a>
+							</article>
+						</div>
+					</div>
+				</section>
+				<!-- Page main content (end) -->
+			</main>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<section class="footer-wrapper">
+					<h2 class="footer__heading">Ohmyfood</h2>
+
+					<div class="footer-link-list-groups">
+						<ul class="fa-ul">
+							<li class="footer-link-list-groups__link">
+								<span class="fa-li"> <span class="fas fa-utensils"></span> </span>
+								<a href="#">Proposer un restaurant</a>
+							</li>
+							<li  class="footer-link-list-groups__link">
+								<span class="fa-li"> <span class="fas fa-hands-helping"></span> </span>
+								<a href="#">Devenir partenaire</a>
+							</li>
+						</ul>
+
+						<ul>
+							<li  class="footer-link-list-groups__link">
+								<a href="#">Mentions Légales</a>
+							</li>
+							<li  class="footer-link-list-groups__link">
+								<a href="mailto:contact@ohmyfood.com">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</footer>
+		</div>
+	</body>
 </html>

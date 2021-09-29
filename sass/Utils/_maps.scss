@@ -1,0 +1,60 @@
+/* Column of the grid built with flexbox */
+
+$grid-col: (
+    col-12: 100%,
+    col-11: 91.66%,
+    col-10: 83.33%,
+    col-9: 75%,
+    col-8: 66.66%,
+    col-7: 58.33%,
+    col-6: 50%,
+    col-5: 41.66%,
+    col-4: 33.33%,
+    col-3: 25%,
+    col-2: 16.66%,
+    col-1: 8.33%
+);
+
+
+/* Breakpoints */
+
+$breakpoints: (
+    sm-mobile: 0px,
+    lg-mobile: 480px,
+    tablette: 700px,
+    computer: 992px,
+    large-screen: 1440px
+);
+
+
+/* Ordoned list number */
+
+$ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');
+
+
+/* Selector sizes */
+
+$user-guide-sizes: (width: auto, height: 30rem);
+
+$restaurants-menu-cards-grid: (width: map-get($grid-col, col-12), height: auto);
+
+$menu-card-sizes: (width: map-get($grid-col, col-12), height: 18rem);
+$menu-card-sizes-lg-mobile: (width: map-get($grid-col, col-5), height: 16rem); 
+
+
+$menu-card-link-sizes: (width: map-get($grid-col, col-12), height: inherit);
+$menu-prev-new-restaurant-indicator-sizes: (width: map-get($grid-col, col-3), height: 2rem);
+$menu-card-infos-sizes: (width: map-get($grid-col, col-11), height: 2.57rem);
+
+$footer-sizes: (width: map-get($grid-col, col-12), height: 14.14rem);
+$footer-wrapper-sizes: (width: map-get($grid-col, col-12), height: 11rem);
+$footer-heading-sizes: (width: map-get($grid-col, col-4), height: auto);
+
+$footer-link-list-groups-sizes: (width: map-get($grid-col, col-11), height: 8rem);
+$footer-link-list-groups-sizes-tablette: (width: map-get($grid-col, col-7), height: 4rem);
+
+$footer-link-list-sizes: (width: map-get($grid-col, col-8), height: 3.1rem);
+$footer-link-list-sizes-tablette: (width: map-get($grid-col, col-5),
+height: 4.2rem);
+
+$footer-link-sizes: (width: map-get($grid-col, col-12), height: 1rem);

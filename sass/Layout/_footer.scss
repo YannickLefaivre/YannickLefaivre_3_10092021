@@ -1,0 +1,128 @@
+.footer {
+    @include set-sizes($footer-sizes);
+
+    display: flex; // prevent scroll bar from appearing
+
+    background-color: $quaternary-neutral-clr;
+
+
+    @include from-large-mobile-and-more {
+        width: 100%;
+        height: 13rem;
+    }
+
+    @include from-tablette-and-more {
+        @include set-sizes($footer-height-tablette, height);
+    }
+    
+    > .footer-wrapper {
+        @include set-sizes($footer-wrapper-sizes);
+        @include set-margin($footer-wrapper-margin-sizes);
+
+        display: flex;
+        flex-flow: row wrap;
+
+
+        @include from-large-mobile-and-more {
+            height: 9rem;
+        }
+
+        @include from-tablette-and-more {
+            @include set-sizes($footer-wrapper-height-tablette, height);
+
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .footer__heading {
+        @include set-sizes($footer-heading-sizes);
+        @include set-margin($footer-heading-margin-sizes, bottom);
+
+        font-family: 'Shrikhand', cursive, "Arial", sans-serif;
+        font-size: 1.3rem;
+
+        color: $primary-neutral-clr;
+
+
+        @include from-large-mobile-and-more {
+            width: map-get($grid-col, col-12);
+        }
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-5);
+            font-size: 1.5rem;
+
+            text-align: center;
+        }
+
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-4);
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-3);
+        }
+    }
+
+    .footer-link-list-groups {
+        @include set-sizes($footer-link-list-groups-sizes);
+
+        display: flex;
+        flex-flow: row wrap;
+
+        font-size: 1rem;
+
+        @include from-large-mobile-and-more {
+            width: 90%;
+            height: 6rem;
+
+            flex-flow: row nowrap;
+        }
+
+        @include from-tablette-and-more {
+            @include set-sizes($footer-link-list-groups-sizes-tablette);
+
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-5)
+        }
+
+
+        > ul {
+            @include set-sizes($footer-link-list-sizes);
+            @include set-margin($footer-link-list-margin-bottom-size, bottom);
+
+            /* Changed the margin of the special Font Awesome list class to align the list of links with icons with the list without icons on the vertical axis */
+            &.fa-ul {
+                margin-left: 1.5rem;
+            }
+
+
+            @include from-large-mobile-and-more {
+                width: 50%;
+            }
+
+            @include from-tablette-and-more {
+                @include set-sizes($footer-link-list-sizes-tablette);
+                @include set-margin(0, bottom);
+            }
+        }
+
+        &__link {
+            @include set-sizes($footer-link-sizes);
+            @include set-margin($footer-link-margin-bottom-size, bottom);
+
+            .fas {
+                color: $primary-neutral-clr;
+            }
+
+            > a {
+                color: $primary-neutral-clr;
+            }
+        }
+    }
+}

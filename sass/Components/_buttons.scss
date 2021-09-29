@@ -1,0 +1,32 @@
+.btn {
+	width: map-get($grid-col, col-8);
+	height: 3.57rem;
+	margin: 1.9em 0 0;
+
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $primary-neutral-clr;
+
+	border-radius: 2rem;
+	border-style: none;
+
+	background: linear-gradient(to bottom, $secondary-clr, $primary-clr);
+
+    box-shadow: 0px 4px 8px 2px hsl(0deg 0% 75%);
+
+    @include from-large-mobile-and-more {
+        width: map-get($grid-col, col-6);
+    }
+
+    @include from-tablette-and-more {
+        width: map-get($grid-col, col-4);
+    }
+
+    @include from-computer-and-more {
+        width: map-get($grid-col, col-3);
+    }
+
+    @include from-large-screen-and-more {
+        width: map-get($grid-col, col-2);
+    }
+}

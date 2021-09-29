@@ -1,0 +1,11 @@
+@function use-shorthand-property($optional-sides) {
+    $result: " ";
+
+    @if ($optional-sides != 0) {
+        $result: "no";
+    } @else {
+        $result: "yes";
+    }
+    
+    @return $result;
+}
