@@ -365,6 +365,10 @@ template {
   box-sizing: border-box;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 html {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 14px;
@@ -456,6 +460,55 @@ a:visited {
 .header__logo {
   width: 50%;
   height: 2em;
+}
+
+.footer {
+  width: 100%;
+  height: 14.14rem;
+  display: flex;
+  background-color: #353535;
+}
+.footer > .footer-wrapper {
+  width: 100%;
+  height: 11rem;
+  margin: 1.92rem 1.35rem 2.71rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__heading {
+  width: 33.33%;
+  height: auto;
+  margin-bottom: 1.57rem;
+  font-family: "Shrikhand", cursive, "Arial", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.footer .footer-link-list-groups {
+  width: 91.66%;
+  height: 8rem;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1rem;
+}
+.footer .footer-link-list-groups > ul {
+  width: 58.33%;
+  height: 3.1rem;
+  margin-bottom: 0.92rem;
+  /* Changed the margin of the special Font Awesome list class to align the list of links with icons with the list without icons on the vertical axis */
+}
+.footer .footer-link-list-groups > ul.fa-ul {
+  margin-left: 1.5rem;
+}
+.footer .footer-link-list-groups__link {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 1.07rem;
+}
+.footer .footer-link-list-groups__link .fas {
+  color: #fff;
+}
+.footer .footer-link-list-groups__link > a {
+  color: #fff;
 }
 
 .restaurant-locations {

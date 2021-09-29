@@ -1,0 +1,57 @@
+.footer {
+    @include set-sizes($footer-sizes);
+
+    display: flex; // prevent scroll bar from appearing
+
+    background-color: $quaternary-neutral-clr;
+    
+    > .footer-wrapper {
+        @include set-sizes($footer-wrapper-sizes);
+        @include set-margin($footer-wrapper-margin-sizes);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__heading {
+        @include set-sizes($footer-heading-sizes);
+        @include set-margin($footer-heading-margin-sizes, bottom);
+
+        font-family: 'Shrikhand', cursive, "Arial", sans-serif;
+        font-size: 1.3rem;
+
+        color: $primary-neutral-clr;
+    }
+
+    .footer-link-list-groups {
+        @include set-sizes($footer-link-list-groups-sizes);
+
+        display: flex;
+        flex-flow: row wrap;
+
+        font-size: 1rem;
+
+        > ul {
+            @include set-sizes($footer-link-list-sizes);
+            @include set-margin($footer-link-list-margin-bottom-size, bottom);
+
+            /* Changed the margin of the special Font Awesome list class to align the list of links with icons with the list without icons on the vertical axis */
+            &.fa-ul {
+                margin-left: 1.5rem;
+            }
+        }
+
+        &__link {
+            @include set-sizes($footer-link-sizes);
+            @include set-margin($footer-link-margin-bottom-size, bottom);
+
+            .fas {
+                color: $primary-neutral-clr;
+            }
+
+            > a {
+                color: $primary-neutral-clr;
+            }
+        }
+    }
+}
