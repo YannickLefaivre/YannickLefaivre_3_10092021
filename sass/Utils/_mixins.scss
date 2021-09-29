@@ -1,65 +1,125 @@
 /* Breakpoints mixins */
 
 @mixin from-large-mobile-and-more {
-    @media screen and (min-width: map-get($breakpoints, lg-mobile)) {
-        @content;
-    }
+	@media screen and (min-width: map-get($breakpoints, lg-mobile)) {
+		@content;
+	}
 }
 
 @mixin from-tablette-and-more {
-    @media screen and (min-width: map-get($breakpoints, tablette)) {
-        @content;
-    }
+	@media screen and (min-width: map-get($breakpoints, tablette)) {
+		@content;
+	}
 }
 
 @mixin from-computer-and-more {
-    @media screen and (min-width: map-get($breakpoints, computer)) {
-        @content;
-    }
+	@media screen and (min-width: map-get($breakpoints, computer)) {
+		@content;
+	}
 }
 
 @mixin from-large-screen-and-more {
-    @media screen and (min-width: map-get($breakpoints, large-screen)) {
-        @content;
-    }
+	@media screen and (min-width: map-get($breakpoints, large-screen)) {
+		@content;
+	}
 }
-
 
 /* Make a Box shadow */
 
-@mixin make-box-shadow($offset, $effect-area, $color: hsl(0, 0, 70%))
-{
-    box-shadow: $offset $effect-area $color;
+@mixin make-box-shadow($offset, $effect-area, $color: hsl(0, 0, 70%)) {
+	box-shadow: $offset $effect-area $color;
 }
 
-@mixin make-box-shadow--with-inset ($offset, $effect-area, $color: hsl(0deg, 0%, 70%), $type: inset)
-{
-    box-shadow: $offset $effect-area $color $type;
+@mixin make-box-shadow--with-inset(
+	$offset,
+	$effect-area,
+	$color: hsl(0deg, 0%, 70%),
+	$type: inset
+) {
+	box-shadow: $offset $effect-area $color $type;
 }
 
+/* Sets the selector sizes */
+
+@mixin set-sizes($sizes, $option: 0) {
+
+	@if ($option == width) or ($option == height)
+	{
+		@if ($option == width) {
+			width: $sizes;
+		} @else if ($option == height) {
+			height: $sizes;
+		} @else {
+			$sizes: 0;
+		}
+	} @else {
+		width: map-get($sizes, width);
+		height: map-get($sizes, height);
+	}
+}
 
 /* Sets the selector margin */
 
-@mixin set-selector-margin($sizes)
-{
-    margin: $sizes;
+@mixin set-margin($sizes, $optional-sides: 0) {
+	@if (use-shorthand-property($optional-sides) == "no") {
+		@if ($optional-sides == top) {
+			margin-top: $sizes;
+		}
+
+		@if ($optional-sides == bottom) {
+			margin-bottom: $sizes;
+		}
+
+		@if ($optional-sides == right) {
+			margin-right: $sizes;
+		}
+
+		@if ($optional-sides == left) {
+			margin-left: $sizes;
+		}
+	} @else {
+		margin: $sizes;
+	}
 }
 
+
+/* Sets the selctor padding */
+
+@mixin set-padding($sizes, $optional-sides: 0) {
+    @if (use-shorthand-property($optional-sides) == "no") {
+		@if ($optional-sides == top) {
+			padding-top: $sizes;
+		}
+
+		@if ($optional-sides == bottom) {
+			padding-bottom: $sizes;
+		}
+
+		@if ($optional-sides == right) {
+			padding-right: $sizes;
+		}
+
+		@if ($optional-sides == left) {
+			padding-left: $sizes;
+		}
+	} @else {
+		padding: $sizes;
+	}
+}
 
 
 /* Print the number of a ordoned list with a purple-ish background-color alongside the icon assiociate to <li> markup */
 
 @mixin print-ordoned-list-number($ordoned-list-number) {
-    @each $number, $charValue in $ordoned-list-number {
-        &--#{$number}::before {
-            content: $charValue;
-        }
-    }
+	@each $number, $charValue in $ordoned-list-number {
+		&--#{$number}::before {
+			content: $charValue;
+		}
+	}
 }
-
 
 /* Ohmyfood website custom marker padding */
 
 @mixin custom-marker-padding {
-    padding: $omf-ol-custom-marker-padding;
+	padding: $omf-ol-custom-marker-padding;
 }
