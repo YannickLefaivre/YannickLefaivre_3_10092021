@@ -34,21 +34,26 @@
 
 	background-color: $secondary-neutral-clr;
 
-	border-radius: 1rem;
+	border-radius: $search-form-border-radius-sizes;
 
-	@include from-tablette-and-more {
+	@include from-extra-small-mobile-and-more {
+		width: map-get($grid-col, col-8)
+	}
+
+	@include from-large-mobile-and-more {
 		background-color: $primary-neutral-clr;
 	}
+
 
 	&__icon {
 		padding: $form-icon-padding;
 	}
 
-	&__searchField {
-		width: 75%;
+	&__search-field {
+		width: map-get($grid-col, col-8);
 		height: inherit;
 
-		padding: 0 0.3em;
+		padding: $form-search-field-padding-sizes;
 
 		font-weight: bold;
 		text-align: left;
@@ -57,8 +62,9 @@
 
 		border-style: none;
 
-		@include from-tablette-and-more {
-			width: 90%;
+		@include from-large-mobile-and-more {
+			width: map-get($grid-col, col-11);
+			border-radius: $search-form-border-radius-sizes;
 		}
 	}
 }
@@ -249,7 +255,7 @@
 .restaurants-menu {
 	height: auto;
 
-	> .restaurants-menu-wrapper {
+	> .restaurants-menu__wrapper {
 		@include set-padding($restaurants-menu-wrapper-padding-sizes);
 
         display: flex;

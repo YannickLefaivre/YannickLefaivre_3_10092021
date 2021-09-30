@@ -12,7 +12,11 @@
 
 	background: linear-gradient(to bottom, $secondary-clr, $primary-clr);
 
-    box-shadow: 0px 4px 8px 2px hsl(0deg 0% 75%);
+    @include make-box-shadow($buttons-shadow-sizes, $buttons-shadow-effect-area, $buttons-shadow-clr);
+
+    @include from-extra-small-mobile-and-more {
+        width: map-get($grid-col, col-9);
+    }
 
     @include from-large-mobile-and-more {
         width: map-get($grid-col, col-6);

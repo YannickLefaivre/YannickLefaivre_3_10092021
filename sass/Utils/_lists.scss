@@ -1,5 +1,7 @@
 /* Margin value */
 
+$main-wrapper-margin-sizes: 0 auto;
+
 $user-guide-instructions-margin-sizes: $zero-value 2rem 1.7rem;
 $restaurant-menu-heading-margin-sizes: $zero-value $page-wrapping-sizes 1.92rem;
 $menu-card-margin-sizes: $zero-value $page-wrapping-sizes 1.21rem;
@@ -9,6 +11,8 @@ $footer-wrapper-margin-sizes: $footer-wrapper-margin-top-size $page-wrapping-siz
 
 /* Padding sizes */
 
+$form-search-field-padding-sizes: $zero-value 0.3rem;
+
 $restaurants-menu-wrapper-padding-sizes: 3rem $zero-value 3.35rem;
 
 
@@ -16,6 +20,9 @@ $restaurants-menu-wrapper-padding-sizes: 3rem $zero-value 3.35rem;
 
 $restaurant-locations-shadow-sizes: $zero-shadow-offset-x 4px;
 $restaurant-locations-shadow-effect-area: 6px -6px;
+
+$buttons-shadow-sizes: $zero-value 4px;
+$buttons-shadow-effect-area: 8px 2px;
 
 $user-guide-instructions-shadow-sizes: $zero-shadow-offset-x 5px;
 $user-guide-instructions-shadow-effect-area: 12px -4px;

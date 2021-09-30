@@ -1,3 +1,8 @@
+/* Null and zero value */
+
+$zero-value: 0;
+
+
 /* Colors */
 
 $primary-clr: #9356DC;
@@ -11,6 +16,9 @@ $secondary-neutral-clr: #eaeaea;
 $tertiary-neutral-clr: #f6f6f6;
 $quaternary-neutral-clr: #353535;
 
+
+$buttons-shadow-clr: hsl(0deg 0% 75%);
+
 $user-guide__instructions-icon-clr: #7d7d7d;
 $user-guide-instructions-shadow-color: #bfbfbf;
 
@@ -19,12 +27,13 @@ $menu-card-shadow-clr: #d9d9d9;
 
 /* Box sizes */
 
+$main-wrapper-width: 1440px;
+
 $menu-prev-and-img-height: 12.5rem;
 $menu-prev-and-img-height-lg-mobile: 11rem;
 
 $footer-height-tablette: 13rem;
 $footer-wrapper-height-tablette: 10rem;
-
 
 
 /* Font sizes */
@@ -49,8 +58,6 @@ $form-icon-padding: 0 .5rem;
 
 $page-wrapping-sizes: 1.35rem;
 
-$zero-value: 0;
-
 $menu-card-margin-bottom-size: 2.5rem;
 $menu-card-infos-margin-top-size: 1.1rem;
 
@@ -63,3 +70,8 @@ $footer-link-margin-bottom-size: 1.07rem;
 /* Shadow offset */
 
 $zero-shadow-offset-x: 0;
+
+
+/* Border radius variables */
+
+$search-form-border-radius-sizes: 1rem;
