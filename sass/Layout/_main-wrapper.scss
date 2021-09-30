@@ -1,0 +1,8 @@
+.main-wrapper {
+    width: map-get($grid-col, col-12);
+
+    @include from-large-screen-and-more {
+        max-width: $main-wrapper-width;
+        margin: $main-wrapper-margin-sizes;
+    }
+}

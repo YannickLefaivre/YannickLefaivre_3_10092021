@@ -15,7 +15,7 @@
         @include set-sizes($footer-height-tablette, height);
     }
     
-    > .footer-wrapper {
+    > .footer__wrapper {
         @include set-sizes($footer-wrapper-sizes);
         @include set-margin($footer-wrapper-margin-sizes);
 

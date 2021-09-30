@@ -9,30 +9,37 @@
 		<title>Home page | Ohmyfood</title>
 		<meta
 			name="description"
-			content="Page description. No longer than 155 characters."
+			content="Commandez sur Ohmyfood votre repas dans les restaurants les plus prestigieux de paris avant votre arriver et réduisez ainsi le temps d'attente à zéro !"
 		/>
 
 		<!-- Twitter Card data -->
 		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@publisher_handle" />
-		<meta name="twitter:title" content="Page Title" />
+		<meta name="twitter:site" content="@pohmyfood" />
+		<meta name="twitter:title" content="Home page" />
 		<meta
 			name="twitter:description"
-			content="Page description less than 200 characters"
+			content="Commandez sur Ohmyfood votre repas dans les restaurants les plus prestigieux de paris avant votre arriver et réduisez ainsi le temps d'attente à zéro !"
 		/>
-		<meta name="twitter:creator" content="@author_handle" />
+		<meta name="twitter:creator" content="@ohmyfood" />
 		<!-- Twitter Summary card images must be at least 200x200px -->
-		<meta name="twitter:image" content="http://www.example.com/image.jpg" />
+		<meta name="twitter:image" content="./pictures/twitter_share_picture.jpg" />
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="Title Here" />
+		<meta property="og:title" content="Home Page" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://www.example.com/" />
-		<meta property="og:image" content="http://example.com/image.jpg" />
-		<meta property="og:description" content="Description Here" />
-		<meta property="og:site_name" content="Site Name" />
-		<meta property="fb:admins" content="Facebook numeric ID" />
+		<meta property="og:url" content="http://www.ohmyfood.com/" />
+		<meta property="og:image" content="./pictures/facebook_share_picture.jpg" />
+		<meta property="og:description" content="Commandez sur Ohmyfood votre repas dans les restaurants les plus prestigieux de paris avant votre arriver et réduisez ainsi le temps d'attente à zéro !" />
+		<meta property="og:site_name" content="Ohmyfood" />
 
+
+		<!-- Default favicon and apple touch specific icon -->
+
+		<link rel="icon" href="./pictures/logo/ohmyfood@2x.svg" type="image/svg+xml">
+
+		<link rel="apple-touch-icon" href="./pictures/logo/ohmyfood.png">
+
+		
 		<!-- Link to my custom CSS rules -->
 
 		<link
@@ -66,8 +73,8 @@
 	</head>
 
 	<body>
-		<!-- Page container -->
-		<div class="container">
+		<!-- Page main wrapper -->
+		<div class="main-wrapper">
 			<!-- Header -->
 			<header class="header">
 				<img
@@ -79,8 +86,8 @@
 
 			<!-- Page main content (start) -->
 			<main>
-				<!-- Restaurant locations -->
-				<div class="restaurant-locations">
+				<!-- Non linear navigation section -->
+				<nav class="restaurant-locations">
 					<div class="restaurant-locations__wrapper">
 						<!-- The search form with its field and icon -->
 						<form class="form" method="POST" action="#">
@@ -88,13 +95,14 @@
 
 							<input
 								type="search"
-								name="form__searchField"
-								class="form__searchField"
+								name="form__search-field"
+								class="form__search-field"
 								value="Paris, Belleville"
+								readonly
 							/>
 						</form>
 					</div>
-				</div>
+				</nav>
 
 				<!-- Enterprise presentation -->
 				<section class="enterprise-presentation">
@@ -144,7 +152,7 @@
 
 				<!-- List of restaurant menus -->
 				<section class="restaurants-menu">
-					<div class="restaurants-menu-wrapper">
+					<div class="restaurants-menu__wrapper">
 						<h2 class="restaurants-menu__heading">Restaurants</h2>
 
 						<div class="restaurants-menu-cards-grid">
@@ -157,6 +165,8 @@
 											src="./pictures/restaurants/la-palette-du-gout.jpg"
 											alt="Aperçue d'un plat du restaurant La palette du goût"
 											ismap
+											width="4402"
+											height="2935"
 										/>
 
 										<span class="menu-prev__new-restaurant-indicator"
@@ -183,6 +193,8 @@
 											src="./pictures/restaurants/la_note_enchantee.jpg"
 											alt="Aperçue d'un plat du restaurant La note enchantée"
 											ismap
+											width="3024"
+											height="3780"
 										/>
 
 										<span class="menu-prev__new-restaurant-indicator"
@@ -207,6 +219,8 @@
 										src="./pictures/restaurants/a_la_francaise.jpg"
 										alt="Aperçue d'un plat du restaurant À la française"
 										ismap
+										width="3936"
+										height="2624"
 									/>
 									<div class="menu-card-infos">
 										<h3 class="menu-card-infos__heading">À la française</h3>
@@ -226,6 +240,8 @@
 										src="./pictures/restaurants/le_delice_des_sens.jpg"
 										alt="Aperçue d'un plat du restaurant Le délice des sens"
 										ismap
+										width="5043"
+										height="3456"
 									/>
 									<div class="menu-card-infos">
 										<h3 class="menu-card-infos__heading">Le délice des sens</h3>
@@ -244,7 +260,7 @@
 
 			<!-- Footer -->
 			<footer class="footer">
-				<section class="footer-wrapper">
+				<section class="footer__wrapper">
 					<h2 class="footer__heading">Ohmyfood</h2>
 
 					<div class="footer-link-list-groups">
