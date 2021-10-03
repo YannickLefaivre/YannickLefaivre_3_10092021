@@ -3,7 +3,7 @@
 /* Box sizes */
 /* Font sizes */
 /* Form padding */
-/* Margin */
+/* Margin variables */
 /* Shadow offset */
 /* Border radius variables */
 /* Margin value */
@@ -14,6 +14,7 @@
 /* Column of the grid built with flexbox */
 /* Breakpoints */
 /* Ordoned list number */
+/* Margin maps */
 /* Selector sizes */
 /* Breakpoints mixins */
 /* Make a Box shadow */
@@ -464,9 +465,27 @@ a:visited {
   font-weight: normal;
   background-color: #fff;
 }
+.header--layout-with-icon {
+  align-items: unset;
+}
+.header .header-wrapper {
+  width: 91.66%;
+  height: inherit;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(4.42rem, auto);
+  justify-content: center;
+  align-items: center;
+}
+.header__button-back-to-home-page {
+  grid-column: 1;
+}
+.header__button-back-to-home-page__icon {
+  font-size: 1.4rem;
+}
 .header__logo {
-  width: 50%;
-  height: 2em;
+  height: 2rem;
+  grid-column: 7;
 }
 
 .footer {
