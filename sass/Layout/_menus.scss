@@ -1,0 +1,17 @@
+.menu {
+    margin-top: -2.42rem;
+
+    
+    grid-column: 1 / 13;
+
+    display: flex;
+    justify-content: center;
+    background-color: #f6f6f6;
+    
+    border-radius: 3rem;
+
+    .menu-wrapper {
+        width: 90%;
+        height: 101.21rem;
+    }
+}
