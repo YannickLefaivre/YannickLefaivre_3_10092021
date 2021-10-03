@@ -9,24 +9,81 @@
         <meta name="description" content="Page description. No longer than 155 characters." />
 
         <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@publisher_handle">
-        <meta name="twitter:title" content="Page Title">
+        <meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@pohmyfood" />
+		<meta name="twitter:title" content="Menu - À la française" />
         <meta name="twitter:description" content="Page description less than 200 characters">
-        <meta name="twitter:creator" content="@author_handle">
+		<meta name="twitter:creator" content="@ohmyfood" />
         <!-- Twitter Summary card images must be at least 200x200px -->
         <meta name="twitter:image" content="http://www.example.com/image.jpg">
 
         <!-- Open Graph data -->
-        <meta property="og:title" content="Title Here" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:title" content="Home Page" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.ohmyfood.com/" />
         <meta property="og:image" content="http://example.com/image.jpg" />
         <meta property="og:description" content="Description Here" /> 
-        <meta property="og:site_name" content="Site Name" />
-        <meta property="fb:admins" content="Facebook numeric ID" />
-    </head>
-    <body>
+		<meta property="og:site_name" content="Ohmyfood" />
         
+
+        <!-- Default favicon and apple touch specific icon -->
+
+		<link rel="icon" href="./pictures/logo/ohmyfood@2x.svg" type="image/svg+xml">
+
+		<link rel="apple-touch-icon" href="./pictures/logo/ohmyfood.png">
+
+		
+		<!-- Link to my custom CSS rules -->
+
+		<link
+			rel="stylesheet"
+			href="./public/css/dist/main.min.css"
+			type="text/css"
+		/>
+
+		<!-- Integration of Roboto and Shrikhand fonts with Google Fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Roboto -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Shrikhand -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Add my Font Awesome kit to use it in this page -->
+		<script
+			src="https://kit.fontawesome.com/9809ccf456.js"
+			crossorigin="anonymous"
+		></script>
+    </head>
+
+    <body>
+        <!-- Page main wrapper -->
+        <div>  
+            <!-- Header -->
+			<header class="header">
+                <a href="./home-page.html" title="Retourner à la page d'accueil">
+                    <span class="fas fa-arrow-left"></span>
+                </a>
+
+				<img
+					class="header__logo"
+					src="./pictures/logo/ohmyfood@2x.svg"
+					alt="Logo de Ohmyfood"
+				/>
+			</header>
+            
+            <!-- Main page content -->
+
+            <!-- Footer -->
+        </div>
     </body>
 </html>
