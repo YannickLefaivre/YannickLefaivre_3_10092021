@@ -31,7 +31,10 @@ $user-guide-instructions-shadow-sizes: $zero-shadow-offset-x 5px;
 $user-guide-instructions-shadow-effect-area: 12px -4px;
 
 $menu-card-shadow-sizes: $zero-shadow-offset-x 0.07rem;
-$menu-card-shadow-effect-area: 0.5rem 0.2rem;
+$menu-card-shadow-effect-area: 0.5rem $light-shadow-offset-y;
+
+$meal-card-shadow-sizes: $zero-shadow-offset-x $light-shadow-offset-y;
+$meal-card-shadow-effect-area: 0.9rem -0.3rem;
 
 
 /* Ohmyfood website custom marker padding value */

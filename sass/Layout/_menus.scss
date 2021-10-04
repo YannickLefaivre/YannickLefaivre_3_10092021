@@ -93,6 +93,7 @@
 
             background-color: #fff;
             border-radius: 1.2rem;
+            @include make-box-shadow($meal-card-shadow-sizes, $meal-card-shadow-effect-area, $meal-card-shadow-clr);
             
             &__name {
                 grid-column: 1 / 3;
