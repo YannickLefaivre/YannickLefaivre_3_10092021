@@ -2,7 +2,13 @@
 
 
 @mixin from-extra-small-mobile-and-more {
-	@media screen and (min-width: map-get($breakpoints, xs-mobile)) {
+	@media screen and (min-width: map-get($breakpoints, sm-mobile)) {
+		@content;
+	}
+}
+
+@mixin from-medium-mobile-and-more {
+	@media screen and (min-width: map-get($breakpoints, md-mobile)) {
 		@content;
 	}
 }
