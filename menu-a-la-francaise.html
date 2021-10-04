@@ -18,7 +18,7 @@
         <meta name="twitter:image" content="http://www.example.com/image.jpg">
 
         <!-- Open Graph data -->
-		<meta property="og:title" content="Home Page" />
+		<meta property="og:title" content="Menu - À la française" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://www.ohmyfood.com/" />
         <meta property="og:image" content="http://example.com/image.jpg" />
@@ -84,12 +84,116 @@
 			</header>
             
             <!-- Main page content -->
-            <main>
+            <main class="page-main-content">
+
+                <!-- Restaurant menu page banner -->
                 <figure class="menu-page-banner">
                     <img src="./pictures/restaurants/a_la_francaise.jpg" alt="Aperçue d'un plat du restaurant À la française">
                 </figure>
-            </main>
 
+                <section class="menu">
+                    <div class="menu-wrapper">
+                        <div class="restaurant-name-and-fav-icon">
+                            <h1 class="restaurant-name-and-fav-icon__heading">À la française</h1>
+
+                            <span class="restaurant-name-and-fav-icon__icon far fa-heart"></span>
+                        </div>
+
+                        <!-- Entrances -->
+                        <article class="meal-grid">
+                            <div class="meal-grid-heading-with-border-bottom">
+                                <h2 class="meal-grid-heading-with-border-bottom__heading">Entrées</h2>
+                                <span class="meal-grid-heading-with-border-bottom__border-bottom"></span>
+                            </div>
+
+                            <ul>
+                                <li class="meal">
+                                    <h3 class="meal__name">Tartare de poulpe acidulé</h3>
+                                    <p class="meal__additional-infos">Aux zeste d'orange <strong class="meal__price">25&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Velouté de légumes d'antan</h3>
+                                    <p class="meal__additional-infos">
+                                        Carotte, panais, topinambour <strong class="meal__price">35&euro;</strong>
+                                    </p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Soupe à l'oignon</h3>
+                                    <p class="meal__additional-infos">Revisitée <strong class="meal__price">20&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <!-- Dishes -->
+                        <article class="meal-grid">
+                            <div class="meal-grid-heading-with-border-bottom">
+                                <h2 class="meal-grid-heading-with-border-bottom__heading">Plats</h2>
+                                <span class="meal-grid-heading-with-border-bottom__border-bottom"></span>
+                            </div>
+
+                            <ul>
+                                <li class="meal">
+                                    <h3 class="meal__name">Coquille Saint-Jacques</h3>
+                                    <p class="meal__additional-infos"> Accompagnées d'une purée de panais<strong class="meal__price">40&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Magret de Canard</h3>
+                                    <p class="meal__additional-infos">
+                                        Et parmentier de pommes de terre <strong class="meal__price">35&euro;</strong>
+                                    </p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Pigeonneau d'Ille-et-Vilaine</h3>
+                                    <p class="meal__additional-infos">Sur son lit de gnocchis aux légumes <strong class="meal__price">44&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <!-- Desserts -->
+                        <article class="meal-grid">
+                            <div class="meal-grid-heading-with-border-bottom">
+                                <h2 class="meal-grid-heading-with-border-bottom__heading">Desserts</h2>
+                                <span class="meal-grid-heading-with-border-bottom__border-bottom"></span>
+                            </div>
+
+                            <ul>
+                                <li class="meal">
+                                    <h3 class="meal__name">Pétales de violette glacé</h3>
+                                    <p class="meal__additional-infos"> Et purée de noisettes <strong class="meal__price">18&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Fondant au chocolat</h3>
+                                    <p class="meal__additional-infos">    Revisitée <strong class="meal__price">22&euro;</strong>
+                                    </p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+
+                                <li class="meal">
+                                    <h3 class="meal__name">Millefeuille croustillant</h3>
+                                    <p class="meal__additional-infos">Mirtilles et pâte d'amande<strong class="meal__price">23&euro;</strong></p>
+                                    <span class="meal__ordered-icon fas fa-check-circle"></span>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <button class="btn btn--restaurant-menu-page-sizes btn--margin-unset">
+                            Commander
+                        </button>
+                    </div>
+                </section>
+            </main>
 
             <!-- Footer -->
         </div>

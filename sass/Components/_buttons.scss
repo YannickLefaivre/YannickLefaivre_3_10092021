@@ -33,4 +33,13 @@
     @include from-large-screen-and-more {
         width: map-get($grid-col, col-2);
     }
+
+    &--restaurant-menu-page-sizes {
+        width: map-get($grid-col, col-8);
+        height: 4rem;
+    }
+
+    &--margin-unset {
+        margin: unset;
+    }
 }
