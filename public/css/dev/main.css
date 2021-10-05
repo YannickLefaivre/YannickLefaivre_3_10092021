@@ -456,10 +456,10 @@ a:visited {
 }
 @media screen and (min-width: 700px) {
   .btn--restaurant-menu-page-sizes {
-    width: 25%;
+    width: 33.33%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .btn--restaurant-menu-page-sizes {
     width: 16.66%;
   }
@@ -728,6 +728,16 @@ a:visited {
 @media screen and (min-width: 480px) {
   .menu .meal-grid .meal-grid-heading-with-border-bottom__border-bottom {
     width: 8.33%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .meal-grid .meal-grid-heading-with-border-bottom__border-bottom {
+    width: 6%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu .meal-grid .meal-grid-heading-with-border-bottom__border-bottom {
+    width: 4.5%;
   }
 }
 .menu .meal-grid ul {

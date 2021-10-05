@@ -83,6 +83,14 @@
 				@include from-large-mobile-and-more {
 					width: map-get($grid-col, col-1);
 				}
+				
+				@include from-computer-and-more {
+					width: $meal-card-heading-border-bottom-width-size-computer;
+				}
+
+				@include from-large-screen-and-more {
+					width: $meal-card-heading-border-bottom-width-size-lg-screen;
+				}
 			}
 		}
 

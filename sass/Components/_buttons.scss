@@ -43,10 +43,10 @@
         }
 
         @include from-tablette-and-more {
-            width: map-get($grid-col, col-3);
+            width: map-get($grid-col, col-4);
         }
 
-        @include from-computer-and-more {
+        @include from-large-screen-and-more {
             width: map-get($grid-col, col-2);
         }
     }
