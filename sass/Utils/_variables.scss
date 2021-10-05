@@ -24,6 +24,8 @@ $user-guide-instructions-shadow-color: #bfbfbf;
 
 $menu-card-shadow-clr: #d9d9d9;
 
+$meal-card-shadow-clr: #cccccc;
+
 
 /* Box sizes */
 
@@ -31,6 +33,9 @@ $main-wrapper-width: 1440px;
 
 $menu-prev-and-img-height: 12.5rem;
 $menu-prev-and-img-height-lg-mobile: 11rem;
+
+$meal-card-heading-border-bottom-width-size-computer: 6%;
+$meal-card-heading-border-bottom-width-size-lg-screen: 4.5%;
 
 $footer-height-tablette: 13rem;
 $footer-wrapper-height-tablette: 10rem;
@@ -54,9 +59,11 @@ $menu-card-infos-restaurant-detailed-location-font-size-lg-mobile: 1rem;
 $form-icon-padding: 0 .5rem;
 
 
-/* Margin */
+/* Margin variables */
 
 $page-wrapping-sizes: 1.35rem;
+
+$btn-margin-top-size: 1.9rem;
 
 $menu-card-margin-bottom-size: 2.5rem;
 $menu-card-infos-margin-top-size: 1.1rem;
@@ -64,12 +71,13 @@ $menu-card-infos-margin-top-size: 1.1rem;
 $footer-wrapper-margin-top-size: 1.92rem;
 $footer-heading-margin-sizes: 1.57rem;
 $footer-link-list-margin-bottom-size: 0.92rem;
-$footer-link-margin-bottom-size: 1.07rem; 
+$footer-link-margin-bottom-size: 1.07rem;
 
 
 /* Shadow offset */
 
 $zero-shadow-offset-x: 0;
+$light-shadow-offset-y: 0.2rem;
 
 
 /* Border radius variables */

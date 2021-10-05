@@ -19,8 +19,8 @@ $grid-col: (
 /* Breakpoints */
 
 $breakpoints: (
-    sm-mobile: 0px,
-    xs-mobile: 280px,
+    sm-mobile: 280px,
+    md-mobile: 320px,
     lg-mobile: 480px,
     tablette: 700px,
     computer: 992px,
@@ -33,7 +33,16 @@ $breakpoints: (
 $ordoned-list-number: (number-one: '1', number-two: '2', number-three: '3');
 
 
+/* Margin maps */
+
+$header-icon-horizontal-margin-sizes: (left: $page-wrapping-sizes, right: 4.71rem);
+
+
 /* Selector sizes */
+
+$header-wrapper-sizes: (width: map-get($grid-col, col-11), height: inherit);
+
+$header-button-back-to-home-page-sizes: (width: 3.14rem, height: 3.14rem);
 
 $user-guide-sizes: (width: auto, height: 30rem);
 

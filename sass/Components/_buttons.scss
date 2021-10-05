@@ -33,4 +33,29 @@
     @include from-large-screen-and-more {
         width: map-get($grid-col, col-2);
     }
+
+    &--restaurant-menu-page-sizes {
+        width: map-get($grid-col, col-8);
+        height: 4rem;
+
+        @include from-large-mobile-and-more {
+            width: map-get($grid-col, col-5);
+        }
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-4);
+        }
+
+        @include from-large-screen-and-more {
+            width: map-get($grid-col, col-2);
+        }
+    }
+
+    &--margin-top-size {
+        margin-top: $zero-value;
+
+        @include from-computer-and-more {
+            margin: $btn-margin-top-size;
+        }
+    }
 }
