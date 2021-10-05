@@ -41,9 +41,21 @@
         @include from-large-mobile-and-more {
             width: map-get($grid-col, col-5);
         }
+
+        @include from-tablette-and-more {
+            width: map-get($grid-col, col-3);
+        }
+
+        @include from-computer-and-more {
+            width: map-get($grid-col, col-2);
+        }
     }
 
-    &--margin-unset {
-        margin: unset;
+    &--margin-top-size {
+        margin-top: $zero-value;
+
+        @include from-computer-and-more {
+            margin: $btn-margin-top-size;
+        }
     }
 }
