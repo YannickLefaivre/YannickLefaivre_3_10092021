@@ -18,6 +18,7 @@
 /* Selector sizes */
 /* Breakpoints mixins */
 /* Make a Box shadow */
+/* Mixins for custom background */
 /* Sets the selector sizes */
 /* Sets the selector margin */
 /* Sets the selctor padding */
@@ -417,8 +418,14 @@ a:visited {
   color: #fff;
   border-radius: 2rem;
   border-style: none;
+  cursor: pointer;
+  transition: background-image 500ms ease, box-shadow 200ms ease-out;
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  box-shadow: 0 4px 8px 2px #bfbfbf;
+  box-shadow: 0 4px 8px 2px #cccccc;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  box-shadow: 0 4px 2px 2px #bfbfbf;
 }
 @media screen and (min-width: 280px) {
   .btn {
