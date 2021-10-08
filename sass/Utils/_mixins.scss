@@ -147,3 +147,7 @@
 @mixin custom-marker-padding {
 	padding: $omf-ol-custom-marker-padding;
 }
+
+@mixin omf-gradient {
+    background-image: linear-gradient(to bottom, $secondary-clr, $primary-clr);
+}

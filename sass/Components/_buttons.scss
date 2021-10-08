@@ -68,3 +68,60 @@
         }
     }
 }
+
+.like-btn {
+    grid-column: 2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    
+    @include from-large-mobile-and-more {
+        font-size: $menu-card-infos-icon-font-size-lg-mobile;
+    }
+
+    @include from-tablette-and-more {
+        font-size: $menu-card-infos-icon-font-size;
+    }
+
+    @include from-large-screen-and-more {
+        font-size: 1.5rem;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: $menu-card-infos-icon-font-size;
+    }
+
+    .far {
+        grid-column: 1;
+        grid-row: 1;
+
+        opacity: 1;
+        transition: opacity 1000ms ease-in;
+
+        &:hover  {
+            opacity: 0;
+            
+            + .fas {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .fas {
+        grid-column: 1;
+        grid-row: 1;
+
+        transform: scale(.01);
+        transition: transform 1000ms ease-in-out;
+
+        @include omf-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
