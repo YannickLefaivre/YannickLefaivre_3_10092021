@@ -75,6 +75,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+
+    cursor: pointer;
     
     @include from-large-mobile-and-more {
         font-size: $menu-card-infos-icon-font-size-lg-mobile;
