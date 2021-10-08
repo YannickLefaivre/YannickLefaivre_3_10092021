@@ -5,12 +5,21 @@
 
     font-size: 1.2rem;
     font-weight: 400;
-    color: $primary-neutral-clr;
 
+    color: $primary-neutral-clr;
 	border-radius: 2rem;
 	border-style: none;
+    
+    cursor: pointer;
 
-	background: linear-gradient(to bottom, $secondary-clr, $primary-clr);
+    transition: background-image 500ms ease, box-shadow 200ms ease-out;
+
+	@include omf-gradient-bg;
+
+    &:hover {
+        @include omf-gradient-bg($is-lighten: "yes");
+        @include make-box-shadow($buttons-shadow-sizes, 2px 2px, darken($buttons-shadow-clr, 5%));
+    }
 
     @include make-box-shadow($buttons-shadow-sizes, $buttons-shadow-effect-area, $buttons-shadow-clr);
 

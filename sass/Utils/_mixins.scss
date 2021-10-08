@@ -52,6 +52,17 @@
 	box-shadow: $offset $effect-area $color $type;
 }
 
+/* Mixins for custom background */
+
+@mixin omf-gradient-bg($is-lighten: "no")
+{
+	@if($is-lighten == "yes") {
+		background: linear-gradient(to bottom, lighten($secondary-clr, 5%), lighten($primary-clr, 5%));
+	} @else {
+		background: linear-gradient(to bottom, $secondary-clr, $primary-clr);
+	}
+}
+
 /* Sets the selector sizes */
 
 @mixin set-sizes($sizes, $option: 0) {
