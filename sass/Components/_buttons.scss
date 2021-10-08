@@ -18,7 +18,7 @@
 
     &:hover {
         @include omf-gradient-bg($is-lighten: "yes");
-        @include make-box-shadow($buttons-shadow-sizes, 2px 2px, darken($buttons-shadow-clr, 5%));
+        @include make-box-shadow($buttons-shadow-sizes, $buttons-shadow-effect-area--when-hover, darken($buttons-shadow-clr, 5%));
     }
 
     @include make-box-shadow($buttons-shadow-sizes, $buttons-shadow-effect-area, $buttons-shadow-clr);

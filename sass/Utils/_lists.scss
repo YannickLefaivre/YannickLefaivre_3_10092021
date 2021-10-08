@@ -25,7 +25,9 @@ $restaurant-locations-shadow-sizes: $zero-shadow-offset-x 4px;
 $restaurant-locations-shadow-effect-area: 6px -6px;
 
 $buttons-shadow-sizes: $zero-value 4px;
+
 $buttons-shadow-effect-area: 8px 2px;
+$buttons-shadow-effect-area--when-hover: 2px nth($buttons-shadow-effect-area, 2);
 
 $user-guide-instructions-shadow-sizes: $zero-shadow-offset-x 5px;
 $user-guide-instructions-shadow-effect-area: 12px -4px;
