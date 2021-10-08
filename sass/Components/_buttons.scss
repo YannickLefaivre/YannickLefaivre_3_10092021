@@ -85,31 +85,34 @@
         align-items: center;
 
         font-size: $menu-card-infos-icon-font-size;
+    }
 
-        &.far {
-            grid-column: 1;
-            grid-row: 1;
-            opacity: 1;
-            transition: opacity 450ms ease-in-out;
+    .far {
+        grid-column: 1;
+        grid-row: 1;
 
-            &:hover {
-                opacity: 0;
-            }
-        }
+        opacity: 1;
+        transition: opacity 1000ms ease-in;
 
-        &.fas {
-            grid-column: 2;
-            grid-row: 1;
+        &:hover  {
             opacity: 0;
-            transition: opacity 450ms ease-in-out;
-
-            @include omf-gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            &:hover {
-                opacity: 1;
+            
+            + .fas {
+                transform: scale(1);
             }
         }
+    }
+
+    .fas {
+        grid-column: 1;
+        grid-row: 1;
+
+        transform: scale(.01);
+        transition: transform 1000ms ease-in-out;
+
+        @include omf-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
