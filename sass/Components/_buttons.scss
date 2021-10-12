@@ -104,6 +104,7 @@
 
     cursor: pointer;
 
+    background-color: $primary-neutral-clr;
     border-style: none;
     
     @include from-large-mobile-and-more {
@@ -123,22 +124,22 @@
 
     /*  fill the Like button when the user clicks it (version with CSS animations) */
     
-    &:active > .far {
+   /*  &:active > .far {
         animation-play-state: running;
 
         + .fas {
             animation-play-state: running;
         }
-    }
+    } */
 
     /* fill the Like button when the user clicks it (version with CSS transitions) */
-    /* &:active > .far {
+    &:active > .far {
         opacity: 0;
 
         + .fas {
             transform: scale(1);
         }
-    } */
+    }
 
     @include from-computer-and-more {    
         &:hover > .far {
@@ -163,10 +164,16 @@
         grid-row: 1;
 
         opacity: 1;
-        /* transition: opacity 1000ms ease-in; */
+        transition: opacity 1000ms ease-in;
 
-        animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
-        animation-play-state: paused;
+        /* Modular animation of the Like button with keyframe */
+        
+        /*
+        *
+        * animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
+        * animation-play-state: paused; 
+        *
+        */
         
     }
 
@@ -175,10 +182,16 @@
         grid-row: 1;
 
         transform: scale(.01);
-        /* transition: transform 1000ms ease-in-out; */
+        transition: transform 1000ms ease-in-out;
 
-        animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
-        animation-play-state: paused;
+        /* Modular animation of the Like button with keyframe */
+        
+        /* 
+        *
+        * animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
+        * animation-play-state: paused; 
+        *
+        */
 
 
         @include omf-gradient;

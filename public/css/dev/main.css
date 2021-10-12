@@ -567,16 +567,17 @@ a:visited {
   grid-template-columns: 1fr;
   justify-items: center;
   cursor: pointer;
+  background-color: #fff;
   border-style: none;
   /*  fill the Like button when the user clicks it (version with CSS animations) */
-  /* fill the Like button when the user clicks it (version with CSS transitions) */
-  /* &:active > .far {
-      opacity: 0;
+  /*  &:active > .far {
+       animation-play-state: running;
 
-      + .fas {
-          transform: scale(1);
-      }
-  } */
+       + .fas {
+           animation-play-state: running;
+       }
+   } */
+  /* fill the Like button when the user clicks it (version with CSS transitions) */
 }
 @media screen and (min-width: 480px) {
   .like-btn {
@@ -596,12 +597,10 @@ a:visited {
   }
 }
 .like-btn:active > .far {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  opacity: 0;
 }
 .like-btn:active > .far + .fas {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  transform: scale(1);
 }
 @media screen and (min-width: 992px) {
   .like-btn:hover > .far {
@@ -621,21 +620,27 @@ a:visited {
   grid-column: 1;
   grid-row: 1;
   opacity: 1;
-  /* transition: opacity 1000ms ease-in; */
-  -webkit-animation: like-btn-fade 1000ms 300ms infinite;
-          animation: like-btn-fade 1000ms 300ms infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  transition: opacity 1000ms ease-in;
+  /* Modular animation of the Like button with keyframe */
+  /*
+  *
+  * animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
+  * animation-play-state: paused; 
+  *
+  */
 }
 .like-btn .fas {
   grid-column: 1;
   grid-row: 1;
   transform: scale(0.01);
-  /* transition: transform 1000ms ease-in-out; */
-  -webkit-animation: like-btn-scale 1000ms 150ms infinite;
-          animation: like-btn-scale 1000ms 150ms infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  transition: transform 1000ms ease-in-out;
+  /* Modular animation of the Like button with keyframe */
+  /* 
+  *
+  * animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
+  * animation-play-state: paused; 
+  *
+  */
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
