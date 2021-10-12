@@ -497,21 +497,22 @@ a:visited {
 .like-btn {
   grid-column: 2;
   grid-row: 2/3;
-  margin: 0 0.5rem;
+  margin: 0 1.3rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
-  cursor: pointer;
   cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   .like-btn {
     font-size: 1.3rem;
+    margin: 0 0.8rem;
   }
 }
 @media screen and (min-width: 700px) {
   .like-btn {
     font-size: 1.6rem;
+    margin: 0 1.3rem;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1233,9 +1234,10 @@ a:visited {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(78px, auto);
-  justify-items: center;
   background-color: #fff;
   border-radius: 1rem;
+  align-items: center;
+  justify-items: center;
   box-shadow: 0 0.07rem 0.5rem 0.2rem #d9d9d9;
 }
 @media screen and (min-width: 480px) {

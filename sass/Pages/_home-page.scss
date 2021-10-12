@@ -290,10 +290,12 @@
 		grid-template-columns: 1fr;
 		grid-auto-rows: minmax(78px, auto);
 
-		justify-items: center;
-
 		background-color: #fff;
 		border-radius: 1rem;
+
+		align-items: center;
+		justify-items: center;
+		
 		@include make-box-shadow(
 			$menu-card-shadow-sizes,
 			$menu-card-shadow-effect-area,

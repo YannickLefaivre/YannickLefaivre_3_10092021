@@ -95,20 +95,23 @@
 .like-btn {
     grid-column: 2;
     grid-row: 2/3;
-    margin: 0 .5rem;
+
+    @include set-margin($like-btn-sides-margin-sizes);
+
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
-    cursor: pointer;
 
     cursor: pointer;
     
     @include from-large-mobile-and-more {
         font-size: $menu-card-infos-icon-font-size-lg-mobile;
+        margin: $zero-value .8rem;
     }
 
     @include from-tablette-and-more {
         font-size: $menu-card-infos-icon-font-size;
+        margin: $zero-value 1.3rem;
     }
 
     @include from-large-screen-and-more {
