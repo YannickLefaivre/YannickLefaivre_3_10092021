@@ -5,7 +5,8 @@
 /* Form padding variables */
 /* Margin variables */
 /* Shadow offset variables */
-/* Border radius variables */
+/* Border variables */
+/* Animations variables */
 /* Margin value */
 /* Padding sizes */
 /* Box shadow offset and effect area settings */
@@ -54,6 +55,38 @@
   }
   100% {
     transform: translateX(0px);
+  }
+}
+@-webkit-keyframes like-btn-scale {
+  0% {
+    transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes like-btn-scale {
+  0% {
+    transform: scale(0.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes like-btn-fade {
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@keyframes like-btn-fade {
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
   }
 }
 /**
@@ -576,13 +609,13 @@ a:visited {
   grid-column: 1;
   grid-row: 1;
   opacity: 1;
-  transition: opacity 1000ms ease-in;
+  transition: opacity 700ms ease-in;
 }
 .like-btn .fas {
   grid-column: 1;
   grid-row: 1;
   transform: scale(0.01);
-  transition: transform 1000ms ease-in-out;
+  transition: transform 700ms ease-in-out;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
