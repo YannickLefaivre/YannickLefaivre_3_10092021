@@ -19,21 +19,21 @@
 }
 
 @keyframes like-btn-scale {
-    0% {
+    25% {
         transform: scale(.01);
     }
 
-    100% {
+    75% {
         transform: scale(1);
     }
 }
 
 @keyframes like-btn-fade {
     25% {
-        opacity: 0;
+        opacity: 1;
     }
 
     75% {
-        opacity: 1;
+        opacity: 0;
     }
 }

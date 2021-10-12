@@ -99,10 +99,12 @@
     @include set-margin($like-btn-sides-margin-sizes);
 
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     justify-items: center;
 
     cursor: pointer;
+
+    border-style: none;
     
     @include from-large-mobile-and-more {
         font-size: $menu-card-infos-icon-font-size-lg-mobile;
@@ -119,13 +121,24 @@
     }
     
 
+    /*  fill the Like button when the user clicks it (version with CSS animations) */
+    
     &:active > .far {
+        animation-play-state: running;
+
+        + .fas {
+            animation-play-state: running;
+        }
+    }
+
+    /* fill the Like button when the user clicks it (version with CSS transitions) */
+    /* &:active > .far {
         opacity: 0;
 
         + .fas {
             transform: scale(1);
         }
-    }
+    } */
 
     @include from-computer-and-more {    
         &:hover > .far {
@@ -150,7 +163,11 @@
         grid-row: 1;
 
         opacity: 1;
-        transition: opacity 700ms ease-in;
+        /* transition: opacity 1000ms ease-in; */
+
+        animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
+        animation-play-state: paused;
+        
     }
 
     .fas {
@@ -158,7 +175,11 @@
         grid-row: 1;
 
         transform: scale(.01);
-        transition: transform 700ms ease-in-out;
+        /* transition: transform 1000ms ease-in-out; */
+
+        animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
+        animation-play-state: paused;
+
 
         @include omf-gradient;
         background-clip: text;
