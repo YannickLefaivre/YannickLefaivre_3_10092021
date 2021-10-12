@@ -552,6 +552,20 @@ a:visited {
     font-size: 1.5rem;
   }
 }
+.like-btn:active > .far {
+  opacity: 0;
+}
+.like-btn:active > .far + .fas {
+  transform: scale(1);
+}
+@media screen and (min-width: 992px) {
+  .like-btn:hover > .far {
+    opacity: 0;
+  }
+  .like-btn:hover > .far + .fas {
+    transform: scale(1);
+  }
+}
 .like-btn__icon {
   display: flex;
   justify-content: center;
@@ -563,12 +577,6 @@ a:visited {
   grid-row: 1;
   opacity: 1;
   transition: opacity 1000ms ease-in;
-}
-.like-btn .far:hover {
-  opacity: 0;
-}
-.like-btn .far:hover + .fas {
-  transform: scale(1);
 }
 .like-btn .fas {
   grid-column: 1;

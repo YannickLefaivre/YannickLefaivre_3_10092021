@@ -117,6 +117,25 @@
     @include from-large-screen-and-more {
         font-size: 1.5rem;
     }
+    
+
+    &:active > .far {
+        opacity: 0;
+
+        + .fas {
+            transform: scale(1);
+        }
+    }
+
+    @include from-computer-and-more {    
+        &:hover > .far {
+            opacity: 0;
+
+            + .fas {
+                transform: scale(1);
+            }
+        }
+    }
 
     &__icon {
         display: flex;
@@ -132,14 +151,6 @@
 
         opacity: 1;
         transition: opacity 1000ms ease-in;
-
-        &:hover  {
-            opacity: 0;
-            
-            + .fas {
-                transform: scale(1);
-            }
-        }
     }
 
     .fas {
