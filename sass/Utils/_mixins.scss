@@ -151,3 +151,15 @@
 @mixin omf-gradient {
     background-image: linear-gradient(to bottom, $secondary-clr, $primary-clr);
 }
+
+
+@mixin draw-quarter-cercle($side: "top-left", $width: 1px, $style: none, $color: #ccc, $radius: 100%) {
+	@if ($side == "top-left")
+	{
+		border-top: $width $style $color;
+
+		border-left: $width $style $color;
+
+		border-top-left-radius: $radius;
+	}
+}

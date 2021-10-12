@@ -27,7 +27,7 @@ $menu-card-shadow-clr: #d9d9d9;
 $meal-card-shadow-clr: #cccccc;
 
 
-/* Box sizes */
+/* Box sizes variables */
 
 $main-wrapper-width: 1440px;
 
@@ -80,6 +80,18 @@ $zero-shadow-offset-x: 0;
 $light-shadow-offset-y: 0.2rem;
 
 
-/* Border radius variables */
+/* Border variables */
 
 $search-form-border-radius-sizes: 1rem;
+
+$loading-spinner-border-radius: 100%;
+$loading-spinner-border-width: 4px;
+$loading-spinner-border-style: solid;
+
+
+/* Animations variables */
+
+$anim-loading-spinner-dur: 3000ms;
+$anim-loading-spinner-delay: 150ms;
+
+$anim-spawner-delay: $anim-loading-spinner-dur + $anim-loading-spinner-delay;

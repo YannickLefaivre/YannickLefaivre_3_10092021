@@ -1,0 +1,19 @@
+@keyframes loading-spinner {
+    50% {
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
+
+@keyframes spawn-content {
+    0% {
+        transform: translateX(-9999px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
