@@ -496,10 +496,12 @@ a:visited {
 
 .like-btn {
   grid-column: 2;
-  grid-row: 1/3;
+  grid-row: 2/3;
+  margin: 0 0.5rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
+  cursor: pointer;
   cursor: pointer;
 }
 @media screen and (min-width: 480px) {
@@ -1228,8 +1230,10 @@ a:visited {
   width: 100%;
   height: 18rem;
   margin: 0 1.35rem 1.21rem;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(78px, auto);
+  justify-items: center;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.07rem 0.5rem 0.2rem #d9d9d9;
@@ -1259,6 +1263,8 @@ a:visited {
 .restaurants-menu .menu-card__link {
   width: 100%;
   height: inherit;
+  grid-column: 1/3;
+  grid-row: 1/3;
   display: flex;
   flex-direction: column;
   align-items: center;
