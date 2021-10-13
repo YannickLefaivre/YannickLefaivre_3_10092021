@@ -120,17 +120,6 @@
     @include from-large-screen-and-more {
         font-size: 1.5rem;
     }
-    
-
-    /*  fill the Like button when the user clicks it (version with CSS animations) */
-    
-   /*  &:active > .far {
-        animation-play-state: running;
-
-        + .fas {
-            animation-play-state: running;
-        }
-    } */
 
     /* fill the Like button when the user clicks it (version with CSS transitions) */
     &:active > .far {
@@ -165,16 +154,6 @@
 
         opacity: 1;
         transition: opacity 1000ms ease-in;
-
-        /* Modular animation of the Like button with keyframe */
-        
-        /*
-        *
-        * animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
-        * animation-play-state: paused; 
-        *
-        */
-        
     }
 
     .fas {
@@ -183,16 +162,6 @@
 
         transform: scale(.01);
         transition: transform 1000ms ease-in-out;
-
-        /* Modular animation of the Like button with keyframe */
-        
-        /* 
-        *
-        * animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
-        * animation-play-state: paused; 
-        *
-        */
-
 
         @include omf-gradient;
         background-clip: text;

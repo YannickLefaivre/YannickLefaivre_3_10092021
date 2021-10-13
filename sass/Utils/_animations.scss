@@ -17,23 +17,3 @@
         transform: translateX(0px);
     }
 }
-
-@keyframes like-btn-scale {
-    25% {
-        transform: scale(.01);
-    }
-
-    75% {
-        transform: scale(1);
-    }
-}
-
-@keyframes like-btn-fade {
-    25% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 0;
-    }
-}
