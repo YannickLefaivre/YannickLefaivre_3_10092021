@@ -1,3 +1,26 @@
+.loading-spinner {
+	@include set-sizes($loading-spinner-sizes);
+
+	border: $loading-spinner-border-width $loading-spinner-border-style lighten($secondary-clr, 15);
+	border-radius: $loading-spinner-border-radius;
+
+	transform-origin: center;
+	perspective: 500px;
+
+	animation: loading-spinner $anim-loading-spinner-dur $anim-loading-spinner-delay backwards ease-in-out;
+
+	&__quarter-cercle {
+		width: 5rem;
+		height: 5rem;
+
+		@include draw-quarter-cercle("top-left", $loading-spinner-border-width, $loading-spinner-border-style, $primary-clr);
+	}
+}
+
+.spawner {
+	animation: spawn-content 0ms $anim-spawner-delay both;
+}
+
 .restaurant-locations {
 	width: map-get($grid-col, col-12);
 	height: 3.64rem;
@@ -286,11 +309,16 @@
 		@include set-sizes($menu-card-sizes);
 		@include set-margin($menu-card-margin-sizes);
 
-		display: flex;
-		flex-flow: row wrap;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(78px, auto);
 
-		background-color: $primary-neutral-clr;
+		background-color: #fff;
 		border-radius: 1rem;
+
+		align-items: center;
+		justify-items: center;
+		
 		@include make-box-shadow(
 			$menu-card-shadow-sizes,
 			$menu-card-shadow-effect-area,
@@ -317,6 +345,9 @@
 
 		&__link {
 			@include set-sizes($menu-card-link-sizes);
+
+			grid-column: 1/3;
+			grid-row: 1/3;
 
 			display: flex;
 			flex-direction: column;

@@ -80,8 +80,25 @@ $zero-shadow-offset-x: 0;
 $light-shadow-offset-y: 0.2rem;
 
 
-/* Border radius variables */
+/* Border variables */
 
 $search-form-border-radius-sizes: 1rem;
 
 $btn-radius: 2rem;
+
+$loading-spinner-border-radius: 100%;
+$loading-spinner-border-width: 4px;
+$loading-spinner-border-style: solid;
+
+
+/* Animations variables */
+
+$anim-loading-spinner-dur: 3000ms;
+$anim-loading-spinner-delay: 150ms;
+
+$anim-spawner-delay: $anim-loading-spinner-dur + $anim-loading-spinner-delay;
+
+$anim-like-btn-dur: 1000ms;
+$anim-like-btn-scale-delay: 150ms;
+
+$anim-like-btn-fade-delay: $anim-like-btn-scale-delay / .5;
