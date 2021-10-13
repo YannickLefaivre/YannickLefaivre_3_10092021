@@ -18,6 +18,8 @@
 }
 
 .spawner {
+	width: map-get($grid-col, col-12);
+
 	animation: spawn-content 0ms $anim-spawner-delay both;
 }
 

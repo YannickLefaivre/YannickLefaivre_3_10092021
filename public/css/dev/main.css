@@ -520,6 +520,9 @@ a:visited {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   cursor: pointer;
+  background-color: #fff;
+  border-style: none;
+  /* fill the Like button when the user clicks it (version with CSS transitions) */
 }
 @media screen and (min-width: 480px) {
   .like-btn {
@@ -1012,6 +1015,7 @@ a:visited {
 }
 
 .spawner {
+  width: 100%;
   -webkit-animation: spawn-content 0ms 3150ms both;
           animation: spawn-content 0ms 3150ms both;
 }
