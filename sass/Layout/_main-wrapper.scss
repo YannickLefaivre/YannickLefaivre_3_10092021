@@ -5,12 +5,4 @@
         max-width: $main-wrapper-width;
         margin: $main-wrapper-margin-sizes;
     }
-
-    
-	&--grid-layout {
-		display: grid;
-
-		justify-items: center;
-		align-items: center;
-	}
 }
