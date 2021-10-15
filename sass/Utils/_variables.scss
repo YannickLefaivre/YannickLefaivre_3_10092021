@@ -102,7 +102,7 @@ $circle-inner-border-width: 3px;
 
 $anim-spin-dur: 550ms;
 $anim-spin-delay: 253ms;
-$anim-spin-iteration-count: 3.7;
+$anim-spin-iteration-count: infinite;
 
 $anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01;
 
