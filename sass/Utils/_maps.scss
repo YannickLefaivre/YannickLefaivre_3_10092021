@@ -40,7 +40,17 @@ $header-icon-horizontal-margin-sizes: (left: $page-wrapping-sizes, right: 4.71re
 
 /* Selector sizes */
 
-$loading-spinner-sizes: (width: 10rem, height: 10rem);
+$spawner-sizes: (width: map-get($grid-col, col-12),
+height: auto);
+
+$loading-spinner-sizes: (width: 50vw, height: 50vh);
+
+$load-circle-sizes: (width: 10rem,
+height: 10rem);
+
+$circle-outer-sizes: (width: map-get($grid-col, col-12), height: 100%);
+$circle-inner-sizes: (width: 45%, height: 45%);
+
 
 $header-wrapper-sizes: (width: map-get($grid-col, col-11), height: inherit);
 

@@ -6,7 +6,10 @@ $zero-value: 0;
 /* Colors */
 
 $primary-clr: #9356DC;
+$primary-clr--lighten-pourcent: 20;
+
 $secondary-clr: #FF79DA;
+$secondary-clr--lighten-pourcent: 15;
 
 $tertiary-clr: #99E2D0;
 $tertiary-clr--alt-darken: #099572; 
@@ -84,14 +87,23 @@ $light-shadow-offset-y: 0.2rem;
 
 $search-form-border-radius-sizes: 1rem;
 
-$loading-spinner-border-radius: 100%;
-$loading-spinner-border-width: 4px;
-$loading-spinner-border-style: solid;
+
+/* loading spinner border properties value */
+
+$circle-border-radius: 100%;
+$circle-border-style: solid;
+
+$circle-outer-border-width: 5px;
+
+$circle-inner-border-width: 3px;
 
 
 /* Animations variables */
 
-$anim-loading-spinner-dur: 3000ms;
-$anim-loading-spinner-delay: 150ms;
+$anim-spin-dur: 550ms;
+$anim-spin-delay: 253ms;
+$anim-spin-iteration-count: 3.7;
 
-$anim-spawner-delay: $anim-loading-spinner-dur + $anim-loading-spinner-delay;
+$anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01;
+
+$anim-hide-loader-delay: $anim-spawner-delay;
