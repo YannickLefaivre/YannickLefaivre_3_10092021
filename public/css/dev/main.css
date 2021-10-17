@@ -1012,12 +1012,38 @@ a:visited {
 
 .loading-spinner {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 41%;
+  left: 27%;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+}
+@media screen and (min-width: 320px) {
+  .loading-spinner {
+    left: 33%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .loading-spinner {
+    left: 39.5%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .loading-spinner {
+    left: 41%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .loading-spinner {
+    left: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loading-spinner {
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .load-circle {
