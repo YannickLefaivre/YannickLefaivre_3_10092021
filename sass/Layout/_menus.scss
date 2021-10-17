@@ -145,6 +145,15 @@
 				$meal-card-shadow-clr
 			);
 
+			animation: gradual-onset $anim-gradual-onset-dur $anim-gradual-onset-delay both;
+
+			@for $i from 1 through 3 {
+				&-group--#{$i} {
+					animation-delay: $anim-gradual-onset-delay * $i * 2;
+				}
+
+			}
+
 			&:nth-child(1) {
 				@include from-large-mobile-and-more {
 					grid-column: 1 / 3;

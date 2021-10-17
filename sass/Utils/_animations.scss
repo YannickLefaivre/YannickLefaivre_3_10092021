@@ -19,11 +19,27 @@
 }
 
 @keyframes spawner {
-	0% {
+	from {
 		transform: translateX(-9999px);
 	}
 
-	100% {
+	to {
 		transform: translateX(0);
+	}
+}
+
+@keyframes gradual-onset {
+	0% {
+		opacity: 0;
+		transform: translateY(25%);
+	}
+
+	50% {
+		animation-timing-function: ease-out;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
