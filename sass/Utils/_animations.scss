@@ -1,19 +1,29 @@
-@keyframes loading-spinner {
-    50% {
-        transform: rotateZ(180deg);
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hide-loader {
+    from {
+        transform: translateX(0);
     }
 
-    100% {
-        transform: rotateZ(180deg);
+    to {
+        transform: translateX(-9999px);
     }
 }
 
-@keyframes spawn-content {
-    0% {
-        transform: translateX(-9999px);
-    }
+@keyframes spawner {
+	0% {
+		transform: translateX(-9999px);
+	}
 
-    100% {
-        transform: translateX(0px);
-    }
+	100% {
+		transform: translateX(0);
+	}
 }
