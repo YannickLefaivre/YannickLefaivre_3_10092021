@@ -59,51 +59,47 @@
   }
 }
 @-webkit-keyframes spawner {
-  0% {
+  from {
     transform: translateX(-9999px);
   }
-  100% {
+  to {
     transform: translateX(0);
   }
 }
 @keyframes spawner {
-  0% {
+  from {
     transform: translateX(-9999px);
   }
-  100% {
+  to {
     transform: translateX(0);
   }
 }
-@-webkit-keyframes like-btn-scale {
-  25% {
-    transform: scale(0.01);
-  }
-  75% {
-    transform: scale(1);
-  }
-}
-@keyframes like-btn-scale {
-  25% {
-    transform: scale(0.01);
-  }
-  75% {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes like-btn-fade {
-  25% {
-    opacity: 1;
-  }
-  75% {
+@-webkit-keyframes gradual-onset {
+  0% {
     opacity: 0;
+    transform: translateY(25%);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes like-btn-fade {
-  25% {
-    opacity: 1;
-  }
-  75% {
+@keyframes gradual-onset {
+  0% {
     opacity: 0;
+    transform: translateY(25%);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /**
@@ -586,14 +582,6 @@ a:visited {
   cursor: pointer;
   background-color: #fff;
   border-style: none;
-  /*  fill the Like button when the user clicks it (version with CSS animations) */
-  /*  &:active > .far {
-       animation-play-state: running;
-
-       + .fas {
-           animation-play-state: running;
-       }
-   } */
   /* fill the Like button when the user clicks it (version with CSS transitions) */
 }
 @media screen and (min-width: 480px) {
@@ -638,26 +626,12 @@ a:visited {
   grid-row: 1;
   opacity: 1;
   transition: opacity 1000ms ease-in;
-  /* Modular animation of the Like button with keyframe */
-  /*
-  *
-  * animation: like-btn-fade $anim-like-btn-dur $anim-like-btn-fade-delay infinite;
-  * animation-play-state: paused; 
-  *
-  */
 }
 .like-btn .fas {
   grid-column: 1;
   grid-row: 1;
   transform: scale(0.01);
   transition: transform 1000ms ease-in-out;
-  /* Modular animation of the Like button with keyframe */
-  /* 
-  *
-  * animation: like-btn-scale $anim-like-btn-dur $anim-like-btn-scale-delay infinite;
-  * animation-play-state: paused; 
-  *
-  */
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -977,6 +951,20 @@ a:visited {
   background-color: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 0.2rem 0.9rem -0.3rem #cccccc;
+  -webkit-animation: gradual-onset 350ms 116.6666666667ms both;
+          animation: gradual-onset 350ms 116.6666666667ms both;
+}
+.menu .meal-grid .meal-group--1 {
+  -webkit-animation-delay: 233.3333333333ms;
+          animation-delay: 233.3333333333ms;
+}
+.menu .meal-grid .meal-group--2 {
+  -webkit-animation-delay: 466.6666666667ms;
+          animation-delay: 466.6666666667ms;
+}
+.menu .meal-grid .meal-group--3 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
 }
 @media screen and (min-width: 480px) {
   .menu .meal-grid .meal:nth-child(1) {
