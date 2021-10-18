@@ -8,6 +8,7 @@
 /* Border variables */
 /* loading spinner border properties value */
 /* Animations variables */
+/* Transitiions variables */
 /* Margin value */
 /* Padding sizes */
 /* Box shadow offset and effect area settings */
@@ -104,7 +105,7 @@
 }
 @-webkit-keyframes slide {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -112,7 +113,7 @@
 }
 @keyframes slide {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -979,9 +980,8 @@ a:visited {
   display: grid;
   grid-template-columns: 5fr 1fr;
   grid-auto-rows: auto;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
   cursor: pointer;
+  overflow: hidden;
   background-color: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 0.2rem 0.9rem -0.3rem #cccccc;
@@ -1030,7 +1030,7 @@ a:visited {
     grid-column: 3/4;
   }
 }
-.meal:active .meal__ordered-icon {
+.meal:active .meal__ordered-indicator {
   -webkit-animation: slide 550ms 150ms both ease;
           animation: slide 550ms 150ms both ease;
 }
@@ -1040,23 +1040,26 @@ a:visited {
   -webkit-animation-delay: 506ms;
           animation-delay: 506ms;
 }
-.meal__ordered-icon {
+.meal:active .meal-infos {
+  grid-column: 1;
+}
+.meal__ordered-indicator {
   width: 100%;
   height: 100%;
   grid-column: 2;
   grid-row: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #99e2d0;
   color: #fff;
+  border-radius: 0 1.2rem 1.2rem 0;
   transform-origin: right;
   transform: scaleX(0);
-  justify-content: center;
-  border-radius: 0 1.2rem 1.2rem 0;
 }
 
 .meal-infos {
-  grid-column: 1;
+  grid-column: 1/-1;
   grid-row: 1;
   margin: 1.14rem 1.71rem 1rem 0.71rem;
   display: grid;
@@ -1064,6 +1067,8 @@ a:visited {
   grid-template-columns: 2fr repeat(2, 1fr);
   grid-auto-rows: auto;
   row-gap: 0.4rem;
+  transition: grid-column 300ms 450ms ease-in-out;
+  transition: grid-column 300ms 450ms ease-in-out, -ms-grid-column 300ms 450ms ease-in-out;
 }
 .meal-infos__name {
   font-size: 1.2rem;
@@ -1102,7 +1107,7 @@ a:visited {
     font-size: 1.3rem;
   }
 }
-.meal-infos__additional-infos {
+.meal-infos__additional {
   font-size: 0.9rem;
   grid-row: 3;
   overflow: hidden;
@@ -1110,22 +1115,22 @@ a:visited {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 280px) {
-  .meal-infos__additional-infos {
+  .meal-infos__additional {
     grid-column: 1/3;
   }
 }
 @media screen and (min-width: 320px) {
-  .meal-infos__additional-infos {
+  .meal-infos__additional {
     grid-column: 1/4;
   }
 }
 @media screen and (min-width: 480px) {
-  .meal-infos__additional-infos {
+  .meal-infos__additional {
     grid-column: 1/3;
   }
 }
 @media screen and (min-width: 1440px) {
-  .meal-infos__additional-infos {
+  .meal-infos__additional {
     font-size: 1.1rem;
   }
 }
