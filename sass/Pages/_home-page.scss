@@ -6,8 +6,12 @@
 
 .loading-spinner {
 	position: fixed;
-	top: 41%;
-	left: 27%;
+	top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @include set-sizes($loading-spinner-sizes);
 
 	display: grid;
 	grid-template-columns: 1fr;
@@ -19,27 +23,6 @@
 	overflow: hidden;
 
 	animation: hide-loader 0ms $anim-hide-loader-delay both;
-
-	@include from-medium-mobile-and-more {
-		left: 33%;
-	}
-
-	@include from-large-mobile-and-more {
-		left: 39.5%;
-	}
-
-	@include from-tablette-and-more {
-		left: 41%;
-	}
-
-	@include from-computer-and-more {
-		left: 45%;
-	}
-
-	@include from-large-screen-and-more {
-		top: 50%;
-		left: 50%;
-	}
 }
 
 .load-circle {
