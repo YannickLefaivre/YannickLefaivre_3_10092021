@@ -123,3 +123,17 @@ $anim-like-btn-fade-delay: $anim-like-btn-scale-delay / .5;
 
 $anim-gradual-onset-dur: 350ms;
 $anim-gradual-onset-delay: $anim-gradual-onset-dur / 3;
+
+$anim-slide-dur: 300ms;
+$anim-slide-delay: 150ms;
+$anim-slide-timing: ease;
+$anim-slide-fill-mode: both;
+
+$anim-rotate-delay: $anim-slide-delay * 2;
+$anim-rotate-iteration-count: 3;
+
+
+/* Transitiions variables */
+
+$trans-shrink-grid-column-dur: 300ms;
+$trans-shrink-grid-column-delay: $anim-slide-dur + $anim-slide-delay;
