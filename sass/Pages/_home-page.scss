@@ -1,3 +1,9 @@
+.rm-scroll-bar {
+	overflow: auto;
+
+	animation: remove-scroll $anim-remove-scroll-dur $anim-remove-scroll-delay both;
+}
+
 .loading-spinner {
 	position: fixed;
 	top: 41%;
@@ -8,6 +14,11 @@
 
 	justify-items: center;
 	align-items: center;
+
+	z-index: 1;
+	overflow: hidden;
+
+	animation: hide-loader 0ms $anim-hide-loader-delay both;
 
 	@include from-medium-mobile-and-more {
 		left: 33%;
@@ -43,10 +54,6 @@
 	justify-items: center;
 	align-items: center;
 
-	z-index: -1;
-
-	animation: hide-loader 0ms $anim-hide-loader-delay both;
-
 	&__outer {
 		@include set-sizes($circle-outer-sizes);
 
@@ -65,8 +72,6 @@
 	&__inner {
 		@include set-sizes($circle-inner-sizes);
 
-		cursor: pointer;
-
 		border: $circle-inner-border-width $circle-border-style lighten($secondary-clr, $secondary-clr--lighten-pourcent);
 		border-top-color: $secondary-clr;
 		border-radius: $circle-border-radius;
@@ -77,6 +82,9 @@
 
 .spawner {
 	@include set-sizes($spawner-sizes);
+
+	overflow: hidden;
+	z-index: -1;
 
 	animation: spawner 0ms $anim-spawner-delay both;
 }

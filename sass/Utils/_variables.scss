@@ -113,6 +113,9 @@ $anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01;
 
 $anim-hide-loader-delay: $anim-spawner-delay;
 
+$anim-remove-scroll-dur: 0ms;
+$anim-remove-scroll-delay: $anim-spawner-delay;
+
 $anim-like-btn-dur: 1000ms;
 $anim-like-btn-scale-delay: 150ms;
 
