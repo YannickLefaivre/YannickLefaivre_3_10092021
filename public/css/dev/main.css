@@ -892,9 +892,6 @@ a:visited {
   height: auto;
   margin-top: 2.78rem;
   margin-bottom: 5.92rem;
-  /* grid-template-columns: repeat(6, 1fr); */
-  /* grid-template-rows: 2.35rem repeat(3, 19.57rem); */
-  /* row-gap: 2.42rem; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -902,8 +899,6 @@ a:visited {
   align-content: flex-start;
 }
 .menu .restaurant-name-and-like-icon {
-  /* grid-column: 1 / 7; */
-  /* grid-row: 1; */
   width: 100%;
   height: 2.35rem;
   margin-bottom: 2.42rem;
@@ -913,6 +908,16 @@ a:visited {
 }
 .menu .restaurant-name-and-like-icon__heading {
   margin-top: 0;
+}
+@media screen and (min-width: 280px) {
+  .menu .restaurant-name-and-like-icon__heading {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 320px) {
+  .menu .restaurant-name-and-like-icon__heading {
+    font-size: 2rem;
+  }
 }
 .menu .restaurant-name-and-like-icon__icon {
   font-size: 1.8rem;
@@ -1084,7 +1089,7 @@ a:visited {
   margin: 1.14rem 1.71rem 1rem 0.71rem;
   display: grid;
   align-content: center;
-  grid-template-columns: 2fr repeat(2, 1fr);
+  grid-template-columns: 5fr 1fr;
   grid-auto-rows: auto;
   row-gap: 0.4rem;
   transition: grid-column 300ms 450ms ease-in-out;
@@ -1092,34 +1097,15 @@ a:visited {
 }
 .meal-infos__name {
   font-size: 1.2rem;
+  height: 1.5rem;
+  grid-column: 1;
   grid-row: 1;
 }
 @media screen and (min-width: 280px) {
   .meal-infos__name {
-    grid-column: 1/3;
-    grid-row: 1/3;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-}
-@media screen and (min-width: 320px) {
-  .meal-infos__name {
-    grid-column: 1/4;
-    overflow: visible;
-    white-space: normal;
-  }
-}
-@media screen and (min-width: 480px) {
-  .meal-infos__name {
-    grid-column: 1/3;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
-@media screen and (min-width: 700px) {
-  .meal-infos__name {
-    grid-column: 1/4;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1129,25 +1115,11 @@ a:visited {
 }
 .meal-infos__additional {
   font-size: 0.9rem;
-  grid-row: 3;
+  grid-column: 1;
+  grid-row: 2;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-@media screen and (min-width: 280px) {
-  .meal-infos__additional {
-    grid-column: 1/3;
-  }
-}
-@media screen and (min-width: 320px) {
-  .meal-infos__additional {
-    grid-column: 1/4;
-  }
-}
-@media screen and (min-width: 480px) {
-  .meal-infos__additional {
-    grid-column: 1/3;
-  }
 }
 @media screen and (min-width: 1440px) {
   .meal-infos__additional {
@@ -1156,8 +1128,8 @@ a:visited {
 }
 .meal-infos__price {
   font-weight: bold;
-  grid-column: 4;
-  grid-row: 3;
+  grid-column: -1;
+  grid-row: 2;
 }
 
 .rm-scroll-bar {
