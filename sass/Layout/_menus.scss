@@ -231,7 +231,7 @@
 	
 	display: grid;
 	align-content: center;
-	grid-template-columns: 2fr repeat(2, 1fr);
+	grid-template-columns: 5fr 1fr;
 	grid-auto-rows: auto;
 	row-gap: .4rem;
 
@@ -240,35 +240,17 @@
 	&__name {
 		font-size: 1.2rem;
 
+		height: 1.5rem;
+
+		grid-column: 1;
 		grid-row: 1;
 
 		@include from-extra-small-mobile-and-more {
-			grid-column: 1 / 3;
-			grid-row: 1/3;
-
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		}
-
-		@include from-medium-mobile-and-more {
-			grid-column: 1 / 4;
-
-			overflow: visible;
-			white-space: normal;
-		}
-
-		@include from-large-mobile-and-more {
-			grid-column: 1 / 3;
-
-			overflow: hidden;
-			white-space: nowrap;
-		}
-
-		@include from-tablette-and-more {
-			grid-column: 1 / 4;
-		}
-
+		
 		@include from-large-screen-and-more {
 			font-size: 1.3rem;
 		}
@@ -277,23 +259,12 @@
 	&__additional {
 		font-size: 0.9rem;
 
-		grid-row: 3;
+		grid-column: 1;
+		grid-row: 2;
 
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-
-		@include from-extra-small-mobile-and-more {
-			grid-column: 1 / 3;
-		}
-
-		@include from-medium-mobile-and-more {
-			grid-column: 1 / 4;
-		}
-
-		@include from-large-mobile-and-more {
-			grid-column: 1 / 3;
-		}
 
 		@include from-large-screen-and-more {
 			font-size: 1.1rem;
@@ -303,7 +274,7 @@
 	&__price {
 		font-weight: bold;
 
-		grid-column: 4;
-		grid-row: 3;
+		grid-column: -1;
+		grid-row: 2;
 	}
 }
