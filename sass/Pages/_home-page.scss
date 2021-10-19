@@ -1,9 +1,3 @@
-.rm-scroll-bar {
-	overflow: auto;
-
-	animation: remove-scroll $anim-remove-scroll-dur $anim-remove-scroll-delay both;
-}
-
 .loading-spinner {
 	position: fixed;
 	top: 0;
@@ -20,9 +14,10 @@
 	align-items: center;
 
 	z-index: 1;
-	overflow: hidden;
 
-	animation: hide-loader 0ms $anim-hide-loader-delay both;
+	background-color: rgba(#fff, .8);
+
+	animation: hide-loader $anim-default-dur $anim-hide-loader-delay both;
 }
 
 .load-circle {
@@ -65,11 +60,10 @@
 
 .spawner {
 	@include set-sizes($spawner-sizes);
-
-	overflow: hidden;
+	
 	z-index: -1;
 
-	animation: spawner 0ms $anim-spawner-delay both;
+	animation: spawner $anim-default-dur $anim-spawner-delay $anim-spawner-fill-mode;
 }
 
 .restaurant-locations {

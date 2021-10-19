@@ -105,16 +105,16 @@ $circle-inner-border-width: 3px;
 
 /* Animations variables */
 
+$anim-default-dur: 0ms;
+
 $anim-spin-dur: 550ms;
 $anim-spin-delay: 253ms;
 $anim-spin-iteration-count: infinite;
 
-$anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01;
+$anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01; // Allows the loader to remain on the screen for 3 seconds before disappearing
+$anim-spawner-fill-mode: both;
 
 $anim-hide-loader-delay: $anim-spawner-delay;
-
-$anim-remove-scroll-dur: 0ms;
-$anim-remove-scroll-delay: $anim-spawner-delay;
 
 $anim-like-btn-dur: 1000ms;
 $anim-like-btn-scale-delay: 150ms;
