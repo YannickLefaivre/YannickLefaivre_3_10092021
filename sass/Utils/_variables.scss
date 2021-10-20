@@ -103,6 +103,18 @@ $circle-outer-border-width: 5px;
 $circle-inner-border-width: 3px;
 
 
+/* Transitiions variables */
+
+$trans-slide-dur: 300ms;
+$trans-slide-delay: 150ms;
+$trans-slide-timing: ease-in-out;
+$trans-slide-fill-mode: both;
+
+$meal-infos-shrink-margin-right: 5rem;
+
+$trans-shrink-meal-infos-dur: 300ms;
+$trans-shrink-meal-infos-delay: $trans-slide-delay;
+
 /* Animations variables */
 
 $anim-spin-dur: 550ms;
@@ -113,9 +125,6 @@ $anim-spawner-delay: $anim-spin-dur + $anim-spin-delay * 4.01;
 
 $anim-hide-loader-delay: $anim-spawner-delay;
 
-$anim-remove-scroll-dur: 0ms;
-$anim-remove-scroll-delay: $anim-spawner-delay;
-
 $anim-like-btn-dur: 1000ms;
 $anim-like-btn-scale-delay: 150ms;
 
@@ -124,16 +133,10 @@ $anim-like-btn-fade-delay: $anim-like-btn-scale-delay / .5;
 $anim-gradual-onset-dur: 350ms;
 $anim-gradual-onset-delay: $anim-gradual-onset-dur / 3;
 
-$anim-slide-dur: 300ms;
-$anim-slide-delay: 150ms;
-$anim-slide-timing: ease;
-$anim-slide-fill-mode: both;
+$anim-rotate-delay: $trans-slide-delay * 2;
+$anim-rotate-iteration-count: 2;
 
-$anim-rotate-delay: $anim-slide-delay * 2;
-$anim-rotate-iteration-count: 3;
-
-
-/* Transitiions variables */
-
-$trans-shrink-grid-column-dur: 300ms;
-$trans-shrink-grid-column-delay: $anim-slide-dur + $anim-slide-delay;
+$anim-shrink-dur: 300ms;
+$anim-shrink-delay: 50ms;
+$anim-shrink-timing: ease-in-out;
+$anim-shrink-fill-mode: both;

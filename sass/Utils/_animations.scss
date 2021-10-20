@@ -30,16 +30,6 @@
 	}
 }
 
-@keyframes remove-scroll {
-	0% {
-		overflow-y: hidden;
-	}
-
-	100% {
-		overflow-y: auto;
-	}
-}
-
 @keyframes gradual-onset {
 	0% {
 		opacity: 0;
@@ -56,16 +46,6 @@
 	}
 }
 
-@keyframes slide {
-	0% {
-		transform: translateX(100%);
-	}
-
-	100% {
-		transform: translateX(0);
-	}
-}
-
 @keyframes rotate {
 	0% {
 		transform: rotate(0turn);
@@ -73,5 +53,15 @@
 
 	100% {
 		transform: rotate(1turn);
+	}
+}
+
+@keyframes shrink {
+	0% {
+		grid-column: 1 / -1;
+	}
+
+	100% {
+		grid-column: 1;
 	}
 }

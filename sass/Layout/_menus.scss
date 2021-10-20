@@ -8,7 +8,7 @@
 
 	display: flex;
 
-	background-color: #f6f6f6;
+	background-color: $tertiary-neutral-clr;
 	border-radius: 3rem;
 
 	.menu-wrapper {
@@ -188,17 +188,17 @@
 
 	&:active {
 		.meal__ordered-indicator {
-			animation: slide $anim-spin-dur $anim-slide-delay $anim-slide-fill-mode $anim-slide-timing;
+			transform: translateX(0);
 		}
 
 		.fa-check-circle {
-			animation: rotate $anim-spin-dur $anim-slide-fill-mode $anim-slide-timing $anim-rotate-iteration-count;
+			animation: rotate $anim-spin-dur $trans-slide-fill-mode $trans-slide-timing $anim-rotate-iteration-count;
 
 			animation-delay: $anim-spin-delay * 2;
 		}
 
 		.meal-infos {
-			grid-column: 1;
+			margin-right: $meal-infos-shrink-margin-right;
 		}
 	}
 
@@ -220,7 +220,11 @@
 		border-radius: 0 1.2rem 1.2rem 0;
 
 		transform-origin: right;
-		transform: scaleX(0);
+		transform: translateX(100%);
+
+		transition: transform $trans-slide-dur
+		$trans-slide-delay
+		$trans-slide-timing;
 	}
 }
 
@@ -237,7 +241,7 @@
 	grid-auto-rows: auto;
 	row-gap: .4rem;
 
-	transition: grid-column $trans-shrink-grid-column-dur $trans-shrink-grid-column-delay ease-in-out;
+	transition: margin-right $trans-shrink-meal-infos-dur $trans-shrink-meal-infos-delay ease-in-out;
 
 	&__name {
 		font-size: 1.2rem;
