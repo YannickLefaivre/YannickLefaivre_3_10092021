@@ -255,11 +255,11 @@
 		position: relative;
 
 		width: map-get($grid-col, col-12);
-		height: 5.21rem;
+		height: 5rem;
 
 		@include set-margin($user-guide-instructions-margin-sizes);
 
-		font-size: 1.1rem;
+		font-size: .9rem;
 		font-weight: 600;
 
 		background-color: $tertiary-neutral-clr;
@@ -278,8 +278,19 @@
 			$user-guide-instructions-shadow-color
 		);
 
+		@include from-medium-mobile-and-more {
+			height: 5.21rem;
+
+			font-size: 1.1rem;
+		}
+
 		@include from-large-mobile-and-more {
 			width: map-get($grid-col, col-6);
+		}
+
+
+		@include for-lg-mobile-between-480px-and-500px {
+			width: map-get($grid-col, col-7);
 		}
 
 		@include from-tablette-and-more {
@@ -298,14 +309,22 @@
 
 	.fas {
 		margin: 0 1rem 0 2rem;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		color: $user-guide__instructions-icon-clr;
+
+		@include from-medium-mobile-and-more {
+			font-size: 1.2rem;
+		}
 	}
 
 	.fa-mobile-alt {
 		margin-left: 2.1rem;
 
-		font-size: 1.4rem;
+		font-size: 1.3rem;
+
+		@include from-medium-mobile-and-more {
+			font-size: 1.4rem;
+		}
 	}
 
 	.fa-store {

@@ -1,6 +1,5 @@
 /* Breakpoints mixins */
 
-
 @mixin from-extra-small-mobile-and-more {
 	@media screen and (min-width: map-get($breakpoints, sm-mobile)) {
 		@content;
@@ -15,6 +14,12 @@
 
 @mixin from-large-mobile-and-more {
 	@media screen and (min-width: map-get($breakpoints, lg-mobile)) {
+		@content;
+	}
+}
+
+@mixin for-lg-mobile-between-480px-and-500px {
+	@media screen and (min-width: map-get($breakpoints, lg-mobile-480w)) and (max-width: map-get($breakpoints, lg-mobile-500w)) {
 		@content;
 	}
 }
@@ -54,10 +59,13 @@
 
 /* Mixins for custom background */
 
-@mixin omf-gradient-bg($is-lighten: "no")
-{
-	@if($is-lighten == "yes") {
-		background: linear-gradient(to bottom, lighten($secondary-clr, 5%), lighten($primary-clr, 5%));
+@mixin omf-gradient-bg($is-lighten: "no") {
+	@if ($is-lighten == "yes") {
+		background: linear-gradient(
+			to bottom,
+			lighten($secondary-clr, 5%),
+			lighten($primary-clr, 5%)
+		);
 	} @else {
 		background: linear-gradient(to bottom, $secondary-clr, $primary-clr);
 	}
@@ -66,9 +74,7 @@
 /* Sets the selector sizes */
 
 @mixin set-sizes($sizes, $option: 0) {
-
-	@if ($option == width) or ($option == height)
-	{
+	@if ($option == width) or ($option == height) {
 		@if ($option == width) {
 			width: $sizes;
 		} @else if ($option == height) {
@@ -106,11 +112,10 @@
 	}
 }
 
-
 /* Sets the selctor padding */
 
 @mixin set-padding($sizes, $optional-sides: 0) {
-    @if (use-shorthand-property($optional-sides) == "no") {
+	@if (use-shorthand-property($optional-sides) == "no") {
 		@if ($optional-sides == top) {
 			padding-top: $sizes;
 		}
@@ -131,7 +136,6 @@
 	}
 }
 
-
 /* Print the number of a ordoned list with a purple-ish background-color alongside the icon assiociate to <li> markup */
 
 @mixin print-ordoned-list-number($ordoned-list-number) {
@@ -149,13 +153,17 @@
 }
 
 @mixin omf-gradient {
-    background-image: linear-gradient(to bottom, $secondary-clr, $primary-clr);
+	background-image: linear-gradient(to bottom, $secondary-clr, $primary-clr);
 }
 
-
-@mixin draw-quarter-cercle($side: "top-left", $width: 1px, $style: none, $color: #ccc, $radius: 100%) {
-	@if ($side == "top-left")
-	{
+@mixin draw-quarter-cercle(
+	$side: "top-left",
+	$width: 1px,
+	$style: none,
+	$color: #ccc,
+	$radius: 100%
+) {
+	@if ($side == "top-left") {
 		border-top: $width $style $color;
 
 		border-left: $width $style $color;
