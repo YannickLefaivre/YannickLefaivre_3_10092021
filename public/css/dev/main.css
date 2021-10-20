@@ -1387,13 +1387,13 @@ a:visited {
   color: #fff;
   border-radius: 100%;
 }
-.user-guide .omf-ol-custom-marker--number-one::before {
+.omf-ol-custom-marker--number-one::before {
   content: "1";
 }
-.user-guide .omf-ol-custom-marker--number-two::before {
+.omf-ol-custom-marker--number-two::before {
   content: "2";
 }
-.user-guide .omf-ol-custom-marker--number-three::before {
+.omf-ol-custom-marker--number-three::before {
   content: "3";
 }
 .user-guide .omf-ol-custom-marker + .fas {

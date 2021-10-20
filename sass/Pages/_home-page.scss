@@ -1,11 +1,11 @@
 .loading-spinner {
 	position: fixed;
 	top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 
-    @include set-sizes($loading-spinner-sizes);
+	@include set-sizes($loading-spinner-sizes);
 
 	display: grid;
 	grid-template-columns: 1fr;
@@ -39,7 +39,8 @@
 		justify-content: center;
 		align-items: center;
 
-		border: $circle-outer-border-width $circle-border-style lighten($primary-clr, $primary-clr--lighten-pourcent);
+		border: $circle-outer-border-width $circle-border-style
+			lighten($primary-clr, $primary-clr--lighten-pourcent);
 		border-top-color: $primary-clr;
 		border-radius: $circle-border-radius;
 
@@ -50,11 +51,13 @@
 	&__inner {
 		@include set-sizes($circle-inner-sizes);
 
-		border: $circle-inner-border-width $circle-border-style lighten($secondary-clr, $secondary-clr--lighten-pourcent);
+		border: $circle-inner-border-width $circle-border-style
+			lighten($secondary-clr, $secondary-clr--lighten-pourcent);
 		border-top-color: $secondary-clr;
 		border-radius: $circle-border-radius;
 
-		animation: spin $anim-spin-dur ($anim-spin-delay * 3) both cubic-bezier(0.14, 0.64, 0.79, 0.49) $anim-spin-iteration-count;
+		animation: spin $anim-spin-dur ($anim-spin-delay * 3) both
+			cubic-bezier(0.14, 0.64, 0.79, 0.49) $anim-spin-iteration-count;
 	}
 }
 
@@ -105,13 +108,12 @@
 	border-radius: $search-form-border-radius-sizes;
 
 	@include from-extra-small-mobile-and-more {
-		width: map-get($grid-col, col-8)
+		width: map-get($grid-col, col-8);
 	}
 
 	@include from-large-mobile-and-more {
 		background-color: $primary-neutral-clr;
 	}
-
 
 	&__icon {
 		padding: $form-icon-padding;
@@ -158,7 +160,7 @@
 		width: map-get($grid-col, col-9);
 		margin: 0 0 0.3em;
 
-		font-family: 'Roboto';
+		font-family: "Roboto";
 		font-size: 1.8rem;
 		text-align: center;
 
@@ -288,35 +290,48 @@
 			width: map-get($grid-col, col-3);
 			margin: 0 nth($user-guide-instructions-margin-sizes, 2);
 		}
+
+		&:last-of-type {
+			background-color: $tertiary-neutral-clr--alt-darken;
+		}
 	}
 
-	.omf-ol-custom-marker {
-		position: absolute;
-		left: -0.6em;
+	.fas {
+		margin: 0 1rem 0 2rem;
+		font-size: 1.2rem;
+		color: $user-guide__instructions-icon-clr;
+	}
 
-		@include custom-marker-padding;
+	.fa-mobile-alt {
+		margin-left: 2.1rem;
 
-		display: flex;
+		font-size: 1.4rem;
+	}
 
-		font-size: 1rem;
-		font-weight: normal;
+	.fa-store {
+		color: $primary-clr;
+	}
+}
 
-		background-color: $primary-clr;
-		color: #fff;
-		border-radius: 100%;
+.omf-ol-custom-marker {
+	position: absolute;
+	left: -0.6em;
 
-		@include print-ordoned-list-number($ordoned-list-number);
+	@include custom-marker-padding;
 
-		+ .fas {
-			margin: 0 1rem 0 2rem;
-			font-size: 1.2rem;
-			color: $user-guide__instructions-icon-clr;
+	display: flex;
 
-			&.fa-mobile-alt {
-				margin-left: 2.1rem;
-				font-size: 1.4rem;
-			}
-		}
+	font-size: 1rem;
+	font-weight: normal;
+
+	background-color: $primary-clr;
+	color: #fff;
+	border-radius: 100%;
+
+	@include print-ordoned-list-number($ordoned-list-number);
+
+	&:last-of-type {
+		font-weight: bold;
 	}
 }
 
@@ -326,7 +341,7 @@
 	> .restaurants-menu__wrapper {
 		@include set-padding($restaurants-menu-wrapper-padding-sizes);
 
-        display: flex;
+		display: flex;
 		flex-direction: column;
 
 		background-color: $secondary-neutral-clr;
@@ -363,7 +378,7 @@
 
 		align-items: center;
 		justify-items: center;
-		
+
 		@include make-box-shadow(
 			$menu-card-shadow-sizes,
 			$menu-card-shadow-effect-area,
@@ -386,7 +401,6 @@
 		@include from-large-screen-and-more {
 			@include set-sizes(map-get($grid-col, col-2), width);
 		}
-
 
 		&__link {
 			@include set-sizes($menu-card-link-sizes);
@@ -432,7 +446,6 @@
 			@include set-sizes($menu-prev-and-img-height, height);
 		}
 
-
 		&__new-restaurant-indicator {
 			@include set-sizes($menu-prev-new-restaurant-indicator-sizes);
 			position: absolute;
@@ -455,11 +468,11 @@
 			}
 
 			@include from-tablette-and-more {
-				@include set-sizes(map-get($grid-col, col-3), width)
+				@include set-sizes(map-get($grid-col, col-3), width);
 			}
 
 			@include from-computer-and-more {
-				@include set-sizes(map-get($grid-col, col-4), width)
+				@include set-sizes(map-get($grid-col, col-4), width);
 			}
 		}
 	}
@@ -492,7 +505,6 @@
 		@include from-large-screen-and-more {
 			column-gap: 2rem;
 		}
-
 
 		&__heading {
 			grid-column: 1;
