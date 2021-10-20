@@ -102,6 +102,21 @@ $circle-outer-border-width: 5px;
 
 $circle-inner-border-width: 3px;
 
+/* Default animation and transitions properties values */
+
+$default-dur: 300ms;
+$default-delay: 150ms; 
+
+/* Transitions variables */
+
+$trans-slide-dur: $default-dur;
+$trans-slide-delay: $default-delay;
+$trans-slide-timing: ease-in-out;
+
+$meal-infos-shrink-margin-right: 5.4rem;
+
+$trans-shrink-meal-infos-dur: $default-dur;
+$trans-shrink-meal-infos-delay: $trans-slide-delay;
 
 /* Animations variables */
 
@@ -124,16 +139,12 @@ $anim-like-btn-fade-delay: $anim-like-btn-scale-delay / .5;
 $anim-gradual-onset-dur: 350ms;
 $anim-gradual-onset-delay: $anim-gradual-onset-dur / 3;
 
-$anim-slide-dur: 300ms;
-$anim-slide-delay: 150ms;
-$anim-slide-timing: ease;
-$anim-slide-fill-mode: both;
+$anim-rotated-icon-dur: 400ms;
+$anim-rotated-icon-timing: cubic-bezier(.76,.01,.45,.85);
+$anim-rotated-icon-delay: 155ms;
+$anim-rotated-icon-fill-mode: both;
 
-$anim-rotate-delay: $anim-slide-delay * 2;
-$anim-rotate-iteration-count: 3;
-
-
-/* Transitiions variables */
-
-$trans-shrink-grid-column-dur: 300ms;
-$trans-shrink-grid-column-delay: $anim-slide-dur + $anim-slide-delay;
+$anim-shrink-dur: $default-dur;
+$anim-shrink-delay: 50ms;
+$anim-shrink-timing: ease-in-out;
+$anim-shrink-fill-mode: both;
