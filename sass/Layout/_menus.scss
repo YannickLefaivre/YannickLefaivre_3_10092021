@@ -134,7 +134,7 @@
     height: 5rem;
 
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 5fr 1.1fr;
     grid-auto-rows: auto;
 
     cursor: pointer;
@@ -192,9 +192,8 @@
 		}
 
 		.fa-check-circle {
-			animation: rotate $anim-spin-dur $trans-slide-fill-mode $trans-slide-timing $anim-rotate-iteration-count;
-
-			animation-delay: $anim-spin-delay * 2;
+			animation: rotated-icon $anim-rotated-icon-dur $anim-rotated-icon-timing $anim-rotated-icon-delay
+			$anim-rotated-icon-fill-mode;
 		}
 
 		.meal-infos {
@@ -213,6 +212,8 @@
 
 		align-items: center;
 		justify-content: center;
+
+		font-size: 1.5rem;
 
 		background-color: #99e2d0;
 		color: #fff;
