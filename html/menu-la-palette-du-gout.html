@@ -1,32 +1,346 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Menu - La palette du goût | Ohmyfood</title>
-    <meta name="description" content="Page description. No longer than 155 characters." />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@publisher_handle">
-    <meta name="twitter:title" content="Page Title">
-    <meta name="twitter:description" content="Page description less than 200 characters">
-    <meta name="twitter:creator" content="@author_handle">
-    <!-- Twitter Summary card images must be at least 200x200px -->
-    <meta name="twitter:image" content="http://www.example.com/image.jpg">
+		<title>Menu - La palette du goût | Ohmyfood</title>
+		<meta
+			name="description"
+			content="Menu du restaurant La palette du goût. À consulter pour passage de commande en ligne sur Ohmyfood afin de réduire le temps d’attente une fois sur place."
+		/>
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Title Here" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.example.com/" />
-    <meta property="og:image" content="http://example.com/image.jpg" />
-    <meta property="og:description" content="Description Here" /> 
-    <meta property="og:site_name" content="Site Name" />
-    <meta property="fb:admins" content="Facebook numeric ID" />
-</head>
-<body>
-    
-</body>
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@ohmyfood" />
+		<meta name="twitter:creator" content="@Lapalettedugoût" />
+		<!-- Twitter Summary card images must be at least 200x200px -->
+		<meta
+			name="twitter:image"
+			content="../pictures/metadatas/la-palette-du-gout-share-image.jpg"
+		/>
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Menu - La palette du goût" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://yannicklefaivre.github.io/YannickLefaivre_3_10092021/"
+		/>
+		<meta
+			property="og:image"
+			content="../pictures/metadatas/la-palette-du-gout-share-image.jpg"
+		/>
+		<meta
+			property="og:description"
+			content="Menu du restaurant La palette du goût commandable en ligne."
+		/>
+		<meta property="og:site_name" content="Ohmyfood" />
+
+		<!-- Default favicon and apple touch specific icon -->
+
+		<!-- Default favicon -->
+		<link
+			rel="icon"
+			href="../pictures/logo/ohmyfood@2x.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- Apple touch icon -->
+		<link rel="apple-touch-icon" href="../pictures/logo/ohmyfood.png" />
+
+		<!-- Link to my custom CSS rules -->
+
+		<link
+			rel="stylesheet"
+			href="../public/css/dist/main.min.css"
+			type="text/css"
+		/>
+
+		<!-- Integration of Roboto and Shrikhand fonts with Google Fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Roboto -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Shrikhand -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Add my Font Awesome kit to use it in this page -->
+		<script
+			src="https://kit.fontawesome.com/9809ccf456.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<!-- Page main wrapper -->
+		<div class="main-wrapper">
+			<!-- Header -->
+			<header class="header header--layout-with-icon">
+				<div class="header-wrapper">
+					<a
+						class="header__button-back-to-home-page"
+						href="../index.html"
+						title="Retourner à la page d'accueil"
+					>
+						<span
+							class="header__button-back-to-home-page__icon fas fa-arrow-left"
+						></span>
+					</a>
+
+					<img
+						class="header__logo"
+						src="../pictures/logo/ohmyfood@2x.svg"
+						alt="Logo de Ohmyfood"
+					/>
+				</div>
+			</header>
+
+			<!-- Main page content -->
+			<main class="page-main-content">
+				<!-- Restaurant menu page banner -->
+				<figure class="menu-page-banner">
+					<img
+						src="../pictures/restaurants/la-palette-du-gout.jpg"
+						alt="Aperçue d'un plat du restaurant La palette du goût"
+					/>
+				</figure>
+
+				<!-- Section : Menu -->
+				<section class="menu">
+					<div class="menu-wrapper">
+						<div class="restaurant-name-and-like-icon">
+							<h1 class="restaurant-name-and-like-icon__heading">
+								La palette du goût
+							</h1>
+
+							<button class="like-btn">
+								<span class="like-btn__icon far fa-heart"></span>
+								<span class="like-btn__icon fas fa-heart"></span>
+							</button>
+						</div>
+
+						<!-- Entrances -->
+						<article class="meal-grid">
+							<div class="meal-grid-heading-with-border-bottom">
+								<h2 class="meal-grid-heading-with-border-bottom__heading">
+									Entrées
+								</h2>
+								<span
+									class="meal-grid-heading-with-border-bottom__border-bottom"
+								></span>
+							</div>
+
+							<ul>
+								<li class="meal meal-group--1">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Fricassée d'escargot</h3>
+										<p class="meal-infos__additional">
+											Au piment d'Espelette
+										</p>
+										<strong class="meal-infos__price">25&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--1">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Foie gras de canard mi-cuit</h3>
+										<p class="meal-infos__additional">
+											Et ses copeaux de truffe noire
+										</p>
+										<strong class="meal-infos__price">35&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--1">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">
+											Oeuf au plat
+										</h3>
+										<p class="meal-infos__additional">
+											Assaisonné à la truffe sur lit de caviar
+										</p>
+										<strong class="meal-infos__price">20&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+                            </ul>
+						</article>
+
+						<!-- Dishes -->
+						<article class="meal-grid">
+							<div class="meal-grid-heading-with-border-bottom">
+								<h2 class="meal-grid-heading-with-border-bottom__heading">
+									Plats
+								</h2>
+								<span
+									class="meal-grid-heading-with-border-bottom__border-bottom"
+								></span>
+							</div>
+
+							<ul>
+								<li class="meal meal-group--2">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">
+											Filet de boeuf aux herbes
+										</h3>
+										<p class="meal-infos__additional">
+											Accompagné de sa ribambelle de légumes
+										</p>
+										<strong class="meal-infos__price">40&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--2">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Parmentier de queue de boeuf</h3>
+										<p class="meal-infos__additional">À la truffe noire sur sa purée de panais</p>
+										<strong class="meal-infos__price">35&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--2">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Filet de turbot</h3>
+										<p class="meal-infos__additional">
+											Aux agrumes
+										</p>
+										<strong class="meal-infos__price">44&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+							</ul>
+						</article>
+
+						<!-- Desserts -->
+						<article class="meal-grid">
+							<div class="meal-grid-heading-with-border-bottom">
+								<h2 class="meal-grid-heading-with-border-bottom__heading">
+									Desserts
+								</h2>
+								<span
+									class="meal-grid-heading-with-border-bottom__border-bottom"
+								></span>
+							</div>
+
+							<ul>
+								<li class="meal meal-group--3">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">
+											Paris-Brest
+										</h3>
+										<p class="meal-infos__additional">
+											Revisité
+										</p>
+										<strong class="meal-infos__price">18&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--3">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Macaron au chocolat d'exception</h3>
+										<p class="meal-infos__additional">
+											Et glace à la vanille de Madagascar
+										</p>
+										<strong class="meal-infos__price">22&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+
+								<li class="meal meal-group--3">
+									<div class="meal-infos">
+										<h3 class="meal-infos__name">Mousse au chocolat</h3>
+										<p class="meal-infos__additional">Au piment d'Espelette et à la truffe noire</p>
+										<strong class="meal-infos__price">23&euro;</strong>
+									</div>
+
+									<div class="meal__ordered-indicator">
+										<span class="fas fa-check-circle"> </span>
+									</div>
+								</li>
+							</ul>
+						</article>
+
+						<button
+							class="btn btn--restaurant-menu-page-sizes btn--margin-top-size"
+						>
+							Commander
+						</button>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<section class="footer__wrapper">
+					<h2 class="footer__heading">Ohmyfood</h2>
+
+					<div class="footer-link-list-groups">
+						<ul class="fa-ul">
+							<li class="footer-link-list-groups__link">
+								<span class="fa-li">
+									<span class="fas fa-utensils"></span>
+								</span>
+								<a href="#">Proposer un restaurant</a>
+							</li>
+							<li class="footer-link-list-groups__link">
+								<span class="fa-li">
+									<span class="fas fa-hands-helping"></span>
+								</span>
+								<a href="#">Devenir partenaire</a>
+							</li>
+						</ul>
+
+						<ul>
+							<li class="footer-link-list-groups__link">
+								<a href="#">Mentions Légales</a>
+							</li>
+							<li class="footer-link-list-groups__link">
+								<a href="mailto:contact@ohmyfood.com">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</footer>
+		</div>
+	</body>
 </html>
