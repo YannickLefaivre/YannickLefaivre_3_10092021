@@ -39,7 +39,8 @@
 			margin-top: 0;
 
 			@include from-extra-small-mobile-and-more {
-				font-size: 1.75rem;
+				font-size: 1.5rem;
+				letter-spacing: 0.03rem;
 			}
 
 			@include from-medium-mobile-and-more {
@@ -72,6 +73,10 @@
 			font-size: 1.3rem;
 			text-transform: uppercase;
 			font-weight: normal;
+
+			@include from-extra-small-mobile-and-more {
+				font-size: 1.1rem;
+			}
 
 			@include from-large-screen-and-more {
 				font-size: 1.4rem;
@@ -244,8 +249,7 @@
 
 		border-radius: 0 1.2rem 1.2rem 0;
 
-		transform-origin: right;
-		transform: translateX(100%);
+		transform: translateX(110%);
 
 		transition: transform $trans-slide-dur
 		$trans-slide-delay
@@ -269,7 +273,7 @@
 	transition: margin-right $trans-shrink-meal-infos-dur $trans-shrink-meal-infos-delay ease-in-out;
 
 	&__name {
-		font-size: 1.2rem;
+		font-size: 1rem;
 
 		height: 1.5rem;
 
@@ -282,7 +286,11 @@
 			text-overflow: ellipsis;
 		}
 		
-		@include from-large-screen-and-more {
+		@include from-medium-mobile-and-more {
+			font-size: 1.2rem;
+		}
+
+		@include from-large-mobile-and-more {
 			font-size: 1.3rem;
 		}
 	}
@@ -307,5 +315,9 @@
 
 		grid-column: -1;
 		grid-row: 2;
+
+		@include from-extra-small-mobile-and-more {
+			font-size: 1rem;
+		}
 	}
 }
