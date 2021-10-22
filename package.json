@@ -1,7 +1,7 @@
 {
   "name": "yannicklefaivre_3_10092021",
   "version": "0.0.1",
-  "description": "Ohmyfood website",
+  "description": "ohmyfood website",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch sass/main.scss:./public/css/style.css --style compressed --no-source-map"

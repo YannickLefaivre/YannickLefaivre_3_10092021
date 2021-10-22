@@ -41,6 +41,7 @@
 
         font-family: 'Shrikhand', cursive, "Arial", sans-serif;
         font-size: 1.3rem;
+        letter-spacing: 0.07rem;
 
         color: $primary-neutral-clr;
 
@@ -110,6 +111,10 @@
                 @include set-sizes($footer-link-list-sizes-tablette);
                 @include set-margin(0, bottom);
             }
+
+            &:nth-child(1) a {
+                font-weight: $fw-medium-500;
+            }
         }
 
         &__link {
@@ -122,6 +127,7 @@
 
             > a {
                 color: $primary-neutral-clr;
+                font-weight: 300;
             }
         }
     }
