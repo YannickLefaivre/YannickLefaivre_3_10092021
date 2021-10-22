@@ -914,7 +914,11 @@ a:visited {
   align-items: baseline;
 }
 .menu .restaurant-name-and-like-icon__heading {
+  height: 2rem;
   margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 280px) {
   .menu .restaurant-name-and-like-icon__heading {

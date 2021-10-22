@@ -27,7 +27,7 @@
 
 	.restaurant-name-and-like-icon {
 		width: 100%;
-		height: 2.35rem;
+		height: $restaurant-page-menu-heading-height;
 		margin-bottom: 2.42rem;
 
 		display: flex;
@@ -36,7 +36,13 @@
 		align-items: baseline;
 
 		&__heading {
+			height: $restaurant-page-menu-heading-height - 0.35rem;
+
 			margin-top: 0;
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 
 			@include from-extra-small-mobile-and-more {
 				font-size: 1.5rem;
