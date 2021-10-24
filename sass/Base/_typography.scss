@@ -10,7 +10,7 @@ h1, h2, h3 {
 
 h1 {
     font-family: 'Shrikhand', cursive, "Arial", sans-serif;
-    font-size: 2rem;
+    font-size: 1.65rem;
 }
 
 h2 {
@@ -23,7 +23,7 @@ h3 {
 
 p {
     font-size: $paragraph-font-size;
-    font-weight: 300;
+    font-weight: $fw-light-300;
 }
 
 a {
