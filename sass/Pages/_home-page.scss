@@ -42,7 +42,7 @@
 		border: $circle-outer-border-width $circle-border-style
 			lighten($primary-clr, $primary-clr--lighten-pourcent);
 		border-top-color: $primary-clr;
-		border-radius: $circle-border-radius;
+		border-radius: $spherical-radius;
 
 		animation: spin $anim-spin-dur both cubic-bezier(0.14, 0.64, 0.79, 0.49)
 			$anim-spin-iteration-count;
@@ -54,7 +54,7 @@
 		border: $circle-inner-border-width $circle-border-style
 			lighten($secondary-clr, $secondary-clr--lighten-pourcent);
 		border-top-color: $secondary-clr;
-		border-radius: $circle-border-radius;
+		border-radius: $spherical-radius;
 
 		animation: spin $anim-spin-dur ($anim-spin-delay * 3) both
 			cubic-bezier(0.14, 0.64, 0.79, 0.49) $anim-spin-iteration-count;
@@ -71,7 +71,7 @@
 
 .restaurant-locations {
 	width: map-get($grid-col, col-12);
-	height: 3.64rem;
+	height: $restaurant-locations-height;
 
 	display: flex;
 	flex-direction: row;
@@ -95,9 +95,9 @@
 
 .form {
 	width: map-get($grid-col, col-6);
-	height: 2rem;
+	height: $form-height;
 
-	font-size: 1rem;
+	font-size: $fs-normal-1rem;
 
 	display: flex;
 	justify-content: center;
@@ -148,7 +148,7 @@
 
 	&__wrapper {
 		width: map-get($grid-col, col-12);
-		height: 20.5rem;
+		height: $enterprise-presentation-wrapper-height;
 
 		display: flex;
 		flex-direction: column;
@@ -158,10 +158,10 @@
 
 	&__heading {
 		width: map-get($grid-col, col-9);
-		margin: 0 0 0.3em;
+		@include set-margin($enterprise-presentation-heading-margin-sizes);
 
 		font-family: "Roboto";
-		font-size: 1.8rem;
+		font-size: $fs-large-1_8rem;
 		text-align: center;
 
 		@include from-tablette-and-more {
@@ -179,9 +179,9 @@
 
 	&__tagline {
 		width: map-get($grid-col, col-12);
-		margin: 0.3em 0 0;
+		@include set-margin($enterprise-presentation-tagline-margin-sizes);
 
-		font-size: 1.4rem;
+		font-size: $fs-medium-1_4rem;
 		font-weight: 300;
 		text-align: center;
 
@@ -213,11 +213,11 @@
 	align-items: center;
 
 	@include from-computer-and-more {
-		height: 20rem;
+		height: $user-guide-height-computer;
 	}
 
 	@include from-large-screen-and-more {
-		height: 25rem;
+		height: $user-guide-height-lg-screen;;
 	}
 
 	&__heading {
@@ -237,7 +237,7 @@
 
 	> ol {
 		width: map-get($grid-col, col-12);
-		height: 19.07rem;
+		height: map-get($user-guide-ol-height, on-mobile);
 
 		display: flex;
 		flex-direction: row;
@@ -247,7 +247,7 @@
 		justify-content: center;
 
 		@include from-computer-and-more {
-			height: 8rem;
+			height: map-get($user-guide-ol-height, on-computer);
 		}
 	}
 
@@ -255,11 +255,11 @@
 		position: relative;
 
 		width: map-get($grid-col, col-12);
-		height: 5rem;
+		height: map-get($user-guide-instructions-height, on-mobile);
 
 		@include set-margin($user-guide-instructions-margin-sizes);
 
-		font-size: .9rem;
+		font-size: $fs-small-0_9rem;
 		font-weight: 600;
 
 		background-color: $tertiary-neutral-clr;
@@ -270,7 +270,7 @@
 		justify-content: flex-start;
 		align-items: center;
 
-		border-radius: 2rem;
+		border-radius: $rounded-square-radius;
 
 		@include make-box-shadow(
 			$user-guide-instructions-shadow-sizes,
@@ -279,9 +279,9 @@
 		);
 
 		@include from-medium-mobile-and-more {
-			height: 5.21rem;
+			height: map-get($user-guide-instructions-height, on-md-mobile);
 
-			font-size: 1.1rem;
+			font-size: $fs-normal-1_1rem;
 		}
 
 		@include from-large-mobile-and-more {
@@ -308,22 +308,23 @@
 	}
 
 	.fas {
-		margin: 0 1rem 0 2rem;
-		font-size: 1.1rem;
+		@include set-margin($user-guide-fas-custom-margin-sizes);
+
+		font-size: $fs-normal-1_1rem;
 		color: $user-guide__instructions-icon-clr;
 
 		@include from-medium-mobile-and-more {
-			font-size: 1.2rem;
+			font-size: $fs-normal-1_2rem;
 		}
 	}
 
 	.fa-mobile-alt {
 		margin-left: 2.1rem;
 
-		font-size: 1.3rem;
+		font-size: $fs-medium-1_3rem;
 
 		@include from-medium-mobile-and-more {
-			font-size: 1.4rem;
+			font-size: $fs-medium-1_4rem;
 		}
 	}
 
@@ -340,12 +341,12 @@
 
 	display: flex;
 
-	font-size: 1rem;
+	font-size: $fs-normal-1rem;
 	font-weight: normal;
 
 	background-color: $primary-clr;
-	color: #fff;
-	border-radius: 100%;
+	color: $primary-neutral-clr;
+	border-radius: $spherical-radius;
 
 	@include print-ordoned-list-number($ordoned-list-number);
 
@@ -392,8 +393,8 @@
 		grid-template-columns: 1fr;
 		grid-auto-rows: minmax(78px, auto);
 
-		background-color: #fff;
-		border-radius: 1rem;
+		background-color: $primary-neutral-clr;
+		border-radius: $menu-card-border-radius;
 
 		align-items: center;
 		justify-items: center;
@@ -480,7 +481,7 @@
 
 			background-color: $tertiary-clr;
 			color: $tertiary-clr--alt-darken;
-			border-radius: 0.2rem;
+			border-radius: $menu-prev-new-restaurant-indicator-border-radius;
 
 			@include from-large-mobile-and-more {
 				@include set-sizes(map-get($grid-col, col-4), width);
@@ -536,11 +537,11 @@
 			}
 
 			@include from-tablette-and-more {
-				font-size: $third-heading-font-size;
+				font-size: $heading-level-3-font-size;
 			}
 
 			@include from-large-screen-and-more {
-				font-size: 1.2rem;
+				font-size: $fs-normal-1_2rem;
 			}
 		}
 
@@ -559,7 +560,7 @@
 			}
 
 			@include from-large-screen-and-more {
-				font-size: 1.1rem;
+				font-size: $fs-normal-1_1rem;
 			}
 		}
 	}

@@ -2,9 +2,18 @@
 
 $main-wrapper-margin-sizes: 0 auto;
 
+$button-margin-sizes: 1.9em $zero-value $zero-value;
+
 $header-wrapper-margin-sizes: $zero-value $page-wrapping-sizes;
 
+$enterprise-presentation-heading-margin-sizes: $zero-value $zero-value 0.3em;
+
+$enterprise-presentation-tagline-margin-sizes: 0.3em $zero-value $zero-value;
+
 $user-guide-instructions-margin-sizes: $zero-value 2rem 1.7rem;
+
+$user-guide-fas-custom-margin-sizes: $zero-value 1rem $zero-value 2rem;
+
 $restaurant-menu-heading-margin-sizes: $zero-value $page-wrapping-sizes 1.92rem;
 
 $menu-card-margin-sizes: $zero-value $page-wrapping-sizes 1.21rem;
@@ -51,3 +60,5 @@ $omf-ol-custom-marker-padding: 0.4rem 0.5rem 0.1rem;
 /* Border radius */
 
 $menu-card-img-border-radius: 1rem 1rem $zero-value $zero-value;
+
+$demi-circle-radius: $zero-value 1.2rem 1.2rem $zero-value;

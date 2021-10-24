@@ -5,6 +5,8 @@ $zero-value: 0;
 
 /* font-weight values */
 
+$fw-light-300: 300;
+$fw-regular-400: 400;
 $fw-medium-500: 500;
 
 
@@ -27,6 +29,8 @@ $tertiary-neutral-clr--alt-darken: #f5edff;
 
 $quaternary-neutral-clr: #353535;
 
+$fifth-neutral-clr: #000;
+
 
 $btn-shadow-clr: #ccc;
 
@@ -42,22 +46,58 @@ $meal-card-shadow-clr: #cccccc;
 
 $main-wrapper-width: 1440px;
 
+$form-height: 2rem;
+
+$header-logo-height: 2rem;
+
+$restaurant-locations-height: 3.64rem;
+
+$enterprise-presentation-wrapper-height: 20.5rem;
+
+$user-guide-height-computer: 20rem;
+$user-guide-height-lg-screen: 25rem;
+
 $menu-prev-and-img-height: 12.5rem;
 $menu-prev-and-img-height-lg-mobile: 11rem;
+
+$menu-wrapper-width: 90%;
 
 $restaurant-page-menu-heading-height: 2.35rem;
 
 $meal-card-heading-border-bottom-width-size-computer: 6%;
 $meal-card-heading-border-bottom-width-size-lg-screen: 4.5%;
 
+$meal-infos-name-height: 1.5rem;
+
 $footer-height-tablette: 13rem;
+
+$footer-wrapper-height-lg-mobile: 9rem;
 $footer-wrapper-height-tablette: 10rem;
 
 
 /* Font sizes variables */
 
-$third-heading-font-size: 1.3rem;
+$root-font-size: 14px;
+
+$heading-level-1-font-size: 1.65rem;
+$heading-level-1-font-size-lg-mobile: 2rem;
+
+$heading-level-2-font-size: 1.5rem;
+$heading-level-3-font-size: 1.3rem;
+
 $paragraph-font-size: 1.2rem;
+
+$fs-small-0_9rem: .9rem;
+
+$fs-normal-1rem: 1rem;
+$fs-normal-1_1rem: 1.1rem;
+$fs-normal-1_2rem: 1.2rem;
+
+$fs-medium-1_3rem: 1.3rem;
+$fs-medium-1_4rem: 1.4rem;
+$fs-medium-1_5rem: 1.5rem;
+
+$fs-large-1_8rem: 1.8rem;
 
 $menu-card-infos-icon-font-size: 1.5rem;
 $menu-card-infos-icon-font-size-lg-mobile: 1.3rem;
@@ -97,20 +137,29 @@ $light-shadow-offset-y: 0.2rem;
 
 $search-form-border-radius-sizes: 1rem;
 
-$btn-radius: 2rem;
+$rounded-square-radius: 2rem;
+$spherical-radius: 100%;
 
 $loading-spinner-border-radius: 100%;
 $loading-spinner-border-width: 4px;
 $loading-spinner-border-style: solid;
 
+$menu-card-border-radius: 1rem;
+
+$menu-prev-new-restaurant-indicator-border-radius: 0.2rem;
+
+$menu-border-radius: 3rem;
+
+$meal-card-border-radius: 1.2rem;
+
 /* loading spinner border properties value */
 
-$circle-border-radius: 100%;
 $circle-border-style: solid;
 
 $circle-outer-border-width: 5px;
 
 $circle-inner-border-width: 3px;
+
 
 /* Default animation and transitions properties values */
 

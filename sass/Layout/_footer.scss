@@ -7,8 +7,7 @@
 
 
     @include from-large-mobile-and-more {
-        width: 100%;
-        height: 13rem;
+        @include set-sizes($footer-sizes-lg-mobile);
     }
 
     @include from-tablette-and-more {
@@ -24,7 +23,7 @@
 
 
         @include from-large-mobile-and-more {
-            height: 9rem;
+            height: $footer-wrapper-height-lg-mobile;
         }
 
         @include from-tablette-and-more {
@@ -40,7 +39,7 @@
         @include set-margin($footer-heading-margin-sizes, bottom);
 
         font-family: 'Shrikhand', cursive, "Arial", sans-serif;
-        font-size: 1.3rem;
+        font-size: $fs-medium-1_3rem;
         letter-spacing: 0.07rem;
 
         color: $primary-neutral-clr;
@@ -52,7 +51,7 @@
 
         @include from-tablette-and-more {
             width: map-get($grid-col, col-5);
-            font-size: 1.5rem;
+            font-size: $fs-medium-1_5rem;
 
             text-align: center;
         }
@@ -72,11 +71,10 @@
         display: flex;
         flex-flow: row wrap;
 
-        font-size: 1rem;
+        font-size: $fs-normal-1rem;
 
         @include from-large-mobile-and-more {
-            width: 90%;
-            height: 6rem;
+            @include set-sizes($footer-link-list-groups-sizes-lg-mobile);
 
             flex-flow: row nowrap;
         }
@@ -104,7 +102,7 @@
 
 
             @include from-large-mobile-and-more {
-                width: 50%;
+                width: map-get($grid-col, col-6);
             }
 
             @include from-tablette-and-more {
@@ -127,7 +125,7 @@
 
             > a {
                 color: $primary-neutral-clr;
-                font-weight: 300;
+                font-weight: $fw-light-300;
             }
         }
     }

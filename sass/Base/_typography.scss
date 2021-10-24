@@ -1,7 +1,7 @@
 html {
     font-family: 'Roboto', "Arial", sans-serif;
-    font-size: 14px;
-    color: black;
+    font-size: $root-font-size;
+    color: $fifth-neutral-clr;
 }
 
 h1, h2, h3 {
@@ -10,15 +10,15 @@ h1, h2, h3 {
 
 h1 {
     font-family: 'Shrikhand', cursive, "Arial", sans-serif;
-    font-size: 1.65rem;
+    font-size: $heading-level-1-font-size;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: $heading-level-2-font-size;
 }
 
 h3 {
-    font-size: $third-heading-font-size;
+    font-size: $heading-level-3-font-size;
 }
 
 p {
@@ -28,9 +28,9 @@ p {
 
 a {
     text-decoration: none;
-    color: black;
+    color: $fifth-neutral-clr;
 
     &:visited {
-        color: black;
+        color: $fifth-neutral-clr;
     }
 }

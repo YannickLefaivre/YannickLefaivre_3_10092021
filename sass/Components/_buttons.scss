@@ -1,15 +1,14 @@
 .btn {
-	width: map-get($grid-col, col-8);
-	height: 3.57rem;
-	margin: 1.9em 0 0;
+	@include set-sizes($button-sizes);
+	@include set-margin($button-margin-sizes);
 
     position: relative;
 
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: $fs-normal-1_2rem;
+    font-weight: $fw-regular-400;
 
     color: $primary-neutral-clr;
-	border-radius: $btn-radius;
+	border-radius: $rounded-square-radius;
 	border-style: none;
     
     cursor: pointer;
@@ -33,7 +32,7 @@
         bottom: 0;
         left: 0;
 
-        border-radius: $btn-radius;
+        border-radius: $rounded-square-radius;
 
         @include omf-gradient-bg($is-lighten: "yes");
         @include make-box-shadow($btn-shadow-sizes, $btn-shadow-effect-area--when-hover, darken($btn-shadow-clr, 5%));
@@ -67,8 +66,7 @@
     }
 
     &--restaurant-menu-page-sizes {
-        width: map-get($grid-col, col-8);
-        height: 4rem;
+        @include set-sizes($button-restaurant-menu-page-sizes);
 
         @include from-large-mobile-and-more {
             width: map-get($grid-col, col-5);
@@ -87,7 +85,7 @@
         margin-top: $zero-value;
 
         @include from-computer-and-more {
-            margin: $btn-margin-top-size;
+            margin: $btn-margin-top-size; // all margin side have the same value as the margin-top property
         }
     }
 }
@@ -114,16 +112,16 @@
     
     @include from-large-mobile-and-more {
         font-size: $menu-card-infos-icon-font-size-lg-mobile;
-        margin: $zero-value .8rem;
+        margin: $zero-value map-get($like-btn-margin-horizontal, on-lg-mobile);
     }
 
     @include from-tablette-and-more {
         font-size: $menu-card-infos-icon-font-size;
-        margin: $zero-value 1.3rem;
+        margin: $zero-value map-get($like-btn-margin-horizontal, on-tablette);
     }
 
     @include from-large-screen-and-more {
-        font-size: 1.5rem;
+        font-size: $fs-medium-1_5rem;
     }
 
     /* fill the Like button when the user clicks it (version with CSS transitions) */
