@@ -239,6 +239,23 @@
 		}
 	}
 
+	@include from-computer-and-more {
+		&:hover {
+			.meal__ordered-indicator {
+				transform: translateX(0);
+			}
+	
+			.fa-check-circle {
+				animation: rotated-icon $anim-rotated-icon-dur $anim-rotated-icon-timing $anim-rotated-icon-delay
+				$anim-rotated-icon-fill-mode;
+			}
+	
+			.meal-infos {
+				margin-right: $meal-infos-shrink-margin-right;
+			}
+		}
+	}
+
 	&__ordered-indicator {
 		@include set-sizes($meal-ordered-indicator-sizes);
 
