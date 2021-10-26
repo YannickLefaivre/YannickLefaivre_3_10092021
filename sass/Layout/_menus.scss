@@ -162,7 +162,7 @@
 		$meal-card-shadow-clr
 	);
 
-	animation: gradual-onset $anim-gradual-onset-dur $anim-gradual-onset-delay both;
+	animation: gradual-onset $anim-gradual-onset-dur $anim-gradual-onset-delay $anim-gradual-onset-fill-mode;
 
 	@for $i from 1 through 3 {
 		&-group--#{$i} {
