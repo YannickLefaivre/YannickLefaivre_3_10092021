@@ -195,8 +195,9 @@ $anim-like-btn-scale-delay: 150ms;
 
 $anim-like-btn-fade-delay: $anim-like-btn-scale-delay / .5;
 
-$anim-gradual-onset-dur: 350ms;
+$anim-gradual-onset-dur: 1s;
 $anim-gradual-onset-delay: $anim-gradual-onset-dur / 3;
+$anim-gradual-onset-fill-mode: both;
 
 $anim-rotated-icon-dur: 400ms;
 $anim-rotated-icon-timing: cubic-bezier(.76,.01,.45,.85);
