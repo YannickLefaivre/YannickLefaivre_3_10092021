@@ -15,5 +15,6 @@
       "**/node_modules/**",
       ".vscode/**"
    ],
-   "liveSassCompile.settings.generateMap": true,
+   "liveSassCompile.settings.generateMap": false,
+   "liveSassCompile.settings.autoprefix": null
 }
