@@ -26,7 +26,7 @@
 	}
 
 	.restaurant-name-and-like-icon {
-		width: map-get($grid-col, col-12);;
+		width: map-get($grid-col, col-12);
 		height: $restaurant-page-menu-heading-height;
 		margin-bottom: 2.42rem;
 
@@ -54,10 +54,9 @@
 			}
 
 			@include from-large-mobile-and-more {
-				font-size: $heading-level-1-font-size-lg-mobile
+				font-size: $heading-level-1-font-size-lg-mobile;
 			}
 		}
-
 
 		&__icon {
 			font-size: $fs-large-1_8rem;
@@ -66,8 +65,7 @@
 }
 
 .meal-grid {
-
-	width: map-get($grid-col, col-12);;
+	width: map-get($grid-col, col-12);
 	height: auto;
 	margin-bottom: 3.07rem;
 
@@ -101,7 +99,7 @@
 			@include from-large-mobile-and-more {
 				width: map-get($grid-col, col-1);
 			}
-			
+
 			@include from-computer-and-more {
 				width: $meal-card-heading-border-bottom-width-size-computer;
 			}
@@ -141,17 +139,16 @@
 	}
 }
 
-
 .meal {
 	grid-column: 1/5;
 
-    @include set-sizes($meal-card-sizes);
+	@include set-sizes($meal-card-sizes);
 
-    display: grid;
-    grid-template-columns: 5fr 1.1fr;
-    grid-auto-rows: auto;
+	display: grid;
+	grid-template-columns: 5fr 1.1fr;
+	grid-auto-rows: auto;
 
-    cursor: pointer;
+	cursor: pointer;
 	overflow: hidden;
 
 	background-color: $primary-neutral-clr;
@@ -162,7 +159,8 @@
 		$meal-card-shadow-clr
 	);
 
-	animation: gradual-onset $anim-gradual-onset-dur $anim-gradual-onset-delay $anim-gradual-onset-fill-mode;
+	animation: gradual-onset $anim-gradual-onset-dur $anim-gradual-onset-delay
+		$anim-gradual-onset-fill-mode;
 
 	@for $i from 1 through 3 {
 		&-group--#{$i} {
@@ -230,8 +228,10 @@
 		}
 
 		.fa-check-circle {
-			animation: rotated-icon $anim-rotated-icon-dur $anim-rotated-icon-timing $anim-rotated-icon-delay
-			$anim-rotated-icon-fill-mode;
+			transform: rotate(360deg);
+
+			transition: transform $trans-rotated-icon-dur $trans-rotated-icon-timing
+			$trans-rotated-icon-delay;
 		}
 
 		.meal-infos {
@@ -244,12 +244,14 @@
 			.meal__ordered-indicator {
 				transform: translateX(0);
 			}
-	
+
 			.fa-check-circle {
-				animation: rotated-icon $anim-rotated-icon-dur $anim-rotated-icon-timing $anim-rotated-icon-delay
-				$anim-rotated-icon-fill-mode;
+				transform: rotate(360deg);
+
+				transition: transform $trans-rotated-icon-dur $trans-rotated-icon-timing
+				$trans-rotated-icon-delay;
 			}
-	
+
 			.meal-infos {
 				margin-right: $meal-infos-shrink-margin-right;
 			}
@@ -276,26 +278,32 @@
 
 		transform: translateX(110%);
 
-		transition: $trans-slide-property $trans-slide-dur
-		$trans-slide-timing 
-		$trans-slide-delay;
+		transition: $trans-slide-property $trans-slide-dur $trans-slide-timing
+			$trans-slide-delay;
+	}
+
+	.fa-check-circle {
+		transform: rotate(0deg);
+
+		transition: transform $trans-rotated-icon-reverse-dur
+		$trans-rotated-icon-reverse-timing $trans-rotated-icon-reverse-delay;
 	}
 }
-
 
 .meal-infos {
 	grid-column: 1/-1;
 	grid-row: 1;
 
 	@include set-margin($meal-infos-margin-sizes);
-	
+
 	display: grid;
 	align-content: center;
 	grid-template-columns: 5fr 1fr;
 	grid-auto-rows: auto;
-	row-gap: .4rem;
+	row-gap: 0.4rem;
 
-	transition: $trans-shrink-property $trans-shrink-meal-infos-dur $trans-shrink-meal-infos-timing $trans-shrink-meal-infos-delay;
+	transition: $trans-shrink-property $trans-shrink-meal-infos-dur
+		$trans-shrink-meal-infos-timing $trans-shrink-meal-infos-delay;
 
 	&__name {
 		font-size: $fs-normal-1rem;
@@ -310,7 +318,7 @@
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		}
-		
+
 		@include from-medium-mobile-and-more {
 			font-size: $fs-normal-1_2rem;
 		}
