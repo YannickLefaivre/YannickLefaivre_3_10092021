@@ -47,20 +47,6 @@
 	}
 }
 
-@keyframes rotated-icon {
-	0% {
-		transform: rotate(90deg);
-	}
-
-	15% {
-		transform: rotate(139deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
 @keyframes shrink {
 	0% {
 		grid-column: 1 / -1;
