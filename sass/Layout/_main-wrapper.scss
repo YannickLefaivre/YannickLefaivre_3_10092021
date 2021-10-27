@@ -1,5 +1,6 @@
 .main-wrapper {
     width: map-get($grid-col, col-12);
+    overflow-x: hidden;
 
     @include from-large-screen-and-more {
         max-width: $main-wrapper-width;
