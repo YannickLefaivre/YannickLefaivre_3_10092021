@@ -168,13 +168,16 @@ $default-delay: 150ms;
 
 /* Transitions variables */
 
-$trans-slide-dur: $default-dur;
+$trans-slide-property: transform;
+$trans-slide-dur: 500ms;
 $trans-slide-delay: $default-delay;
 $trans-slide-timing: ease-in-out;
 
 $meal-infos-shrink-margin-right: 5.7rem;
 
-$trans-shrink-meal-infos-dur: $default-dur;
+$trans-shrink-property: margin-right;
+$trans-shrink-meal-infos-dur: $trans-slide-dur;
+$trans-shrink-meal-infos-timing: ease-in-out;
 $trans-shrink-meal-infos-delay: $trans-slide-delay;
 
 /* Animations variables */
@@ -199,7 +202,7 @@ $anim-gradual-onset-dur: 1s;
 $anim-gradual-onset-delay: $anim-gradual-onset-dur / 3;
 $anim-gradual-onset-fill-mode: both;
 
-$anim-rotated-icon-dur: 400ms;
+$anim-rotated-icon-dur: 600ms;
 $anim-rotated-icon-timing: cubic-bezier(.76,.01,.45,.85);
 $anim-rotated-icon-delay: 155ms;
 $anim-rotated-icon-fill-mode: both;

@@ -276,9 +276,9 @@
 
 		transform: translateX(110%);
 
-		transition: transform $trans-slide-dur
-		$trans-slide-delay
-		$trans-slide-timing;
+		transition: $trans-slide-property $trans-slide-dur
+		$trans-slide-timing 
+		$trans-slide-delay;
 	}
 }
 
@@ -295,7 +295,7 @@
 	grid-auto-rows: auto;
 	row-gap: .4rem;
 
-	transition: margin-right $trans-shrink-meal-infos-dur $trans-shrink-meal-infos-delay ease-in-out;
+	transition: $trans-shrink-property $trans-shrink-meal-infos-dur $trans-shrink-meal-infos-timing $trans-shrink-meal-infos-delay;
 
 	&__name {
 		font-size: $fs-normal-1rem;
