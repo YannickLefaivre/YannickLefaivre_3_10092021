@@ -173,7 +173,6 @@
         transition: transform 1000ms ease-in-out;
 
         @include omf-gradient;
-        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

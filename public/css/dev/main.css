@@ -29,29 +29,12 @@
 /* Sets the selctor padding */
 /* Print the number of a ordoned list with a purple-ish background-color alongside the icon assiociate to <li> markup */
 /* ohmyfood website custom marker padding */
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes hide-loader {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-9999px);
-    z-index: -1;
   }
 }
 @keyframes hide-loader {
@@ -61,16 +44,6 @@
   to {
     transform: translateX(-9999px);
     z-index: -1;
-  }
-}
-@-webkit-keyframes spawner {
-  from {
-    opacity: 0.8;
-    z-index: -1;
-  }
-  to {
-    opacity: 1;
-    z-index: 1;
   }
 }
 @keyframes spawner {
@@ -603,7 +576,6 @@ a:visited {
   transform: scale(0.01);
   transition: transform 1000ms ease-in-out;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
