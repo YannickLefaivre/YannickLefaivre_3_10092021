@@ -128,7 +128,7 @@
     &:active > .far {
         opacity: 0;
 
-        + .fas {
+        + .like-btn__icon--with-gradient {
             transform: scale(1);
         }
     }
@@ -137,7 +137,7 @@
         &:hover > .far {
             opacity: 0;
 
-            + .fas {
+            + .like-btn__icon--with-gradient {
                 transform: scale(1);
             }
         }
@@ -155,6 +155,14 @@
                 font-size: $menu-card-infos-icon-font-size + 0.1rem;
             }
         }
+
+        &--with-gradient {
+            grid-column: 1;
+            grid-row: 1;
+            
+            transform: scale(.01);
+            transition: transform $trans-grow-dur $trans-grow-timing;
+        }
     }
 
     .far {
@@ -162,18 +170,6 @@
         grid-row: 1;
 
         opacity: 1;
-        transition: opacity 1000ms ease-in;
-    }
-
-    .fas {
-        grid-column: 1;
-        grid-row: 1;
-
-        transform: scale(.01);
-        transition: transform 1000ms ease-in-out;
-
-        @include omf-gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        transition: opacity $trans-fade-dur $trans-fade-timing;
     }
 }
