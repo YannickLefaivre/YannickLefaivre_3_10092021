@@ -432,8 +432,22 @@
 			flex-direction: column;
 			align-items: center;
 		}
+	}
 
-		img {
+	.menu-prev {
+		position: relative;
+		width: map-get($grid-col, col-12);
+		height: $menu-prev-and-img-height;
+
+		@include from-large-mobile-and-more {
+			@include set-sizes($menu-prev-and-img-height-lg-mobile, height);
+		}
+
+		@include from-tablette-and-more {
+			@include set-sizes($menu-prev-and-img-height, height);
+		}
+
+		&__picture {
 			width: map-get($grid-col, col-12);
 			height: $menu-prev-and-img-height;
 
@@ -450,20 +464,6 @@
 			@include from-tablette-and-more {
 				@include set-sizes($menu-prev-and-img-height, height);
 			}
-		}
-	}
-
-	.menu-prev {
-		position: relative;
-		width: map-get($grid-col, col-12);
-		height: $menu-prev-and-img-height;
-
-		@include from-large-mobile-and-more {
-			@include set-sizes($menu-prev-and-img-height-lg-mobile, height);
-		}
-
-		@include from-tablette-and-more {
-			@include set-sizes($menu-prev-and-img-height, height);
 		}
 
 		&__new-restaurant-indicator {
