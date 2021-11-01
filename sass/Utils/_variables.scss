@@ -168,6 +168,12 @@ $default-delay: 150ms;
 
 /* Transitions variables */
 
+$trans-fade-dur: 1000ms;
+$trans-fade-timing: ease-in;
+
+$trans-grow-dur: 1000ms;
+$trans-grow-timing: ease-in-out;
+
 $trans-slide-property: transform;
 $trans-slide-dur: 500ms;
 $trans-slide-delay: $default-delay;
