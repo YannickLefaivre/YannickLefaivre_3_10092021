@@ -44,6 +44,9 @@ $like-btn-margin-horizontal: (on-lg-mobile: .8rem, on-tablette: 1.3rem);
 
 /* Selector sizes */
 
+$heart-icon-css-version-size: (width: map-get($grid-col, col-12),
+height: 100%);
+
 $spawner-sizes: (width: map-get($grid-col, col-12),
 height: auto);
 
@@ -107,3 +110,7 @@ $footer-link-list-sizes-tablette: (width: map-get($grid-col, col-5),
 height: 4.2rem);
 
 $footer-link-sizes: (width: map-get($grid-col, col-12), height: 1rem);
+
+/* Transitions maps */
+
+$trans-heart-icon-css-version-translation: (translateX: -43%, translateY: -32%);

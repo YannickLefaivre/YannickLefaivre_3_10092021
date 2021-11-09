@@ -129,7 +129,7 @@
         opacity: 0;
 
         + .like-btn__icon--with-gradient {
-            transform: scale(1);
+            transform: translate(map-values($trans-heart-icon-css-version-translation)) scale($trans-heart-icon-css-version-scale);
         }
     }
 
@@ -138,7 +138,7 @@
             opacity: 0;
 
             + .like-btn__icon--with-gradient {
-                transform: scale(1);
+                transform: translate(map-values($trans-heart-icon-css-version-translation)) scale($trans-heart-icon-css-version-scale);
             }
         }
     }
@@ -172,4 +172,47 @@
         opacity: 1;
         transition: opacity $trans-fade-dur $trans-fade-timing;
     }
+}
+
+.heart-icon-css-version {
+	position: relative;
+	@include set-sizes($heart-icon-css-version-size);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		top: $heart-icon-css-version-semi-parts-pos-top;
+		width: 3.25rem;
+		height: 5rem;
+		border-radius: 50px 50px 0 0;
+	}
+
+	&::before {
+		left: $heart-icon-css-version-left-part-pos-left;
+		transform: rotate(-45deg);
+		transform-origin: 0% 100%;
+
+		background: linear-gradient(
+			to bottom left,
+			$secondary-clr 0% 45%,
+			$primary-clr 100%
+		);
+	}
+
+	&::after {
+		left: $heart-icon-css-version-right-part-pos-left;
+		transform: rotate(45deg);
+		transform-origin: 100% 100%;
+
+		background: linear-gradient(
+			to bottom right,
+			$secondary-clr 0% 25%,
+			$primary-clr 100%
+		);
+	}
 }
