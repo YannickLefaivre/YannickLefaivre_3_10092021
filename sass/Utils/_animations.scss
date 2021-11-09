@@ -46,13 +46,3 @@
 		transform: translateY(0);
 	}
 }
-
-@keyframes shrink {
-	0% {
-		grid-column: 1 / -1;
-	}
-
-	100% {
-		grid-column: 1;
-	}
-}
