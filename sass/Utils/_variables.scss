@@ -41,6 +41,12 @@ $menu-card-shadow-clr: #d9d9d9;
 
 $meal-card-shadow-clr: #cccccc;
 
+/* Position variables */
+
+$heart-icon-css-version-semi-parts-pos-top: 0;
+$heart-icon-css-version-left-part-pos-left: 45px;
+$heart-icon-css-version-right-part-pos-left: 0px;
+
 
 /* Box sizes variables */
 
@@ -167,6 +173,8 @@ $default-dur: 300ms;
 $default-delay: 150ms; 
 
 /* Transitions variables */
+
+$trans-heart-icon-css-version-scale: 0.27;
 
 $trans-fade-dur: 1000ms;
 $trans-fade-timing: ease-in;
