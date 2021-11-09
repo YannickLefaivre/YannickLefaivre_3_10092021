@@ -16,5 +16,5 @@
       ".vscode/**"
    ],
    "liveSassCompile.settings.generateMap": false,
-   "liveSassCompile.settings.autoprefix": null
+   "liveSassCompile.settings.autoprefix": false
 }

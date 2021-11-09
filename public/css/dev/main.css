@@ -1,6 +1,7 @@
 /* Null and zero value variables */
 /* font-weight values */
 /* Colors variables */
+/* Position variables */
 /* Box sizes variables */
 /* Font sizes variables */
 /* Form padding variables */
@@ -21,6 +22,7 @@
 /* Ordoned list number */
 /* Margin maps */
 /* Selector sizes */
+/* Transitions maps */
 /* Breakpoints mixins */
 /* Make a Box shadow */
 /* Mixins for custom background */
@@ -519,14 +521,14 @@ a:visited {
   opacity: 0;
 }
 .like-btn:active > .far + .like-btn__icon--with-gradient {
-  transform: scale(1);
+  transform: translate(-43%, -32%) scale(0.27);
 }
 @media screen and (min-width: 992px) {
   .like-btn:hover > .far {
     opacity: 0;
   }
   .like-btn:hover > .far + .like-btn__icon--with-gradient {
-    transform: scale(1);
+    transform: translate(-43%, -32%) scale(0.27);
   }
 }
 .like-btn__icon {
@@ -551,6 +553,35 @@ a:visited {
   grid-row: 1;
   opacity: 1;
   transition: opacity 1000ms ease-in;
+}
+
+.heart-icon-css-version {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-icon-css-version::before, .heart-icon-css-version::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 3.25rem;
+  height: 5rem;
+  border-radius: 50px 50px 0 0;
+}
+.heart-icon-css-version::before {
+  left: 45px;
+  transform: rotate(-45deg);
+  transform-origin: 0% 100%;
+  background: linear-gradient(to bottom left, #FF79DA 0% 45%, #9356DC 100%);
+}
+.heart-icon-css-version::after {
+  left: 0px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  background: linear-gradient(to bottom right, #FF79DA 0% 25%, #9356DC 100%);
 }
 
 .main-wrapper {
